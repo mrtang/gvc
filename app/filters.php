@@ -124,7 +124,7 @@ Route::filter('csrf', function()
 
 
 
-App::error(function($exception, $code) {
+/*App::error(function($exception, $code) {
     switch ($code) {
         case 403:
             return Response::view('errors.403', array(), 403);
@@ -138,7 +138,7 @@ App::error(function($exception, $code) {
         default:
             return Response::view('errors.default', array(), $code);
     }
-});
+});*/
 
 
 

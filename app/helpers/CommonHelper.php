@@ -118,4 +118,22 @@ class CommonHelper {
             return false;
         }
     }
+
+    /**
+     * get news type 1   
+     */
+    public static function getNoticeNew(){
+        $notice = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->skip(0)->take(8)->get();
+        return $notice;
+    }
+
+    public static function getNewsRandom(){
+        $news = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy(DB::raw('RAND()'))->skip(0)->take(6)->get();
+        return $news;
+    }
+
+    public static function getNewsLastest(){
+        $news = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('created_at','desc')->skip(0)->take(4)->get();
+        return $news;
+    }
 }

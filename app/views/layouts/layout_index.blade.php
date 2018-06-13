@@ -54,6 +54,23 @@
                 </div>
             </div>
             @include('elements/footer')
+            <div class="copyright">
+                <div class="container">
+
+                <p>© 2018&nbsp;
+
+                    Made by gvc.        
+                 || 
+
+                 <a href="#"> 
+                T&amp;T
+                 </a>   &nbsp;
+
+                </p><div class="social">
+                 <a class="rss" target="_blank" href="#"><i class="fas fa-rss"></i> </a>     <a class="dribbble" target="_blank" href="#"><i class="fab fa-dribbble"></i> </a>   <a class="vimeo" target="_blank" href="#"><i class="fab fa-vimeo-v"></i> </a>   <a class="youtube" target="_blank" href="#"><i class="fab fa-youtube"></i> </a>     <a class="twitch" target="_blank" href="#"><i class="fab fa-twitch"></i></a>    <a class="steam" target="_blank" href="#"><i class="fab fa-steam"></i></a>  <a class="pinterest" target="_blank" href="#"><i class="fab fa-pinterest"></i> </a>     <a class="google-plus" target="_blank" href="#"><i class="fab fa-google-plus"></i></a>  <a class="twitter" target="_blank" href="#"><i class="fab fa-twitter"></i></a>  <a class="facebook" target="_blank" href="#"><i class="fab fa-facebook"></i></a>   </div>
+
+                </div>
+            </div>
         </div>
 
         {{ HTML::script('assets/frontendnew/js/libs/imagesloaded.min.js') }}
@@ -65,21 +82,19 @@
         {{ HTML::script('assets/frontendnew/js/libs/appear-img.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/bootstrap.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/polls-js.js') }}
-        {{ HTML::script('assets/frontendnew/js/libs/js.cookie.min.js') }}
-        {{ HTML::script('assets/frontendnew/js/libs/jquery.blockUI.min.js') }}
-        {{ HTML::script('assets/frontendnew/js/scripts.js') }}
+        {{ HTML::script('assets/frontendnew/js/libs/scripts.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/ps.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/jquery.clickoutside.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/inview.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/global.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/owl.carousel.min.js') }}
-        {{ HTML::script('assets/frontendnew/js/wp-owl-carousel.js') }}
+        {{ HTML::script('assets/frontendnew/js/libs/wp-owl-carousel.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/ubermenu.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/wp-embed.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/js_composer_front.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/waypoints.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/core.min.js') }}
-        {{ HTML::script('assets/frontendnew/js/tabs.min.js') }}
-        {{ HTML::script('assets/frontendnew/js/widget.min.js') }}
+        {{ HTML::script('assets/frontendnew/js/libs/tabs.min.js') }}
+        {{ HTML::script('assets/frontendnew/js/libs/widget.min.js') }}
     </body>
 </html>
