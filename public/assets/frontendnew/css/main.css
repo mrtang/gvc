@@ -2709,7 +2709,7 @@ ul.comment-list li {
     border: 1px solid #000;
 }
 footer .widget ul li:nth-child(even), footer .latest-twitter-tweet:nth-child(odd){
-	background: #181B1E;
+	background: #181B1E !important;
     border-top: 1px solid #000000;
 }
 .latest-twitter-tweet:nth-child(even){

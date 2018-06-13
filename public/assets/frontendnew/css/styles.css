@@ -177,7 +177,7 @@ html{
 }
 body{
         background-attachment: fixed !important;
-		background:url(images/banner.jpg) no-repeat center top;
+		background:url(../images/banner.jpg) no-repeat center top;
 }
 img.wp-smiley,
 img.emoji {
