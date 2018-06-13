@@ -1,0 +1,13 @@
+<?xml version="1.0"?> 
+<sharpUpdate> 
+    <update appID="Launcher"> 
+        <version>2.1.6.0</version> 
+        <url>http://gvc.vn/Launcher/GvC%20Launcher.exe</url> 
+        <fileName>GvC Launcher.exe</fileName> 
+        <md5>7a6a19fd8daf065355ce81b351f6cb69</md5>
+        <description>Update: 00:00 10/06/2018:
+        - None
+	</description> 
+        <launchArgs></launchArgs> 
+    </update> 
+</sharpUpdate>
