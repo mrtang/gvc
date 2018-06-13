@@ -136,4 +136,9 @@ class CommonHelper {
         $news = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('created_at','desc')->skip(0)->take(4)->get();
         return $news;
     }
+
+    public static function getNewsRandomF(){
+        $news = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy(DB::raw('RAND()'))->skip(0)->take(4)->get();
+        return $news;
+    }
 }

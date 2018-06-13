@@ -156,7 +156,7 @@ class NewController extends \BaseController {
         $totalRecords = $this->news->getTotalRecords($input);
         $latestNews = News::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'asc')->skip(0)->take(5)->get();
 
-        $this->layout = View::make('layouts.application');
+        $this->layout = View::make('layouts.layout_other');
         $view = View::make('new.list')->with(array(
             'news' => $news,
             'totalRecords' => $totalRecords,
@@ -185,7 +185,7 @@ class NewController extends \BaseController {
         Session::put('image', $imageUrl->path.$imageUrl->medium);
         Session::put('url', URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html'));
         
-        $this->layout = View::make('layouts.application');
+        $this->layout = View::make('layouts.layout_other');
         $view = View::make('new.detail')->with(array(
             'new' => $new,
             'latestNews' => $latestNews
