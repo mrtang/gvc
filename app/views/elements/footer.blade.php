@@ -30,7 +30,7 @@
 </div>        
 <div class="widget-2 footer-widget widget col-lg-4 col-md-4"><div class="title-wrapper"> <h3 class="widget-title"><i class="far fa-newspaper"></i> Tin cập nhật</h3><div class="clear"></div></div> 
     <ul class="review">
-    	@foreach(CommonHelper::getNewsRandom() as $news)
+    	@foreach(CommonHelper::getNewsRandomF() as $news)
 		<?php $imageUrl = Media::find($news->media_id); ?>
 	    <li>
 	    	<a rel="bookmark" href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}">		

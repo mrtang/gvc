@@ -65,21 +65,20 @@ class HomeController extends BaseController {
      */
     public function index() {
         $input = array_map('trim', Input::all());
-        /*$specialNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->skip(0)->take(8)->get();
-        $latestNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->skip(0)->take(10)->get();
-        $mostProducts = Product::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('num_buy', 'desc')->skip(0)->take(Config::get('config.homepage.number_products'))->get();
-        
+        $specialNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->skip(0)->take(4)->get();
+        $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->skip(0)->take(1)->get()->toArray();
+        $latestNews = News::whereRaw('is_deleted = ? and status = ? and type = ? and new_id != ?', array(0, 1, 2,$hotNews[0]['new_id']))->orderBy('updated_at', 'desc')->skip(0)->take(4)->get();
         
         Session::put('title', 'Grand Theft Auto Vietnamese Community');
         Session::put('description', 'Cộng đồng Grand Theft Auto - San Andreas tại Việt Nam. Máy chủ chính thức với IP: GVC.WTF:7777. Bạn sẽ được trải nghiệm qua tất cả nhân vật trong cuộc sống thực tế để có thể phô diễn khả năng của chúng ta cho mọi người xem. Tất cả mọi thứ đã có trong GvC , bạn hãy vào để giao lưu , làm quen với mọi người nào !');
         Session::put('image', Asset('assets/images/banner-bg-1.png'));
-        Session::put('url', URL::to('/'));*/
+        Session::put('url', URL::to('/'));
         
         $this->layout = View::make('layouts.layout_index');
         $view = View::make('home.index')->with(array(
-            /*'specialNews' => $specialNews,
+            'specialNews' => $specialNews,
             'latestNews' => $latestNews,
-            'mostProducts' => $mostProducts,*/
+            'hotNews' => $hotNews[0],
         ));
         $this->layout->content = $view;
     }
