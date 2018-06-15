@@ -1,7 +1,3 @@
-<div id="sliderhome">
-<div class="container">
-	@section('scripts')
-        @show
 <script data-cfasync="false" type="text/javascript">var lsjQuery = jQuery;</script><script data-cfasync="false" type="text/javascript">
 lsjQuery(document).ready(function() {
 if(typeof lsjQuery.fn.layerSlider == "undefined") {
@@ -9,10 +5,20 @@ if( window._layerSlider && window._layerSlider.showNotice) {
 window._layerSlider.showNotice('layerslider_2','jquery');
 }
 } else {
-lsjQuery("#layerslider_2").layerSlider({sliderVersion: '', responsiveUnder: 1200, layersContainer: 1350, hideUnder: 0, hideOver: 100000, pauseOnHover: 1, skin: 'fullwidth', globalBGColor: '2d3e50', navStartStop: false, navButtons: false, skinsPath: '', type: 'fullwidth', showCircleTimer: false});
+lsjQuery("#layerslider_2").layerSlider({sliderVersion: '', responsiveUnder: 1200, layersContainer: 1350, hideUnder: 0, hideOver: 100000, pauseOnHover: 1, skin: 'fullwidth', globalBGColor: '2d3e50', navStartStop: false, navButtons: false, skinsPath: 'https://skywarriorthemes.com/crystalskull/wp-content/plugins/LayerSlider/static/layerslider/skins/', type: 'fullwidth', showCircleTimer: false});
 }
 });
 </script>
 
-<div class="ls-fullscreen-wrapper"><div id="layerslider_2" class="ls-wp-container fitvidsignore ls-fullwidth ls-container ls-device-is-desktop" style="width: 1349px; height: 515px; margin: 0px auto 0px -99.5px; position: relative; max-width: none; visibility: visible;" data-layerslider-uid="LS90oad7nj2"><div class="ls-inner" style=""><div class="ls-layers"><div class="ls-background-videos"></div><div class="ls-slide-backgrounds"><div class="ls-wrapper ls-bg-outer" style="z-index: 1; width: 1349px; height: 515px;"><div class="ls-wrapper ls-bg-wrap" style="background-color: transparent; display: block; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><img src="{{Asset('assets/frontendnew/images/2.jpg')}}" class="ls-bg" alt="" style="margin: 0px; z-index: auto; width: 1917px; height: 515px; padding: 0px; border-width: 0px; border-radius: 0px; transform: translateX(-284px) translateY(0px); filter: none;" data-ls-slidein="1" data-ls-slideout="1"></div></div></div><div class="ls-slide-effects"></div><div class="ls-wrapper ls-in-out" style="z-index: 102; margin-left: 0px; margin-top: 0px; width: 482px; height: 350px; left: 10.5px; top: 184px; transform: translate3d(0px, 0px, 0px); transform-origin: 50% 50% 0px; opacity: 1; display: block;"><img src="{{Asset('assets/frontendnew/images/41.png')}}" class="ls-layer" alt="" style="top: 184px; left: 10.5px; margin: 0px; z-index: auto; width: 482px; height: 350px; padding: 0px; border-width: 0px; border-radius: 0px;" data-ls="offsetxin:-80;delayin:2500;durationout:400;parallaxlevel:0;" data-ls-slidein="1" data-ls-slideout="1"></div><div class="ls-wrapper ls-in-out" style="z-index: 103; margin-left: 0px; margin-top: 0px; width: 482px; height: 350px; left: 836.5px; top: 193px; transform: translate3d(0px, 0px, 0px); transform-origin: 50% 50% 0px; opacity: 1; display: block;"><img src="{{Asset('assets/frontendnew/images/ak.png')}}" class="ls-layer" alt="" style="top: 193px; left: 836.5px; margin: 0px; z-index: auto; width: 482px; height: 350px; padding: 0px; border-width: 0px; border-radius: 0px;" data-ls="offsetxin:80;delayin:2500;durationout:400;parallaxlevel:0;" data-ls-slidein="1" data-ls-slideout="1"></div><div class="ls-wrapper ls-in-out" style="z-index: 104; margin-left: 0px; margin-top: 0px; width: 1120px; height: 244px; left: 104.5px; top: 271px; transform: translate3d(0px, 0px, 0px); transform-origin: 50% 50% 0px; opacity: 1; display: block;"><img src="{{Asset('assets/frontendnew/images/devices.png')}}" class="ls-layer" alt="" style="top: 271px; left: 104.5px; margin: 0px; z-index: auto; width: 1120px; height: 244px; padding: 0px; border-width: 0px; border-radius: 0px;" data-ls="offsetyin:80;delayin:1000;durationout:400;parallaxlevel:0;" data-ls-slidein="1" data-ls-slideout="1"></div></div></div><div style="display: none;" class="ls-gui-element ls-loading-container"><div class="ls-loading-indicator"></div></div><div class="ls-gui-element ls-shadow" data-ls-parallax="disabled"></div></div></div></div>
+<div id="sliderhome">
+<div class="container">
+<div class="ls-fullscreen-wrapper">
+	<div id="layerslider_2" class="ls-wp-container fitvidsignore" style="width:100%;height:515px;margin:0 auto;margin-bottom: 0px;"><div class="ls-slide" data-ls="duration:9000;"><img width="1902" height="511" src="{{Asset('assets/frontendnew/images/2.jpg')}}" class="ls-bg" alt=""  sizes="(max-width: 1902px) 100vw, 1902px" /><img width="482" height="350" src="{{Asset('assets/frontendnew/images/41.png')}}" class="ls-l" alt="" sizes="(max-width: 482px) 100vw, 482px" style="width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:;border-radius:;top:184px;left:11px;" data-ls="offsetxin:-80;delayin:2500;durationout:400;parallaxlevel:0;"><img width="482" height="350" src="{{Asset('assets/frontendnew/images/ak.png')}}" class="ls-l" alt="" sizes="(max-width: 482px) 100vw, 482px" style="width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:;border-radius:;top:193px;left:837px;" data-ls="offsetxin:80;delayin:2500;durationout:400;parallaxlevel:0;"><img width="1120" height="244" src="{{Asset('assets/frontendnew/images/devices.png')}}" class="ls-l" alt="" sizes="(max-width: 1120px) 100vw, 1120px" style="width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:;border-radius:;top:271px;left:105px;" data-ls="offsetyin:80;delayin:1000;durationout:400;parallaxlevel:0;"></div></div>
+
+
+
+	
+
+
+</div></div>
 </div>
