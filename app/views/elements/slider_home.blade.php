@@ -9,7 +9,7 @@ if( window._layerSlider && window._layerSlider.showNotice) {
 window._layerSlider.showNotice('layerslider_2','jquery');
 }
 } else {
-lsjQuery("#layerslider_2").layerSlider({sliderVersion: '', responsiveUnder: 1200, layersContainer: 1350, hideUnder: 0, hideOver: 100000, pauseOnHover: 1, skin: 'fullwidth', globalBGColor: '2d3e50', navStartStop: false, navButtons: false, skinsPath: 'https://skywarriorthemes.com/crystalskull/wp-content/plugins/LayerSlider/static/layerslider/skins/', type: 'fullwidth', showCircleTimer: false});
+lsjQuery("#layerslider_2").layerSlider({sliderVersion: '', responsiveUnder: 1200, layersContainer: 1350, hideUnder: 0, hideOver: 100000, pauseOnHover: 1, skin: 'fullwidth', globalBGColor: '2d3e50', navStartStop: false, navButtons: false, skinsPath: '', type: 'fullwidth', showCircleTimer: false});
 }
 });
 </script>

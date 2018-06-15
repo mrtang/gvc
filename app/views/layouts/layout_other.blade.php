@@ -35,7 +35,7 @@
         {{ HTML::script('assets/frontendnew/js/libs/jquery-migrate.min.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/layerslider.kreaturamedia.jquery.js') }}
         {{ HTML::script('assets/frontendnew/js/libs/layerslider.transitions.js') }}
-        <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
+        <!--script src='https://www.google.com/recaptcha/api.js?hl=vi'></script-->
         <noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
         <style type='text/css'>
             body {
