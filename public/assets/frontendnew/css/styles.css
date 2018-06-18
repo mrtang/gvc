@@ -15,7 +15,9 @@
 @import url('tooltip.css');
 @import url('vcfixes.css');
 
-
+.forgotPassword {
+    display: none;
+}
 
 #content .download {
     margin-top: 30px;
