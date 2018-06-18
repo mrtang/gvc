@@ -1,3 +1,8 @@
+<style type="text/css">
+    .modal-backdrop {
+  z-index: -1;
+}
+</style>
 <div class="menu-profile">
     <nav class="navbar navbar-default">
         <div class="container-fluid container">
@@ -40,49 +45,13 @@
         </div><!-- /.container-fluid -->
     </nav>
 </div>
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
-                    <span style="color: #9F2B33;">Đổi </span>mật khẩu
-                    <p style="margin-top: 5px; font-size: 13px; margin-bottom: 0px; text-transform: none; font-family: RobotoLight;">
-                        Nhập mật khẩu hiện tại, nếu mật khẩu chính xác chúng tôi sẽ gửi một đường link thay đổi mật khẩu vào email của bạn.
-                    </p>
-                </h3>
-                {{
-                    Form::open(array(
-                        'action' => 'AccountController@changePassword',
-                        'class' => 'smart-form client-form',
-                        'id' => 'form-change-password',
-                        'method' => 'post',
-                        'data-remote' => 'true',
-                        'data-type' => 'json',
-                        'novalidate'
-                    ))
-                }}
-                <div class="">
-                    <p id="login-error" style="color: #EB0000"></p>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="password" style="text-align: center;">
-                </div>
-                <div style="text-align: center">
-                    <button class="btn btn-default db" type="submit">Xác nhận</button>
-                </div>
-                {{Form::close()}}
-
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
-                    <span style="color: #9F2B33;">Đổi </span>mật khẩu
+                    <span style="color: red;">Đổi mật khẩu</span>
                     <p style="margin-top: 5px; font-size: 13px; margin-bottom: 0px; text-transform: none; font-family: RobotoLight;">
                         Nhập mật khẩu hiện tại, nếu mật khẩu chính xác chúng tôi sẽ gửi một đường link thay đổi mật khẩu vào email của bạn.
                     </p>

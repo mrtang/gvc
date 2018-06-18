@@ -3,8 +3,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Quản lý</span>
-            nhân vật
+            <span class="text-main-1">Quản lý nhân vật</span>
         </span>
     </h3>
 
@@ -15,7 +14,11 @@
                 @foreach ($characters as $character)
                     <div class="col-xs-4">
                         <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat/chi-tiet/'.$character->ID) }}" class="character-account">
+                            @if ($character->Skin)
                             <img src="{{Asset("assets/frontend/skins/$character->Skin.png")}}" style="width: 100%;">
+                            @else
+                            <img src="{{Asset("assets/frontend/skins/unknow.png")}}" style="width: 100%;">
+                            @endif
                             <p style="color: #fff; text-align: center; margin-top: -70px;">{{ $character->CharacterName }}</p>
                             <p style="color: #9F2B33; text-align: center; margin-top: 0px;">@if($character->Active) Đã duyệt @else Chờ duyệt @endif</p>
                         </a>

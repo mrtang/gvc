@@ -108,12 +108,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ URL::to('/tin-tuc') }}">Tin tức</a></li>
-                    <li class="active"><a href="http://forum.gvc.vn/">Diễn đàn</a></li>
-                    <li><a href="#">Cửa hàng</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="{{ URL::to('/tin-tuc') }}">Thông tin</a></li>
                     <li><a href="#">Hướng dẫn</a></li>
-                    <li><a href="{{ URL::to('thong-ke') }}">Thống kê</a></li>
+                    <li class="active"><a href="http://forum.gvc.vn/">Diễn đàn</a></li>
+                    <li><a href="#" style="color: red !important;">Đăng nhập/Đăng ký</a></li>
+                    <li><a href="#">Thư viện</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

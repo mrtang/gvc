@@ -3,8 +3,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Quản lý</span>
-            nhân vật
+            <span class="text-main-1">Quản lý nhân vật</span>
         </span>
     </h3>
 

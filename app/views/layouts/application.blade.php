@@ -35,14 +35,12 @@
         <div id="wrapper">
             @include('elements/app_header')
             <div id="content">
-                <div class="container">
                     <div class="contain-flash">
                         <div class="flash">
                             @include('elements/flash')
                         </div>
                     </div>
                     @yield('content')
-                </div>
             </div>
             @include('elements/app_footer')
         </div>
