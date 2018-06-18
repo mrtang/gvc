@@ -4,7 +4,7 @@
             <div class="col-xs-4">
                 <div class="nk-feature-1">
                     <div class="nk-feature-icon">
-                        <img src="http://gvc.vn/assets/frontend/img/icon-download-1.png" alt="">
+                        <img src="{{Asset('assets/frontendnew/img/icon-download-1.png')}}" alt="">
                     </div>
                     <div class="nk-feature-cont">
                         <h3 class="nk-feature-title"><a href="http://files.sa-mp.com/sa-mp-0.3.7-install.exe">Tải sa-mp</a></h3>
@@ -15,7 +15,7 @@
             <div class="col-xs-4">
                 <div class="nk-feature-1" style="margin: 0 auto !important;">
                     <div class="nk-feature-icon">
-                        <img src="http://gvc.vn/assets/frontend/img/icon-launcher.png" alt="">
+                        <img src="{{Asset('assets/frontendnew/img/icon-launcher.png')}}" alt="">
                     </div>
                     <div class="nk-feature-cont">
                         <h3 class="nk-feature-title"><a href="/Launcher/GvC%20Launcher.exe">GvC launcher</a></h3>
@@ -26,7 +26,7 @@
             <div class="col-xs-4">
                 <div class="nk-feature-1" style="float: right;">
                     <div class="nk-feature-icon">
-                        <img src="http://gvc.vn/assets/frontend/img/icon-download-2.png" alt="">
+                        <img src="{{Asset('assets/frontendnew/img/icon-download-2.png')}}" alt="">
                     </div>
                     <div class="nk-feature-cont">
                         <h3 class="nk-feature-title"><a href="https://www.fshare.vn/file/TRZF7158YT">Tải GTA SA</a></h3>

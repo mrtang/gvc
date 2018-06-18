@@ -2,6 +2,9 @@
     .modal-backdrop {
   z-index: -1;
 }
+.modal-content{
+    border-radius: 15px !important;
+    }
 </style>
 <div class="menu-profile">
     <nav class="navbar navbar-default">
