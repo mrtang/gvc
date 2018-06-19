@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
-                    <span style="color: #9F2B33;">Đổi </span>email
+                    <span style="color: red;">Đổi email</span>
                     <p style="margin-top: 5px; font-size: 13px; margin-bottom: 0px; text-transform: none; font-family: RobotoLight;">
                         Nhập mật khẩu hiện tại và email mới, nếu mật khẩu chính xác chúng tôi sẽ gửi một đường link xác nhận thay đổi email vào email mới của bạn.
                     </p>
