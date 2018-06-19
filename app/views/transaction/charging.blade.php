@@ -4,8 +4,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Nạp</span>
-            thẻ cào
+            <span class="text-main-1">Nạp thẻ cào</span>
         </span>
     </h3>
 

@@ -3,8 +3,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Danh sách</span>
-            hòm thư
+            <span class="text-main-1">Danh sách hòm thư</span>
         </span>
     </h3>
 

@@ -3,8 +3,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Lịch sử</span>
-            nạp thẻ
+            <span class="text-main-1">Lịch sử nạp thẻ</span>
         </span>
     </h3>
 

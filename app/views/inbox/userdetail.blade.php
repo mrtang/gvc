@@ -3,8 +3,7 @@
 
     <h3 class="nk-decorated-h-2">
         <span>
-            <span class="text-main-1">Chi tiết</span>
-            nội dung thư
+            <span class="text-main-1">Chi tiết nội dung thư</span>
         </span>
     </h3>
 
