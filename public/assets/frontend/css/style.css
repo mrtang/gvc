@@ -48,7 +48,7 @@
 body {
     font-family: 'RobotoRegular' !important;
     font-size: 13px !important;
-    background-image: url('/assets/frontend/img/bg-wrapper.png');
+    background-image: url('/assets/frontend/img/nen2.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -124,7 +124,7 @@ img#bg-wrapper {
     width: 100%;
     height: auto;
     background-color: #1E2030;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 #content .slider-special-new {
     width: 100%;
@@ -288,7 +288,7 @@ img#bg-wrapper {
     color: #fff;
 }
 .text-main-1 {
-    color: #42A9F0 !important;
+    color: #0D9DC6 !important;
 }
 
 #content .slider-latests-new {
@@ -463,7 +463,7 @@ input.form-control, textarea.form-control, select.form-control  {
     text-transform: uppercase;
 }
 .gvc-box {
-    border: 1px rgba(171, 161, 162, 0.5) solid !important;
+    /*border: 1px rgba(171, 161, 162, 0.5) solid !important;*/
     background-color: rgba(41, 48, 68, 0.5);
     padding: 0px 25px 25px 25px;
 }
@@ -609,10 +609,10 @@ form .control-label {
     padding: 8px 14px;
 }
 .menu-profile .navbar-default .navbar-nav > li:hover > a {
-    color: #9F2B33 !important;
+    color: #000 !important;
 }
 .menu-profile .navbar-default .navbar-nav > li.active a {
-    color: #9F2B33 !important;
+    color: #990033 !important;
 }
 
 .character-account:hover {
@@ -822,4 +822,9 @@ ul.dropdown-menu > li:hover a {
     position: absolute;
     margin-top: -50px;
     margin-left: -50px;
+}
+
+.text-main-10{
+    color: blue !important;
+    font-size: 16px;
 }
