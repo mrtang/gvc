@@ -1,57 +1,45 @@
 <footer>
-	<div class="container">
-		
-			
-	<div class="widget-1 first footer-widget widget col-lg-4 col-md-4"><div class="title-wrapper"> <h3 class="widget-title"><i class="far fa-newspaper"></i> Tin mới nhất</h3><div class="clear"></div></div> 
-    <ul class="latest-post-w">
-    @foreach(CommonHelper::getNewsLastest() as $news)
-    <?php $imageUrl = Media::find($news->media_id); ?>
-      <li>
-      	<a rel="bookmark" href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}">
-	      	<div class="latest_p_img">
-					<img alt="img" src="{{ $imageUrl->path.$imageUrl->original }}" height="90" width="100">		
-			</div>
-		</a>
+    <div class="container">
+        <div class="footer-left">
+            <img class="only-pc" src="{{Asset('assets/frontendV3/images/partner.jpg')}}" alt="">
+            <img class="only-mobile" src="{{Asset('assets/frontendV3/images/partnerm.jpg')}}" alt="">
+        </div>
 
-        <div class="info">
-
-        	<a href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}" class="pw_maint">{{$news->title}}</a>
-        	<div class="pop_desc">By&nbsp;
-        	<a data-original-title="View all posts by admin" data-toggle="tooltip" href="#">admin</a>
-        	/ <small><i class="fa fa-calendar"></i> {{date('d/m/Y',strtotime($news->created_at))}}</small></div>
-
-		</div>
-
-		<div class="clear"></div>
-
-      </li>
-    @endforeach        
-    </ul>
-</div>        
-<div class="widget-2 footer-widget widget col-lg-4 col-md-4"><div class="title-wrapper"> <h3 class="widget-title"><i class="far fa-newspaper"></i> Tin cập nhật</h3><div class="clear"></div></div> 
-    <ul class="review">
-    	@foreach(CommonHelper::getNewsRandomF() as $news)
-		<?php $imageUrl = Media::find($news->media_id); ?>
-	    <li>
-	    	<a rel="bookmark" href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}">		
-		    	<div class="img">
-					<img alt="img" src="{{ $imageUrl->path.$imageUrl->original }}"><span class="overlay-link"></span>
-				</div>
-			</a>
-			<div class="info">
-				<a rel="bookmark" href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}">
-					<small><i class="far fa-calendar-alt"></i> {{date('d/m/Y',strtotime($news->created_at))}}</small>
-				</a><a href="{{ URL::to('/tin-tuc/'.$news->new_id.'/'.$news->slug.'.html') }}" class="pw_maint">{{$news->title}}</a>	
-			</div>
-			<div class="clear"></div>
-		</li>
-		@endforeach
-    </ul>
-</div>        
-<div class="widget-3 last footer-widget widget col-lg-4 col-md-4"><div class="title-wrapper"><h3 class="widget-title">Cộng đồng</h3><div class="clear"></div></div>
-		<div id="insta-feeds-232" class="insta-feeds">
-			<a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/24.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/23.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/22.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/21.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/20.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/19.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/18.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/17.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/16.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/15.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/14.jpg')}}"><div class="image-hover-overlay"></div></div></a><a class="featured-image" href="#"><div class="item-holder"><img src="{{Asset('assets/frontend/img/gallery/13.jpg')}}"><div class="image-hover-overlay"></div></div></a></div>
-		</div>
-		
-	</div>
+        <div class="footer-center">
+            © 201​8​ Electronic Arts Inc. EA, EA SPORTS, and the EA SPORTS logo are trademarks of Electronic Arts Inc.
+            Official FIFA licensed product. © FIFA name and FIFA's Official Licensed Product Logo are copyrights and/or
+            trademarks of FIFA. All rights reserved. Manufactured under license by Electronic Arts Inc. The use of real
+            player names and likenesses is authorized by FIFPro Commercial Enterprises BV. The Premier League Logo © The
+            Football Association Premier League Limited 2017. The Premier League Logo is a trademark of the Football
+            Association Premier League Limited which is registered in the UK and other jurisdictions. The Premier League
+            Club logos are copyright works and registered trademarks of the respective Clubs. All are used with the kind
+            permission of their respective owners. Manufactured under license from the Football Association Premier
+            League Limited. No association with nor endorsement of this product by any player is intended or implied by
+            the license granted by the Football Association Premier League Limited to Electronic Arts. All other
+            trademarks are the property of their respective owners.
+            <style>
+                footer{
+                    opacity: 1;
+                    color: #898989;
+                }
+                footer .policy{
+                    margin-top: 1rem;
+                }
+                footer .policy a{
+                    color: white;
+                }
+            </style>
+            <div class="policy">
+                <a href="#" target="_blank">Điều khoản dịch vụ</a> | <a href="#" target="_blank">Chính sách Bảo mật</a> | <a href="#" target="_blank">Điều khoản tranh chấp và khiếu nại</a>
+            </div>
+            <div class="company">
+                <div>CÔNG TY CỔ PHẦN GVC</div>
+                <div>Văn phòng đại diện: Tầng 54, tòa nhà Trung tâm Lotte Hà Nội, số 54, đường Liễu Giai, Phường Cống Vị, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.</div>
+                <div>Điện thoại: (04)7305-9696 | Fax: (04)3759-6969</div>
+            </div>
+        </div>
+        <div class="footer-right only-pc">
+            <img src="{{Asset('assets/frontendV3/images/18.jpg')}}" alt="">
+        </div>
+    </div>
 </footer>

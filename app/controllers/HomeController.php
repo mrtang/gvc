@@ -74,7 +74,7 @@ class HomeController extends BaseController {
         Session::put('image', Asset('assets/images/banner-bg-1.png'));
         Session::put('url', URL::to('/'));
         
-        $this->layout = View::make('layouts.layout_index');
+        $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('home.index')->with(array(
             'specialNews' => $specialNews,
             'latestNews' => $latestNews,
