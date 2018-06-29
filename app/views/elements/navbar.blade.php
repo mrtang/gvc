@@ -3,7 +3,7 @@
         <div class="header-left">
             <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/4.png')}}" alt=""></a>
             <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a>
-            <a href="/tin-tuc">Tin tức</a>
+            <a href="{{ URL::to('/tin-tuc') }}" class="{{ Route::currentRouteName() == 'new.list' ? 'active' : ''}}">Tin tức</a>
             <a href="/hoc-vien">Học viện</a>
             <a href="/thu-vien">Thư viện</a>
 <!--            <a href="" data-toggle="modal" data-target="#cashModal">Nạp code</a>-->

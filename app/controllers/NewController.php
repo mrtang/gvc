@@ -156,7 +156,7 @@ class NewController extends \BaseController {
         $totalRecords = $this->news->getTotalRecords($input);
         $latestNews = News::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'asc')->skip(0)->take(5)->get();
 
-        $this->layout = View::make('layouts.layout_other');
+        $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('new.list')->with(array(
             'news' => $news,
             'totalRecords' => $totalRecords,
