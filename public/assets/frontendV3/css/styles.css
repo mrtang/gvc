@@ -2976,7 +2976,7 @@ img {
 
 .library-page ~ header .header-left a.active {
   color: #a3e90c;
-  font-weight: normal; }
+  font-weight: bold; }
 
 .news-page ~ header .header-left a.active {
   color: #a3e90c;
