@@ -2961,26 +2961,26 @@ img {
   margin: 0 auto;
   position: relative; }
 
-.home-page ~ header .header-left a.home {
+.home-page ~ header .header-left a.active {
   color: #a3e90c;
   font-weight: bold; }
 
-.feature-page ~ header .header-left a.feature {
+.feature-page ~ header .header-left a.active {
   color: #a3e90c;
   font-weight: bold; }
 
-.library-page ~ header .header-left a.library {
+.library-page ~ header .header-left a.active {
   color: #a3e90c;
-  font-weight: bold; }
+  font-weight: bold; 
+}
 
-.library-page ~ header .header-left a.feature {
-  color: white;
+.library-page ~ header .header-left a.active {
+  color: #a3e90c;
   font-weight: normal; }
 
-.news-page ~ header .header-left a.news {
+.news-page ~ header .header-left a.active {
   color: #a3e90c;
   font-weight: bold; }
-
 .download-page ~ header .header-left a.download {
   color: #a3e90c;
   font-weight: bold; }
@@ -3013,8 +3013,7 @@ header {
       color: white; }
       header .header-left a:hover {
         text-decoration: none;
-        color: #a3e90c;
-        font-weight: bold; }
+        color: #a3e90c; }
   header .header-right {
     float: right;
     line-height: 6.6rem;
