@@ -88,7 +88,7 @@ class AccountController extends \BaseController {
         if (!empty($input)) {
             $validator = $this->account->validateEdit($input, $id);
             if ($validator->passes()) {
-                $apiKey = '5e47987b566a11cd08caae38498d3953';
+                $apiKey = '2d62d32ea27e7653304430a31976a8e2';
                 $body = [
                     'name'      =>  $input['username'],
                     'email'     =>  $input['email'],
@@ -312,7 +312,7 @@ class AccountController extends \BaseController {
 
         if (!empty($account)) {
             // save account to forum
-            $apiKey = '5e47987b566a11cd08caae38498d3953';
+            $apiKey = '2d62d32ea27e7653304430a31976a8e2';
             $body = [
                 'name'      =>  $account->UserName,
                 'email'     =>  $account->Email,
@@ -498,7 +498,7 @@ class AccountController extends \BaseController {
                 $validator = $this->account->validateUpdatePassword($input);
                 if ($validator->passes()) {
                     if($input['confirm_password'] == $input['password']){
-                        $apiKey = '5e47987b566a11cd08caae38498d3953';
+                        $apiKey = '2d62d32ea27e7653304430a31976a8e2';
                         $body = [
                             'username'  =>  $account->UserName,
                             'email'     =>  $account->Email,
@@ -568,7 +568,7 @@ class AccountController extends \BaseController {
                 Session::put('auth', $account->ID);
             }
 
-            $apiKey = '5e47987b566a11cd08caae38498d3953';
+            $apiKey = '2d62d32ea27e7653304430a31976a8e2';
             $body = [
                 'username'  =>  $account->UserName,
                 'email'     =>  $account->email_new,

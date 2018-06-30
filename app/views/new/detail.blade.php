@@ -1,27 +1,19 @@
 @section('content')
-<div class="col-lg-8 col-md-8 ">
-    <div class="blog-post"><!-- blog-post -->
-
-      <div class="blog-info"><!-- blog-info -->
-        <div class="post-pinfo">
-
-          <a href="#"><img src="{{Asset('assets/frontendnew/images/userava.jpg')}}" class="avatar avatar-60 photo authorimg" alt="author image" sizes="(max-width: 60px) 100vw, 60px" width="60" height="60"> Đăng bởi admin</a>
-          <i>|</i>
-             <span class="date"> {{date('d/m/Y',strtotime($new->updated_at))}}</span>
-
+<div class="side-left">
+                <h1 class="title-detail-news">{{$new->title}}</h1>
+                <div class="time-new">{{date('H',strtotime($new->created_at))}}h{{date('i',strtotime($new->created_at))}} - {{date('d/m/Y',strtotime($new->created_at))}}</div>
+                <div class="category">Tin tức</div>
+                <div class="content-detail-news">{{$new->content}}
+                </div>
+                <div class="sign">
+                    <div class="sign-logo">
+                        <img src="{{Asset('assets/frontendV3/images/4-sign.png')}}" alt="">
+                    </div>
+                    <div class="sign-text">
+                        <h4 class="sign-title">GTA Online Việt Nam</h4>
+                        <div class="sign-slogan">Nơi bạn thực sự đắm chìm và sống trọn đam mê!
+                        </div>
+                    </div>
+                </div>
         </div>
-      <div class="clear"></div>
-      </div><!-- blog-info -->
-
-      <div class="blog-content wcontainer"><!-- /.blog-content -->
-        <h2>
-            <a href="#"> {{$new->title}}</a>
-        </h2>
-        {{$new->content}}
-      </div><!-- /.blog-content -->
-
-      <div class="clear"></div>
-    </div><!-- /.blog-post --><div class="clear"></div>
-    <div class="fb-comments" data-href="https://gta-online.vn/" data-width="100%" data-numposts="5"></div>
-</div>
 @stop

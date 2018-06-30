@@ -154,14 +154,14 @@ class NewController extends \BaseController {
 
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
-        $latestNews = News::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'asc')->skip(0)->take(5)->get();
+        $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->first();
 
         $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('new.list')->with(array(
             'news' => $news,
             'totalRecords' => $totalRecords,
             'input' => $input,
-            'latestNews' => $latestNews
+            'hotNews' => $hotNews
         ));
         $this->layout->content = $view;
     }
@@ -185,7 +185,7 @@ class NewController extends \BaseController {
         Session::put('image', $imageUrl->path.$imageUrl->medium);
         Session::put('url', URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html'));
         
-        $this->layout = View::make('layouts.layout_other');
+        $this->layout = View::make('layouts.layout_sidebar_right_v3');
         $view = View::make('new.detail')->with(array(
             'new' => $new,
             'latestNews' => $latestNews

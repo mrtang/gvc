@@ -27,7 +27,7 @@ class News extends Eloquent {
         
         $query->orderBy('created_at', 'desc')->get();
         
-        $news = $query->paginate(4)->appends($appends);
+        $news = $query->paginate(12)->appends($appends);
         return $news;
     }
     

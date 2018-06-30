@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
+<html lang="en-US" prefix="og: https://ogp.me/ns#" class="no-js no-svg">
+<head>
         <title>
             @section('title')
                 Grand Theft Auto Vietnamese Community
@@ -35,27 +35,32 @@
             }
         </style>
     </head> <!-- end HEAD -->
-    <!-- BEGIN BODY -->
-    <body class="home blog hfeed has-header-image has-sidebar colors-light">
-        @yield('content')
+<body class="post-template-default single single-post postid-514 single-format-standard has-header-image has-sidebar colors-light">
 
-        @include('elements/navbar')
+    <div class="page detail-page">
+        @include('elements/bg_news')
+        <div class="container">
+            @yield('content')
+            @include('elements/right')
+    </div>
+</div>
+@include('elements/navbar')
+<div class="social only-pc">
+    <a target="_blank" href="https://www.facebook.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/facebook.png')}}" alt=""></a>
+    <a target="_blank" href="https://www.youtube.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/youtube.png')}}" alt=""></a>
+</div>
+<div class="go-top" id="go-to-top">
+    <img src="{{Asset('assets/frontendV3/images/gototop.png')}}" alt="">
+</div>
 
-        <div class="social only-pc">
-            <a target="_blank" href="https://www.facebook.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/facebook.png')}}" alt=""></a>
-            <a target="_blank" href="https://www.youtube.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/youtube.png')}}" alt=""></a>
-        </div>
-        <div class="go-top" id="go-to-top">
-            <img src="{{Asset('assets/frontendV3/images/gototop.png')}}" alt="">
-        </div>
-        @include('elements/footer')
+    @include('elements/footer')
 
-        {{ HTML::script('assets/frontendV3/js/libs/jquery.min.js') }}
-        {{ HTML::script('assets/frontendV3/js/libs/bootstrap.min.js') }}
-        {{ HTML::script('assets/frontendV3/js/libs/aos.js') }}
-        {{ HTML::script('assets/frontendV3/js/libs/app.js') }}
-        {{ HTML::script('assets/frontendV3/js/libs/embed.min.js') }}
-         @section('scripts')
-        @show
-    </body>
+    {{ HTML::script('assets/frontendV3/js/libs/jquery.min.js') }}
+    {{ HTML::script('assets/frontendV3/js/libs/bootstrap.min.js') }}
+    {{ HTML::script('assets/frontendV3/js/libs/aos.js') }}
+    {{ HTML::script('assets/frontendV3/js/libs/app.js') }}
+    {{ HTML::script('assets/frontendV3/js/libs/embed.min.js') }}
+     @section('scripts')
+    @show
+</body>
 </html>
