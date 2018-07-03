@@ -6,7 +6,7 @@
     border-radius: 15px !important;
     }
 </style>
-<div class="menu-profile">
+<div class="menu-profile" style="margin-top: 54px;">
     <nav class="navbar navbar-default">
         <div class="container-fluid container">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,7 +54,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
-                    <span style="color: red;">Đổi mật khẩu</span>
+                    <span style="color: #ffc200;">Đổi mật khẩu</span>
                     <p style="margin-top: 5px; font-size: 13px; margin-bottom: 0px; text-transform: none; font-family: RobotoLight;">
                         Nhập mật khẩu hiện tại, nếu mật khẩu chính xác chúng tôi sẽ gửi một đường link thay đổi mật khẩu vào email của bạn.
                     </p>
@@ -77,7 +77,7 @@
                     <input type="password" class="form-control" name="password" style="text-align: center;">
                 </div>
                 <div style="text-align: center">
-                    <button class="btn btn-default db" type="submit">Xác nhận</button>
+                    <button class="btn btn-default db" type="submit" style="width: 90px;height: 30px;">Xác nhận</button>
                 </div>
                 {{Form::close()}}
 
@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
-                    <span style="color: red;">Đổi email</span>
+                    <span style="color: #ffc200;">Đổi email</span>
                     <p style="margin-top: 5px; font-size: 13px; margin-bottom: 0px; text-transform: none; font-family: RobotoLight;">
                         Nhập mật khẩu hiện tại và email mới, nếu mật khẩu chính xác chúng tôi sẽ gửi một đường link xác nhận thay đổi email vào email mới của bạn.
                     </p>
@@ -123,7 +123,7 @@
                     <input type="text" class="form-control" name="email" style="text-align: center;">
                 </div>
                 <div style="text-align: center">
-                    <button class="btn btn-default db" type="submit">Xác nhận</button>
+                    <button class="btn btn-default db" type="submit" style="width: 90px;height: 30px;">Xác nhận</button>
                 </div>
                 {{Form::close()}}
 

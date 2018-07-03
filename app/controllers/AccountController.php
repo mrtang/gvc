@@ -95,7 +95,7 @@ class AccountController extends \BaseController {
                     'key'       =>  $apiKey
                 ];
                 $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, 'http://forum.gvc.vn/api/index.php?/core/members/'.$account->forum_id);
+                curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
                 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
                 curl_setopt($ch, CURLOPT_TIMEOUT,        10);
@@ -157,7 +157,7 @@ class AccountController extends \BaseController {
                 'key'       =>  $apiKey
             ];
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'http://forum.gvc.vn/api/index.php?/core/members');
+            curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members');
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
             curl_setopt($ch, CURLOPT_TIMEOUT,        10);
@@ -321,7 +321,7 @@ class AccountController extends \BaseController {
                 'key'       =>  $apiKey
             ];
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'http://forum.gvc.vn/api/index.php?/core/members');
+            curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members');
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
             curl_setopt($ch, CURLOPT_TIMEOUT,        10);
@@ -352,13 +352,13 @@ class AccountController extends \BaseController {
 
                 $contentInbox = $this->getContentEmailRegisterSuccess($account);
                 $inbox = new Inbox();
-                $inbox->title = 'Chào mừng đến với GvC - Grand Theft Auto Vietnam Community';
+                $inbox->title = 'Chào mừng đến với GTA - Grand Theft Auto Vietnam Community';
                 $inbox->content = $contentInbox;
                 $inbox->sender = 'Hệ thống';
                 $inbox->receive_account_id = $account->ID;
                 $inbox->save();
 
-                Session::flash('f_notice', 'Kích hoạt tài khoản thành công, tài khoản cũng đã được đồng bộ lên forum.gvc.vn');
+                Session::flash('f_notice', 'Kích hoạt tài khoản thành công, tài khoản cũng đã được đồng bộ lên forum.gta-online.vn');
                 return Redirect::to('/');
             }
 
@@ -506,7 +506,7 @@ class AccountController extends \BaseController {
                             'key'       =>  $apiKey
                         ];
                         $ch = curl_init();
-                        curl_setopt($ch, CURLOPT_URL, 'http://forum.gvc.vn/api/index.php?/core/members/'.$account->forum_id);
+                        curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
                         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
                         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
                         curl_setopt($ch, CURLOPT_TIMEOUT,        10);
@@ -576,7 +576,7 @@ class AccountController extends \BaseController {
                 'key'       =>  $apiKey
             ];
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'http://forum.gvc.vn/api/index.php?/core/members/'.$account->forum_id);
+            curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
             curl_setopt($ch, CURLOPT_TIMEOUT,        10);

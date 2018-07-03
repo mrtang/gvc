@@ -8,7 +8,7 @@
     </h3>
 
     <div class='gvc-box' style="margin-top: 20px;">
-        <div class="row" style="border: 1px rgba(171, 161, 162, 0.5) solid !important; border-radius: 1px !important; ">
+        <div class="row" style="">
             <div class="col-xs-12">
                 <div class="row">
                     <div class="col-xs-3">
@@ -16,11 +16,11 @@
                             <a href="#" class="character-account">
                                 <img src="{{Asset("assets/frontend/skins/$character->Skin.png")}}" style="width: 100%; margin-top: 90px;">
                                 <p style="color: #fff; text-align: center; margin-top: -70px;">{{ $character->CharacterName }}</p>
-                                <p style="color: #9F2B33; text-align: center; margin-top: 0px;">@if($character->Active) Đã duyệt @else Chờ duyệt @endif</p>
+                                <p style="color: #ffc200; text-align: center; margin-top: -10px;">@if($character->Active) Đã duyệt @else Chờ duyệt @endif</p>
                             </a>
                         </div>
 
-                        <p style="color: #9F2B33; text-align: center; margin-top: 320px; font-size: 15px; font-family: RobotoBold;">Licenses</p>
+                        <p style="color: #ffc200; text-align: center; margin-top: 450px; font-size: 15px; font-family: RobotoBold;">Licenses</p>
                         <div class="row">
                             @if ($character->Car_License == 1)
                                 <div class="col-xs-4">
@@ -225,7 +225,7 @@
                                         <textarea type="text" name="character_introdue" class="form-control"  rows="5">{{ $character->character_introdue_utf8 }}</textarea>
                                     </div>
                                 </div>
-                                <button class="btn btn-default" type="submit" style="margin-left: 42%; margin-top: 20px; margin-bottom: 30px;">Cập nhật</button>
+                                <button class="btn btn-default" type="submit" style="margin-left: 42%; margin-top: 20px; margin-bottom: 30px; width: 90px; height: 30px;">Cập nhật</button>
                                 {{Form::close()}}
                             </div>
                         </div>

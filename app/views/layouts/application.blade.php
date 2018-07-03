@@ -20,6 +20,7 @@
         {{ HTML::style('assets/frontend/css/swiper.min.css') }}
         {{ HTML::style('assets/frontend/css/animate.css') }}
         {{ HTML::style('assets/frontend/css/style.css') }}
+        {{ HTML::style('assets/frontendV3/css/styles.css') }}
 
         <!-- FAVICONS -->
         <link rel="shortcut icon" href="{{Asset('assets/frontend/img/logo.png')}}" type="image/x-icon">
@@ -32,7 +33,7 @@
         <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
     </head>
     <body class="">
-        <div id="wrapper">
+
             @include('elements/app_header')
             <div id="content">
                     <div class="contain-flash">
@@ -43,7 +44,7 @@
                     @yield('content')
             </div>
             @include('elements/app_footer')
-        </div>
+
 
         {{ HTML::script('assets/frontend/js/libs/jquery-3.1.1.min.js') }}
         {{ HTML::script('assets/frontend/js/libs/jquery-ui-1.10.3.min.js') }}

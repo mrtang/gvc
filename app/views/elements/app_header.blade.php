@@ -1,23 +1,35 @@
+<header class="only-pc" style="position: absolute;">
+    <?php $currentAccount = BaseController::getAccountInfo(); ?>
+    <div class="container">
+        <div class="header-left">
+            <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/4.png')}}" alt=""></a>
+            <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a>
+            <a href="{{ URL::to('/tin-tuc') }}" class="{{ Route::currentRouteName() == 'new.list' ? 'active' : ''}}">Tin tức</a>
+            <a href="/hoc-vien">Học viện</a>
+            <a href="/thu-vien">Thư viện</a>
+<!--            <a href="" data-toggle="modal" data-target="#cashModal">Nạp code</a>-->
+            <a href="#" class="support" target="_blank">Hỗ trợ</a>
+            <a href="#" class="support" target="_blank" style="font-size: 1.3rem">Tài khoản</a>
+        </div>
+        <div class="header-right actions">
+            <a href="#" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
+            <a href=""  data-toggle="modal" data-target="#loginModal" class="btn-action small recharge btn-gray"><span>Đăng nhập</span></a>
+            <a href="/tai-game" class="btn-action small download btn-green">
+<!--            <a href="javascript:void(0)" class="btn-action small download btn-green"  data-toggle="modal" data-target="#commingSoonModal">-->
+                <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
+                <span>Tải GTA</span>
+            </a>
+            <div class="search">
+                <input type="text" placeholder="Nhập nội dung tìm kiếm">
+                <img src="{{Asset('assets/frontendV3/images/icon-search.png')}}" alt="">
+            </div>
+        </div>
+    </div>
+</header>
 <div id="header">
     <div class="header-auth">
         <div class="container">
             <?php $currentAccount = BaseController::getAccountInfo(); ?>
-            @if (empty($currentAccount))
-            <a class="pull-right" data-toggle="modal" data-target="#loginModal" style="cursor: pointer; ">
-                <i class="glyphicon glyphicon-user"></i>
-            </a>
-            @else
-            <a class="pull-right" href="{{ URL::to('/dang-xuat') }}" style="color: #fff; margin-left: 5px; margin-top: 1px;">
-                Đăng xuất
-            </a>
-            <a class="pull-right" style="color: #fff; margin-left: 5px;  margin-top: 1px;">
-                G-Coin: <span style="color: orange" class="money-format">{{ $currentAccount->Coin }}</span> |
-            </a>
-            <a class="pull-right" href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" style="color: #fff; margin-top: 0px;">
-                Xin chào: <span style="color: orange">{{ $currentAccount->UserName }}</span> |
-            </a>
-            @endif
-
             @if (empty($currentAccount))
             <!-- Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -90,32 +102,4 @@
             @endif
         </div>
     </div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">
-                    <img src="{{Asset('assets/frontend/img/logo.png')}}">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">Trang chủ</a></li>
-                    <li><a href="{{ URL::to('/tin-tuc') }}">Thông tin</a></li>
-                    <li><a href="#">Hướng dẫn</a></li>
-                    <li class="active"><a href="http://forum.gvc.vn/">Diễn đàn</a></li>
-                    <li><a href="#" style="color: red !important;">Đăng nhập/Đăng ký</a></li>
-                    <li><a href="#">Thư viện</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
 </div>

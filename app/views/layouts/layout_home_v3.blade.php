@@ -55,7 +55,191 @@
         {{ HTML::script('assets/frontendV3/js/libs/aos.js') }}
         {{ HTML::script('assets/frontendV3/js/libs/app.js') }}
         {{ HTML::script('assets/frontendV3/js/libs/embed.min.js') }}
+        {{ HTML::script('assets/frontend/js/libs/common.js') }}
+        {{ HTML::script('assets/frontend/js/script.js') }}
          @section('scripts')
         @show
+        <script>
+            (function($) {
+                var $document = $(document);
+
+                /**
+                 * login (normal)
+                 */
+                $document.on({
+                    'ajax:beforeSend': function() {
+                        $.utils.clearFieldError('form-admin-login');
+                        $(this).find('.btn').attr('disabled', 'disabled');
+                        $('#login-error').text('');
+                        $('.alert').css('display', 'none');
+                    },
+                    'ajax:success': function(e, data) {
+                        console.log(data);
+                        if (data.status) {
+                            if (typeof data.redirect != '') {
+                                window.location.href = data.redirect;
+                            } else {
+                                window.location.reload();
+                            }
+
+                        } else {
+                            if (data.code == 'invalid_data') {
+                                for (var field in data.messages) {
+                                    //$.utils.showFieldError('form-admin-login', field, data.messages[field][0]);
+
+                                    $('#login-error').text(data.messages[field][0]);
+                                    break;
+                                }
+                                $.utils.autoFocus('form-admin-login', '.input-error');
+                            }
+                            else {
+                                $('#login-error').text(data.message);
+                                $('.alert').css('display', 'block');
+                            }
+
+                        }
+                    },
+                    'ajax:complete': function() {
+                        $(this).find('.btn').removeAttr('disabled');
+                    }
+
+                }, '#form-admin-login');
+
+
+                $document.on({
+                    'ajax:beforeSend': function() {
+                        $.utils.clearFieldError('form-change-password');
+                        $(this).find('.btn').attr('disabled', 'disabled');
+                        $('#login-error').text('');
+                        $('.alert').css('display', 'none');
+                    },
+                    'ajax:success': function(e, data) {
+                        console.log(data);
+                        if (data.status) {
+                            if (typeof data.redirect != '') {
+                                window.location.href = data.redirect;
+                            } else {
+                                window.location.reload();
+                            }
+
+                        } else {
+                            if (data.code == 'invalid_data') {
+                                for (var field in data.messages) {
+                                    $.utils.showFieldError('form-change-password', field, data.messages[field][0], 1);
+
+                                    //$('#login-error').text(data.messages[field][0]);
+                                    //break;
+                                }
+                                $.utils.autoFocus('form-change-password', '.input-error');
+                            }
+                            else {
+                                $('#login-error').text(data.message);
+                                $('.alert').css('display', 'block');
+                            }
+
+                        }
+                    },
+                    'ajax:complete': function() {
+                        $(this).find('.btn').removeAttr('disabled');
+                    }
+
+                }, '#form-change-password');
+
+                /**
+                 * Admin forgot password (normal)
+                 */
+                $document.on({
+                    'ajax:beforeSend': function() {
+                        $.utils.clearFieldError('form-user-forgotpass');
+                        $(this).find('.btn').attr('disabled', 'disabled');
+                        $('#login-error').text('');
+                        $('.alert').css('display', 'none');
+                        $('#send-success').text('');
+                    },
+                    'ajax:success': function(e, data) {
+                        if (data.status) {
+                            if (typeof data.redirect != '') {
+                                window.location.href = data.redirect;
+                            } else {
+                                window.location.reload();
+                            }
+                            //$('#send-success').text('Chúng tôi đã gửi mật khẩu mới vào email của bạn, vui lòng kiểm tra email.');
+                        } else {
+                            if (data.code == 'invalid_data') {
+                                for (var field in data.messages) {
+                                    $.utils.showFieldError('form-user-forgotpass', field, data.messages[field][0], 1);
+                                }
+                                $.utils.autoFocus('form-user-forgotpass', '.input-error');
+                                $('#login-error').text('');
+                            }
+                            else {
+                                $('#login-error').text(data.message);
+                                $('.alert').css('display', 'block');
+                            }
+
+                        }
+                    },
+                    'ajax:complete': function() {
+                        $(this).find('.btn').removeAttr('disabled');
+                    }
+
+                }, '#form-user-forgotpass');
+
+
+                $document.on({
+                    'ajax:beforeSend': function() {
+                        $.utils.clearFieldError('form-change-email');
+                        $(this).find('.btn').attr('disabled', 'disabled');
+                        $('#login-error').text('');
+                        $('.alert').css('display', 'none');
+                    },
+                    'ajax:success': function(e, data) {
+                        console.log(data);
+                        if (data.status) {
+                            if (typeof data.redirect != '') {
+                                window.location.href = data.redirect;
+                            } else {
+                                window.location.reload();
+                            }
+
+                        } else {
+                            if (data.code == 'invalid_data') {
+                                for (var field in data.messages) {
+                                    $.utils.showFieldError('form-change-email', field, data.messages[field][0], 1);
+
+                                    //$('#login-error').text(data.messages[field][0]);
+                                    //break;
+                                }
+                                $.utils.autoFocus('form-change-email', '.input-error');
+                            }
+                            else {
+                                $('#login-error').text(data.message);
+                                $('.alert').css('display', 'block');
+                            }
+
+                        }
+                    },
+                    'ajax:complete': function() {
+                        $(this).find('.btn').removeAttr('disabled');
+                    }
+
+                }, '#form-change-email');
+
+
+                $('#forgotPass').click(function(){
+                    $( ".forgotPassword" ).animate({
+                        height: "toggle"
+                    }, 200, function() {
+                    });
+                });
+            })(jQuery);
+
+            $(document).ready(function() {
+                $('#agree').keyup(function() {
+                    if ($(this).val() == 'tôi đồng ý')
+                    $('#next-step').css('display', 'block');
+                });
+            });
+        </script>
     </body>
 </html>

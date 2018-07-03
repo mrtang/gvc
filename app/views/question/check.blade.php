@@ -1,4 +1,5 @@
 @section('content')
+    <div style="margin-top: 70px;">
     <h3 class="nk-decorated-h-2">
         <span>
             <span class="text-main-1">Đăng ký</span>
@@ -17,8 +18,8 @@
         <p class="color-white"> Để tham gia cộng đồng của chúng tôi, bạn cần phải hoàn tất các bước đăng ký phía dưới, việc đăng ký tài khoản sẽ cho phép bạn khởi tạo một tài khoản quản lý tại GvC. Bạn có thể sử dụng nó để sử dụng các dịch vụ mà chúng tôi cung cấp và nó có thể sử dụng để quản lý nhiều nhân vật trong máy chủ của GvC, điều đó cho phép bạn có nhiều hơn một nhân vật trong môi trường Roleplay của GvC. Xin lưu ý, bạn sẽ không thể truy cập vào máy chủ cho tới khi bạn khởi tạo một nhân vật trong tài khoản quản lý của mình. </p>
         <p class="color-white"> * Để trả lời câu hỏi, bạn cần phải đọc những <a href="http://forum.gvc.vn/index.php?/topic/10-noi-quy-tai-gvc-cap-nhat-07052017/" class="color-red">quy tắc</a> của GvC.</p>
     </div>
-
-    <div class="question-box">
+    </div>
+    <div class="question-box" style="margin-bottom: 80px;">
         <h4 style="text-align: center; margin-top: 30px;" class="color-white">Danh sách câu hỏi</h4>
         <p style="color: #D01D34; font-size: 20px; text-align: center;">{{ $errorMessage }}</p>
         {{ Form::open(array(

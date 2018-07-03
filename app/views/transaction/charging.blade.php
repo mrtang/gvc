@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-xs-8 col-xs-offset-4">
-                        <button class="btn btn-default db" type="submit">Nạp tiền</button>
+                        <button class="btn btn-default db" type="submit" style="width: 90px;height: 30px;">Nạp tiền</button>
                     </div>
                 </div>
             {{Form::close()}}
