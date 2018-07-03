@@ -257,6 +257,7 @@ img#bg-wrapper {
 .nk-decorated-h-2 {
     display: -ms-flexbox;
     display: flex;
+    margin-top: 21px;
 }
 .nk-decorated-h-2::after, .nk-decorated-h-2::before, .nk-decorated-h::after, .nk-decorated-h::before {
     content: '';
@@ -281,14 +282,15 @@ img#bg-wrapper {
     -ms-flex: auto;
     flex: auto;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 40px;
     text-transform: uppercase;
     z-index: 2;
     font-family: 'RobotoBold';
-    color: #fff;
+    color: #ffc200;
+    margin-bottom: 2px;
 }
 .text-main-1 {
-    color: #0D9DC6 !important;
+    color: #ffc200 !important;
 }
 
 #content .slider-latests-new {
@@ -421,13 +423,14 @@ img#bg-wrapper {
     position: relative;
     min-height: 50px;
     padding: 20px 0;
+    opacity: 0.6;
 }
 #footer .copyright {
     text-transform: uppercase;
     color: #fff;
     font-family: 'RobotoBold';
     text-align: center;
-    margin-top: 70px;
+    font-size: 16px;
 }
 #footer img {
     width: 60px;
@@ -444,6 +447,8 @@ img#bg-wrapper {
 #loginModal .modal-dialog, #emailModal .modal-dialog {
     max-width: 400px;
     margin-top: 100px;
+    border: 1px solid #ffc200 !important;
+    border-radius: 16px;
 }
 #loginModal .modal-dialog .modal-content, #emailModal .modal-dialog .modal-content {
     background-color: rgba(41, 48, 68, 0.9);
@@ -585,9 +590,10 @@ form .control-label {
     cursor: default;
 }
 .menu-profile .navbar-default {
-    background-color: #00CCFF;
+    background-color: #142A3D;
     border: none;
     border-radius: 0 !important;
+    opacity: 0.9;
 }
 .menu-profile .navbar {
     position: relative;
@@ -609,10 +615,10 @@ form .control-label {
     padding: 8px 14px;
 }
 .menu-profile .navbar-default .navbar-nav > li:hover > a {
-    color: #000 !important;
+    color: #ffc200 !important;
 }
 .menu-profile .navbar-default .navbar-nav > li.active a {
-    color: #990033 !important;
+    color: #ffc200 !important;
 }
 
 .character-account:hover {
@@ -622,7 +628,7 @@ form .control-label {
 .character-account:hover p {
     color: #fff !important;
 }
-.character-account img {
+.character-account img{
 
 }
 .character-account:hover img {
@@ -783,14 +789,14 @@ blockquote {
     padding-left: 0px !important;
 }
 ul.dropdown-menu {
-    background-color: #00CCFF;
+    background-color: #ffc200;
     padding: 0px;
 }
 ul.dropdown-menu > li {
 
 }
 ul.dropdown-menu > li a {
-    color: #fff;
+    color: #000;
     padding: 6px 15px;
     font-family: RobotoLight;
 }
