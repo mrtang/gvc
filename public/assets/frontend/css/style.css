@@ -48,7 +48,7 @@
 body {
     font-family: 'RobotoRegular' !important;
     font-size: 13px !important;
-    background-image: url('/assets/frontend/img/nen2.png');
+    background-image: url('/assets/frontend/img/nen2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -418,12 +418,11 @@ img#bg-wrapper {
 #footer {
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    background-color: #000;
     position: relative;
     min-height: 50px;
     padding: 20px 0;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 #footer .copyright {
     text-transform: uppercase;

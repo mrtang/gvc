@@ -2943,7 +2943,7 @@ body {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #39840c; }
+  color: #feba01; }
 
 a {
   display: inline-block; }
@@ -2962,27 +2962,27 @@ img {
   position: relative; }
 
 .home-page ~ header .header-left a.active {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; }
 
 .feature-page ~ header .header-left a.active {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; }
 
 .library-page ~ header .header-left a.active {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; 
 }
 
 .library-page ~ header .header-left a.active {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; }
 
 .news-page ~ header .header-left a.active {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; }
 .download-page ~ header .header-left a.download {
-  color: #a3e90c;
+  color: #feba01;
   font-weight: bold; }
 
 header {
@@ -3013,7 +3013,7 @@ header {
       color: white; }
       header .header-left a:hover {
         text-decoration: none;
-        color: #a3e90c; }
+        color: #feba01; }
   header .header-right {
     float: right;
     line-height: 6.6rem;
@@ -3021,7 +3021,7 @@ header {
     header .header-right a, header .header-right a:hover {
       text-decoration: none; }
     header .header-right .register {
-      color: #a3e90c; }
+      color: #feba01; }
       header .header-right .register img {
         vertical-align: sub;
         width: 2.5rem;
@@ -3044,11 +3044,11 @@ header {
         right: 0rem;
         width: 5rem;
         height: 5.4rem;
-        border: 1px solid #c5ff45;
+        border: 1px solid #feba01;
         background: #0e263a;
         border-radius: 0.8rem;
         z-index: 10;
-        color: #c5ff45;
+        color: #feba01;
         outline: none;
         font-size: 1.9rem; }
         header .header-right .search input::-webkit-input-placeholder {
@@ -3145,10 +3145,10 @@ header {
   .section-1 .bg-light {
     background: url("../images/light.png") no-repeat top center !important;
     background-size: 100%; }
-  .section-1 .bg-ronaldo {
+  /*.section-1 .bg-ronaldo {
     background: url("../images/Ronaldo.png") no-repeat top center;
     top: 9%;
-    background-size: 100%; }
+    background-size: 100%; }*/
   .section-1 .bg-blur {
     background: url("../images/bg-blur.png") no-repeat top center;
     bottom: 0px;
@@ -3340,7 +3340,7 @@ header {
   text-decoration: none; }
 
 .actions .btn-green {
-  background-color: #a3e90c;
+  background-color: #feba01;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(45, 45, 45, 0.2)));
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2)); }
@@ -3356,7 +3356,7 @@ header {
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2));
   background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2)); }
   .actions .btn-gray:hover {
-    background-color: #a3e90c;
+    background-color: #feba01;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(45, 45, 45, 0.2)));
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2));
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(45, 45, 45, 0.2)); }
@@ -3487,10 +3487,10 @@ header {
       background: transparent; }
       .actions.thin-actions a.white:hover {
         background: #1c1f26;
-        color: #96d610; }
+        color: #feba01; }
     .actions.thin-actions a.dark {
       background: #1c1f26;
-      color: #96d610; }
+      color: #feba01; }
       .actions.thin-actions a.dark:hover {
         color: #1c1f26;
         background: transparent; }
@@ -3531,12 +3531,12 @@ header {
   .section-3 .section-left {
     width: 46%; }
   .section-3 .section-text .title-news {
-    color: #96d610; }
+    color: #feba01; }
   .section-3 .section-text .actions a {
-    border-color: #96d610;
-    color: #96d610; }
+    border-color: #feba01;
+    color: #feba01; }
     .section-3 .section-text .actions a:hover {
-      background: #96d610;
+      background: #feba01;
       color: #1c1f26; }
 
 .section.section-dynamic {
@@ -3628,12 +3628,12 @@ header {
   background-size: 1920px;
   color: white; }
   .section-5 .section-text .title-news {
-    color: #96d610; }
+    color: #feba01; }
   .section-5 .section-text .actions a {
-    border-color: #96d610;
-    color: #96d610; }
+    border-color: #feba01;
+    color: #feba01; }
     .section-5 .section-text .actions a:hover {
-      background: #96d610;
+      background: #feba01;
       color: #1c1f26; }
 
 .section-6 {
@@ -3681,7 +3681,7 @@ header {
     .section-6 .topic:last-child {
       margin-right: 0px; }
     .section-6 .topic .topic-title {
-      color: #96d610;
+      color: #feba01;
       font-size: 2.5rem;
       font-weight: 400; }
     .section-6 .topic .topic-image {
@@ -3727,7 +3727,7 @@ header {
         color: #96d610; }
       .section-7 .latest-news .news-title a {
         font-size: 3.5rem;
-        color: #39840c; }
+        color: #feba01; }
     .section-7 .latest-news .news-time {
       color: #a3a3a3;
       font-size: 1.6rem; }
@@ -3743,7 +3743,7 @@ header {
       margin-bottom: 3rem;
       margin-right: 3%; }
       .section-7 .list-news .news .news-title {
-        color: #39840c;
+        color: #feba01;
         margin-top: 2rem;
         display: block;
         font-size: 2.4rem; }
@@ -3759,7 +3759,7 @@ header {
           min-height: 25rem; }
   .section-7 .actions a {
     width: 26rem;
-    color: #96d610;
+    color: #feba01;
     border-radius: 0.5rem;
     background: #1c1f26; }
     .section-7 .actions a:hover {
@@ -3780,7 +3780,7 @@ header {
   .detail-page .title-detail-news {
     text-transform: uppercase;
     font-size: 3rem;
-    color: #39840c; }
+    color: #feba01; }
   .detail-page .category {
     background: gray;
     display: inline-block;
@@ -3812,7 +3812,7 @@ header {
       vertical-align: middle;
       text-align: left; }
   .detail-page .side-title {
-    color: #39840c;
+    color: #feba01;
     font-size: 3rem;
     text-transform: uppercase;
     border-bottom: 1px solid #0d1017;
@@ -4268,10 +4268,10 @@ footer {
     .section-1 .bg-light {
       background: url("https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/light.png") no-repeat bottom center;
       background-size: 100% auto; }
-    .section-1 .bg-ronaldo {
+    /*.section-1 .bg-ronaldo {
       background: url("https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/ronadol.png") no-repeat bottom center;
       background-size: 100% auto;
-      top: 0rem; }
+      top: 0rem; }*/
     .section-1 .bg-blur {
       background: url("https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/bg-blur.png") no-repeat bottom center;
       background-size: 100% auto;
@@ -4728,15 +4728,15 @@ footer {
 @media all and (min-width: 751px) {
   .section-1 .bg-base:not(.base-download) {
     background: url("../images/main-bg.jpg") no-repeat top center;
-    background-size: 100%; }
+    background-size: 100%;height: 100%; }
   .section-1 .bg-light {
     background: url("../images/light.png") no-repeat top center !important;
     background-size: 100%;
     background: transparent !important; }
-  .section-1 .bg-ronaldo {
+  /*.section-1 .bg-ronaldo {
     background: url("../images/cr7.png") no-repeat top center;
     top: 9%;
-    background-size: 100%; }
+    background-size: 100%; }*/
   .section-1 .bg-blur {
     background: url("../images/bg-blur.png") no-repeat top center;
     bottom: 0px;
@@ -4757,9 +4757,9 @@ footer {
     background: url("../images/light.png") no-repeat top center !important;
     background-size: 100%;
     background: transparent !important; }
-  .section-1 .bg-ronaldo {
+  /*.section-1 .bg-ronaldo {
     background: url("../images/text.png") no-repeat top center;
-    background-size: 100%; }
+    background-size: 100%; }*/
   .section-1 .bg-blur {
     background: url("../images/bg-blur.png") no-repeat top center;
     bottom: 0px;
