@@ -45,10 +45,6 @@
     </div>
 </div>
 @include('elements/navbar')
-<div class="social only-pc">
-    <a target="_blank" href="https://www.facebook.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/facebook.png')}}" alt=""></a>
-    <a target="_blank" href="https://www.youtube.com/gta-online/"><img src="{{Asset('assets/frontendV3/images/youtube.png')}}" alt=""></a>
-</div>
 <div class="go-top" id="go-to-top">
     <img src="{{Asset('assets/frontendV3/images/gototop.png')}}" alt="">
 </div>

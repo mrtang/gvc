@@ -1,5 +1,48 @@
 @section('content')
 <div class="page library-page feature-page">
+        <div class="section section-6">
+            <div class="bg-image-wrapper">
+                <img src="" alt="" class="bg only-pc">
+                <img src="" alt="" class="bg only-mobile">
+            </div>
+            <div class="section-main-content">
+                <div class="container">
+                    <?php $imageUrlH = Media::find($hotNews->media_id); ?>
+                    <div class="topics-wrapper">
+                        <div class="topic">
+                            <h2 class="topic-title">{{$hotNews->title}}</h2>
+                            <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">
+                                <img class="topic-image only-pc" src="{{ $imageUrlH->path.$imageUrlH->original }}" alt="">
+                            </a>
+                            <p class="topic-caption" alt="">
+                                {{$hotNews->summary}}
+                            </p>
+                            <div class="actions">
+                                <a class="btn-action small btn-green" href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">Xem
+                                    ngay</a>
+                            </div>
+                        </div>
+                        <div class="topic">
+                            <h2 class="topic-title">Hướng dẫn người mới</h2>
+                            <a href="?topic=huong-dan-nguoi-moi">
+                                <img class="topic-image only-pc" src="/wp-content/themes/fo4/images/feature-2.png" alt="">
+                                <img class="topic-image only-mobile" src="/wp-content/themes/fo4/images/mobile/feature-2.png" alt="">
+                            </a>
+                            <p class="topic-caption" alt="">
+                                Thư viện hướng dẫn dành cho những người lần đầu tiếp xúc với FIFA Online 4. Thế giới trò
+                                chơi của chúng ta hết sức rộng lớn với nhiều tính năng phong phú, vì thế, đừng ngại theo
+                                dõi những video này trước khi tham gia trò chơi.
+                            </p>
+                            <div class="actions">
+                                <a class="btn-action small btn-green" href="?topic=huong-dan-nguoi-moi">Xem
+                                    ngay</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section section-7">
             <img class="texture only-pc top" data-aos="fade-up-right" data-aos-duration="1000"
                  src="{{Asset('assets/frontendV3/images/texture/pc/news-2-top.png')}}"/>
