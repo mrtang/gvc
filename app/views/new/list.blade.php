@@ -2,8 +2,7 @@
 <div class="page library-page feature-page">
         <div class="section section-6">
             <div class="bg-image-wrapper">
-                <img src="" alt="" class="bg only-pc">
-                <img src="" alt="" class="bg only-mobile">
+                <img src="{{Asset('assets/frontendV3/images/section-6-bg.jpg')}}" alt="" class="bg only-pc">
             </div>
             <div class="section-main-content">
                 <div class="container">
@@ -26,8 +25,7 @@
                             <?php $imageUrlNT = Media::find($hotNotice->media_id); ?>
                             <h2 class="topic-title">{{substr($hotNotice->title, 0, 27)}}</h2>
                             <a href="{{ URL::to('/tin-tuc/'.$imageUrlNT->new_id.'/'.$imageUrlNT->slug.'.html') }}">
-                                <img class="topic-image only-pc" src="{{ $imageUrlNT->path.$imageUrlNT->original }}" alt="" style="height: 180px !important;">
-                                <img class="topic-image only-mobile" src="/wp-content/themes/fo4/images/mobile/feature-2.png" alt="">
+                                <img class="topic-image only-pc img-responsive" src="{{ $imageUrlNT->path.$imageUrlNT->original }}" alt="" style="height: 180px !important;">
                             </a>
                             <p class="topic-caption" alt="">
                                 {{$hotNotice->summary}}

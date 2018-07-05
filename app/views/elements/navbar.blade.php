@@ -13,7 +13,7 @@
         <div class="header-right actions">
             @if (empty($currentAccount))
             <a href="{{ URL::to('/cau-hoi-dang-ky') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
-            <a href="#"  data-toggle="modal" data-target="#loginModal" class="btn-action small recharge btn-gray"><span>Đăng nhập</span></a>
+            <a href="#"  data-toggle="modal" data-target="#loginModal" class="btn-action small btn-gray"><span>Đăng nhập</span></a>
             @else
             <a href="{{ URL::to('/dang-xuat') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng xuất</a>
             <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" class="btn-action small recharge btn-gray"><span>{{$currentAccount->UserName}}</span></a>

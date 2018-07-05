@@ -17,7 +17,7 @@
                     }
                 }
             </style>
-            <img class="texture only-pc top" data-aos="fade-down-left"
+            <!--img class="texture only-pc top" data-aos="fade-down-left"
                  data-aos-duration="1000"
                  src="{{Asset('assets/frontendV3/images/texture/pc/slide-1-top.png')}}"/>
             <img class="texture only-pc bottom" data-aos="fade-down-left"
@@ -25,7 +25,7 @@
                  src="{{Asset('assets/frontendV3/images/texture/pc/slide-1-bottom-down.png')}}"/>
             <img class="texture only-pc bottom up" data-aos="fade-up-right"
                  data-aos-duration="1000"
-                 src="{{Asset('assets/frontendV3/images/texture/pc/slide-1-bottom-up.png')}}"/>
+                 src="{{Asset('assets/frontendV3/images/texture/pc/slide-1-bottom-up.png')}}"/-->
             <div class="bg-image bg-base"></div>
             <div class="bg-image bg-light"></div>
             <div class="bg-image bg-ronaldo" data-aos="zoom-out-right" data-aos-duration="1500"></div>
