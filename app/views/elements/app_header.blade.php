@@ -1,3 +1,11 @@
+<style type="text/css">
+    .modal-backdrop {
+  z-index: -1;
+}
+.modal-content{
+    border-radius: 15px !important;
+    }
+</style>
 <header class="only-pc" style="position: absolute;">
     <?php $currentAccount = BaseController::getAccountInfo(); ?>
     <div class="container">
@@ -69,11 +77,11 @@
                                 <p style="text-align: right; font-family: RobotoLight; font-size: 13px; margin-bottom: 0px;"><a href="javascript:void(0)" id="forgotPass" style="color: #EB0000;">Quên mật khẩu ?</a></p>
                                 <p style="text-align: right; font-family: RobotoLight; font-size: 13px; margin-top: 0px;"><a href="{{ URL::to('/cau-hoi-dang-ky') }}" style="color: #EB0000;">Chưa có tài khoản ? Đăng ký</a></p>
                                 <div style="text-align: center">
-                                    <button class="btn btn-default db" type="submit">Đăng nhập</button>
+                                    <button class="btn btn-default db" type="submit" style="width: 80px;height: 30px;">Đăng nhập</button>
                                 </div>
                             {{Form::close()}}
 
-                            <div class="forgotPassword">
+                            <div class="forgotPassword" style="display: none; margin-top: 20px;">
                                 {{ Form::open(array(
                                 'action' => 'AccountController@forgot',
                                 'id' => 'form-user-forgotpass',
@@ -93,7 +101,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <button class="btn btn-default db" type="submit"> Gửi</button>
+                                            <button class="btn btn-default db" type="submit" style="width: 40px;height: 30px;"> Gửi</button>
                                         </div>
                                     </div>
                                 </div>
