@@ -48,9 +48,8 @@
 body {
     font-family: 'RobotoRegular' !important;
     font-size: 13px !important;
-    background-image: url('/assets/frontend/img/nen2.jpg');
+    background: url('/assets/frontend/img/background2.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     height: auto;
     -padding-top: 66.64%;
@@ -123,8 +122,6 @@ img#bg-wrapper {
 #content {
     width: 100%;
     height: auto;
-    background-color: #1E2030;
-    opacity: 0.8;
 }
 #content .slider-special-new {
     width: 100%;
