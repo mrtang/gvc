@@ -155,13 +155,15 @@ class NewController extends \BaseController {
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
         $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->first();
+        $hotNotice = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->first();
 
         $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('new.list')->with(array(
             'news' => $news,
             'totalRecords' => $totalRecords,
             'input' => $input,
-            'hotNews' => $hotNews
+            'hotNews' => $hotNews,
+            'hotNotice' => $hotNotice
         ));
         $this->layout->content = $view;
     }

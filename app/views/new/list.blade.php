@@ -10,7 +10,7 @@
                     <?php $imageUrlH = Media::find($hotNews->media_id); ?>
                     <div class="topics-wrapper">
                         <div class="topic">
-                            <h2 class="topic-title">{{$hotNews->title}}</h2>
+                            <h2 class="topic-title">{{substr($hotNews->title, 0, 27)}}</h2>
                             <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">
                                 <img class="topic-image only-pc" src="{{ $imageUrlH->path.$imageUrlH->original }}" alt="">
                             </a>
@@ -23,18 +23,17 @@
                             </div>
                         </div>
                         <div class="topic">
-                            <h2 class="topic-title">Hướng dẫn người mới</h2>
-                            <a href="?topic=huong-dan-nguoi-moi">
-                                <img class="topic-image only-pc" src="/wp-content/themes/fo4/images/feature-2.png" alt="">
+                            <?php $imageUrlNT = Media::find($hotNotice->media_id); ?>
+                            <h2 class="topic-title">{{substr($hotNotice->title, 0, 27)}}</h2>
+                            <a href="{{ URL::to('/tin-tuc/'.$imageUrlNT->new_id.'/'.$imageUrlNT->slug.'.html') }}">
+                                <img class="topic-image only-pc" src="{{ $imageUrlNT->path.$imageUrlNT->original }}" alt="" style="height: 180px !important;">
                                 <img class="topic-image only-mobile" src="/wp-content/themes/fo4/images/mobile/feature-2.png" alt="">
                             </a>
                             <p class="topic-caption" alt="">
-                                Thư viện hướng dẫn dành cho những người lần đầu tiếp xúc với FIFA Online 4. Thế giới trò
-                                chơi của chúng ta hết sức rộng lớn với nhiều tính năng phong phú, vì thế, đừng ngại theo
-                                dõi những video này trước khi tham gia trò chơi.
+                                {{$hotNotice->summary}}
                             </p>
                             <div class="actions">
-                                <a class="btn-action small btn-green" href="?topic=huong-dan-nguoi-moi">Xem
+                                <a class="btn-action small btn-green" href="{{ URL::to('/tin-tuc/'.$imageUrlNT->new_id.'/'.$imageUrlNT->slug.'.html') }}">Xem
                                     ngay</a>
                             </div>
 

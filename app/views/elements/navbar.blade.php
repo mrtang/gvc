@@ -18,7 +18,7 @@
             <a href="{{ URL::to('/dang-xuat') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng xuất</a>
             <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" class="btn-action small recharge btn-gray"><span>{{$currentAccount->UserName}}</span></a>
             @endif
-            <a href="/tai-game" class="btn-action small download btn-green">
+            <a href="https://gta-online.vn/Launcher/GvC%20Launcher.exe" class="btn-action small download btn-green">
 <!--            <a href="javascript:void(0)" class="btn-action small download btn-green"  data-toggle="modal" data-target="#commingSoonModal">-->
                 <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                 <span>Tải GTA</span>
@@ -33,17 +33,11 @@
 <header class="only-mobile">
     <div class="header-horizontal">
         <a href="/" class="logo" data-aos="zoom-in-right">
-            <img src="{{Asset('assets/frontendV3/images/logo.png')}}" alt="">
+            <img class="img-responsive" src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" alt="" style="width: 52px;margin-top: 3px;">
         </a>
         <span class="right">
-            <a href="https://www.facebook.com/officialfo4vn/" class="facebook">
-                <img src="images/facebook.png" alt="">
-            </a>
-            <a href="https://www.youtube.com/channel/UCrCqu1n0H52uGETAoSmgNdQ" class="youtube">
-                <img src="{{Asset('assets/frontendV3/images/youtube.png')}}" alt="">
-            </a>
             <a class="menu">
-                <img src="{{Asset('assets/frontendV3/images/mobile/menu.png')}}" alt="">
+                <img src="{{Asset('assets/frontendV3/images/menu.png')}}" alt="">
             </a>
         </span>
     </div>
@@ -55,31 +49,21 @@
     <div class="menu-wrapper">
         <div class="logo-menu">
             <span class="close-menu">X</span>
-            <a href="/"><img src="images/fo4.png" alt=""></a>
+            <a href="/"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" alt=""></a>
         </div>
         <ul>
             <li class="search">
                 <input type="text" placeholder="Nhập nội dung tìm kiếm">
-                <img src="images/icon-search.png" alt="">
+                <img src="{{Asset('assets/frontendV3/images/icon-search.png')}}" alt="">
             </li>
             <li><a href="/" class="menu-home {{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a></li>
-            <li><a href="/tin-tuc" class="menu-news">Tin tức</a></li>
-            <li><a href="/hoc-vien" class="menu-feature">Học viện</a></li>
-            <li><a href="/thu-vien" class="">Thư viện</a></li>
+            <li><a href="{{ URL::to('/tin-tuc') }}" class="menu-news">Tin tức</a></li>
+            <li><a href="#" class="menu-feature">Học viện</a></li>
+            <li><a href="#" class="">Thư viện</a></li>
 <!--            <li><a  data-toggle="modal" data-target="#cashModal" class="menu-recharge">Nạp code</a></li>-->
-            <li><a href="#" class="menu-support">Hỗ trợ</a></li>
-            <li><a href="#" class="menu-support" target="_blank">EP Point Shop</a></li>
-            <li><a href="#" class="menu-support" target="_blank">Tài khoản</a></li>
+            <li><a href="#" class="menu-support" target="_blank">G-shop</a></li>
             <li>
-                <a href="#" class="register"><img src="images/icon-person.png" alt="">Đăng ký</a>
-            </li>
-            <li class="actions">
-                <a href="" data-toggle="modal" data-target="#helpModal" class="btn-action small recharge btn-green"><img src="{{Asset('assets/frontendV3/images/C.png')}}" alt=""><span>Nạp FC</span></a>
-            </li>
-            <li class="actions">
-                <a href="/tai-game" class="btn-action small download btn-gray">
-                    <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt=""><span>Tải GTA</span>
-                </a>
+                <a href="{{ URL::to('/cau-hoi-dang-ky') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
             </li>
         </ul>
     </div>

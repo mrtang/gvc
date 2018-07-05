@@ -32,7 +32,7 @@
             <div class="bg-image bg-blur"></div>
             <div class="content">
                 <div class="actions">
-                    <a href="#" class="btn-action big download btn-green only-pc">
+                    <a href="https://gta-online.vn/Launcher/GvC%20Launcher.exe" class="btn-action big download btn-green only-pc">
                         <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                         <span class="text">Tải game</span>
                     </a>
@@ -79,8 +79,6 @@
                 <div class="bg-image-wrapper">
                     <img class="img-responsive" src="{{Asset('assets/frontendV3/images/dong-hanh-1.jpg')}}" alt=""
                          class="bg only-pc">
-                    <img src="{{Asset('assets/frontendV3/images/dong-hanh-2.png')}}" alt=""
-                         class="bg only-mobile">
                 </div>
             </div>
                                     <div class="section section-3 section-dynamic">
@@ -114,8 +112,6 @@
                 <div class="bg-image-wrapper">
                     <img class="img-responsive" src="{{Asset('assets/frontendV3/images/TOTY_desktop.jpg')}}" alt=""
                          class="bg only-pc">
-                    <img src="{{Asset('assets/frontendV3/images/TOTY_mobile.png')}}" alt=""
-                         class="bg only-mobile">
                 </div>
             </div>
                                     <div class="section section-4 section-dynamic">
@@ -138,8 +134,6 @@
                 <div class="bg-image-wrapper">
                     <img class="img-responsive" src="{{Asset('assets/frontendV3/images/nap-lan-dau-nhan-qua-ngau-FO4-desktop.jpg')}}" alt=""
                          class="bg only-pc">
-                    <img src="{{Asset('assets/frontendV3/images/nap-lan-dau-nhan-qua-ngau-FO4-mobile.png')}}" alt=""
-                         class="bg only-mobile">
                 </div>
             </div>
                                     <div class="section section-5 section-dynamic">
@@ -163,8 +157,6 @@
                 <div class="bg-image-wrapper">
                     <img class="img-responsive" src="{{Asset('assets/frontendV3/images/Ep-poin-shop-1.jpg')}}" alt=""
                          class="bg only-pc">
-                    <img src="{{Asset('assets/frontendV3/images/Ep-poin-shop-mobile.png')}}" alt=""
-                         class="bg only-mobile">
                 </div>
             </div>
     </div>

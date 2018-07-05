@@ -5,16 +5,15 @@
             <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-bottom: 3px;" alt=""></a>
             <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a>
             <a href="{{ URL::to('/tin-tuc') }}" class="{{ Route::currentRouteName() == 'new.list' ? 'active' : ''}}">Tin tức</a>
-            <a href="/hoc-vien">Học viện</a>
-            <a href="/thu-vien">Thư viện</a>
+            <a href="#">Học viện</a>
+            <a href="#">Thư viện</a>
 <!--            <a href="" data-toggle="modal" data-target="#cashModal">Nạp code</a>-->
-            <a href="#" class="support" target="_blank">Hỗ trợ</a>
-            <a href="#" class="support" target="_blank" style="font-size: 1.3rem">Tài khoản</a>
+            <a href="#" class="support" target="_blank" style="font-size: 1.3rem">G-shop</a>
         </div>
         <div class="header-right actions">
-            <a href="#" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
-            <a href=""  data-toggle="modal" data-target="#loginModal" class="btn-action small recharge btn-gray"><span>Đăng nhập</span></a>
-            <a href="/tai-game" class="btn-action small download btn-green">
+            <a href="{{ URL::to('/dang-xuat') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng xuất</a>
+            <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" class="btn-action small recharge btn-gray"><span>{{$currentAccount->UserName}}</span></a>
+            <a href="https://gta-online.vn/Launcher/GvC%20Launcher.exe" class="btn-action small download btn-green">
 <!--            <a href="javascript:void(0)" class="btn-action small download btn-green"  data-toggle="modal" data-target="#commingSoonModal">-->
                 <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                 <span>Tải GTA</span>
