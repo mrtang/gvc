@@ -42,6 +42,10 @@ Route::get('/tin-tuc/{id}/{slug}.html',                 array('as' => 'new.detai
 Route::get('/tai-khoan/xep-hang',                       array('as' => 'account.ranking', 'uses' => 'AccountController@ranking'));
 Route::get('/tai-khoan/vi-pham',                        array('as' => 'account.banned', 'uses' => 'AccountController@banned'));
 Route::get('/dailydiscount',                            array('as' => 'dailydiscount', 'uses' => 'HomeController@dailydiscount'));
+
+Route::get('/hoc-vien',                                 array('as' => 'academy.list', 'uses' => 'AcademyController@index'));
+Route::get('/thu-vien',                                 array('as' => 'library.list', 'uses' => 'LibraryController@index'));
+Route::get('/shop',                                     array('as' => 'shop.list', 'uses' => 'ShopController@index'));
 Route::get("launcher/statics", function() {
     //return File::get(public_path() . '/Launcher/statics/index.php');
     ob_start();

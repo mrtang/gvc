@@ -6,47 +6,39 @@
             </div>
             <div class="section-main-content">
                 <div class="container">
-                    <div class="topic">
-                        <h2 class="topic-title">Thông báo | Sự kiện</h2>
-                        <a href="?topic=thong-bao-su-kien">
-                            <img class="topic-image only-pc" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/category-news-1.png" alt="">
-                            <img class="topic-image only-mobile" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/category-news-1.png" alt="">
-                        </a>
-                        <p class="topic-caption" alt="">
-                            Nơi cập nhật những tin tức mới nhất về các sự kiện ingame, sự kiện offline, giải đấu, và tất tần
-                            tật các thông tin khác của FIFA Online 4 Việt Nam
-                        </p>
-                        <div class="actions">
-                            <a class="btn-action small btn-green" href="?topic=thong-bao-su-kien">Xem ngay</a>
+                    <div class="topics-wrapper">
+                        <div class="topic">
+                            <h2 class="topic-title">Bản tin cập nhật</h2>
+                            <a href="?topic=ban-tin-cap-nhat">
+                                <img class="topic-image only-pc" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/category-news-1.png" alt="">
+                                <img class="topic-image only-mobile" src="/wp-content/themes/fo4/images/mobile/feature-1.png" alt="">
+                            </a>
+                            <p class="topic-caption" alt="">
+                                "Những thay đổi quan trọng của FIFA Online 4 mà bạn cần lưu ý để tránh bỏ quên những
+                                tính năng tuyệt vời của chúng tôi sau mỗi lần cập nhật.
+                                Hãy chắc rằng mình sẽ không bị “out meta” nhé!"
+                            </p>
+                            <div class="actions">
+                                <a class="btn-action small btn-green" href="?topic=ban-tin-cap-nhat">Xem
+                                    ngay</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="topic">
-                        <h2 class="topic-title">Tin khuyến mãi</h2>
-                        <a href="?topic=tin-khuyen-mai">
-                            <img class="topic-image only-pc" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/category-news-2.png" alt="">
-                            <img class="topic-image only-mobile" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/category-news-2.png" alt="">
-                        </a>
-                        <p class="topic-caption" alt="">
-                            Nơi chia sẻ những tin tức khuyến mãi cực hot trong FIFA Online 4 Việt Nam
-                        </p>
-                        <div class="actions">
-                            <a class="btn-action small btn-green" href="?topic=tin-khuyen-mai">Xem ngay</a>
-                        </div>
+                        <div class="topic">
+                            <h2 class="topic-title">Hướng dẫn người mới</h2>
+                            <a href="?topic=huong-dan-nguoi-moi">
+                                <img class="topic-image only-pc" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/category-news-1.png" alt="">
+                                <img class="topic-image only-mobile" src="/wp-content/themes/fo4/images/mobile/feature-2.png" alt="">
+                            </a>
+                            <p class="topic-caption" alt="">
+                                Thư viện hướng dẫn dành cho những người lần đầu tiếp xúc với FIFA Online 4. Thế giới trò
+                                chơi của chúng ta hết sức rộng lớn với nhiều tính năng phong phú, vì thế, đừng ngại theo
+                                dõi những video này trước khi tham gia trò chơi.
+                            </p>
+                            <div class="actions">
+                                <a class="btn-action small btn-green" href="?topic=huong-dan-nguoi-moi">Xem
+                                    ngay</a>
+                            </div>
 
-                    </div>
-                    <div class="topic">
-                        <h2 class="topic-title">Thông tin vật phẩm</h2>
-                        <a href="?topic=thong-tin-vat-pham">
-                            <img class="topic-image only-pc" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/category-news-3.png" alt="">
-                            <img class="topic-image only-mobile" src="https://cdn.vn.garenanow.com/web/fo3/fo4/home-page/images/mobile/category-news-3.png" alt="">
-                        </a>
-                        <p class="topic-caption" alt="">
-                            FO4 Shop đang bày bán những vật phẩm gì? Chất lượng của từng món ra sao? Tất cả các thông tin đó
-                            sẽ được lưu ý ở đây
-                        </p>
-                        <div class="actions">
-                            <a class="btn-action small btn-green" href="?topic=thong-tin-vat-pham">Xem
-                                ngay</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +61,7 @@
                  src="{{Asset('assets/frontendV3/images/texture/mobile/news-2-right.png')}}"/>
             <div class="container">
                 <div class="section-news" id="thu-vien">
-                                        <h1 class="title-section" style="font-family: Roboto Condensed;">Tin khuyến mãi</h1>
+                                        <h1 class="title-section" style="font-family: Roboto Condensed;">Bản tin cập nhật</h1>
                     <div class="latest-news">
                             <div class="left-side only-pc">
                                 <?php $imageUrl = Media::find($hotNews->media_id); ?>
