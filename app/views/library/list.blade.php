@@ -21,23 +21,23 @@
                     <div class="latest-news">
                             <div class="left-side only-pc">
                                 <?php $imageUrl = Media::find($hotNews->media_id); ?>
-                                <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">
+                                <a href="{{ URL::to('/thu-vien/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">
                                     <img src="{{ $imageUrl->path.$imageUrl->original }}"
                                          alt="">
                                 </a>
                             </div>
                             <div class="right-side">
                                 <h2 class="news-title">
-                                    <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">{{$hotNews->title}}</a>
+                                    <a href="{{ URL::to('/thu-vien/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">{{$hotNews->title}}</a>
                                 </h2>
                                 <div class="news-time">{{date('H',strtotime($hotNews->created_at))}}h{{date('i',strtotime($hotNews->created_at))}} - {{date('d/m/Y',strtotime($hotNews->created_at))}}</div>
-                                <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}" class="only-mobile">
+                                <a href="{{ URL::to('/thu-vien/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}" class="only-mobile">
                                     <img src="{{ $imageUrl->path.$imageUrl->original }}"
                                          alt="">
                                 </a>
                                 <div class="news-caption">{{$hotNews->summary}}</div>
                                 <div class="actions thin-actions">
-                                    <a href="{{ URL::to('/tin-tuc/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">Xem chi tiết</a>
+                                    <a href="{{ URL::to('/thu-vien/'.$hotNews->new_id.'/'.$hotNews->slug.'.html') }}">Xem chi tiết</a>
                                 </div>
                             </div>
                     </div>
@@ -45,13 +45,13 @@
                         @foreach($news as $value)
                             <div class="news">
                                 <?php $imageUrlN = Media::find($value->media_id); ?>
-                                <a href="{{ URL::to('/tin-tuc/'.$value->new_id.'/'.$value->slug.'.html') }}">
+                                <a href="{{ URL::to('/thu-vien/'.$value->new_id.'/'.$value->slug.'.html') }}">
                                     <img src="{{ $imageUrlN->path.$imageUrlN->original }}"
                                          alt="" class="new-image">
                                 </a>
                                 <h5>
                                     <a class="news-title"
-                                       href="{{ URL::to('/tin-tuc/'.$value->new_id.'/'.$value->slug.'.html') }}">{{$value->title}}</a>
+                                       href="{{ URL::to('/thu-vien/'.$value->new_id.'/'.$value->slug.'.html') }}">{{$value->title}}</a>
                                 </h5>
                                 <div class="news-time">{{date('H',strtotime($value->created_at))}}h{{date('i',strtotime($value->created_at))}} - {{date('d/m/Y',strtotime($value->created_at))}}</div>
                                 <div class="new-caption">{{$value->summary}}</div>

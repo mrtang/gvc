@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý tin tức
+    Quản lý danh mục tin tức
 @stop
 
 @section('style')
@@ -12,27 +12,24 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-table"></i> 
-                            <span> Danh sách tin tức</span>
+                            <span> Danh mục tin tức</span>
                         </p>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-2">
-                        <a href="{{ URL::to('admin/new/create') }}" class="btn btn-pink pull-right btn-create"><i class="fa fa-plus"></i> Tạo tin tức</a>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3">
-                        <a href="{{ URL::to('admin/catenews') }}" class="btn btn-pink pull-right btn-create"><i class="fa fa-table"></i> Danh mục tin tức</a>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <a href="{{ URL::to('admin/catenews/create') }}" class="btn btn-pink pull-right btn-create"><i class="fa fa-plus"></i> Tạo danh mục</a>
                     </div>
                 </div>
                 <div class="search-box">
                     {{ Form::open(array(
-                        'url' => URL::to('/admin/new'),
+                        'url' => URL::to('/admin/catenews'),
                         'class' => '',
                         'method' => 'get',
                     )) }}
                         <div class="content-form">
                             <div class="row">
                                 <div class="col-sm-6 form-group">
-                                    <label>Tiêu đề tin tức</label>
-                                    <input type="text" name="title" class="form-control" value="{{{ isset($input['title']) ? $input['title'] : '' }}}" placeholder="Nhập tiêu đề tin tức để tìm kiếm"></input>
+                                    <label>Tên danh mục</label>
+                                    <input type="text" name="title" class="form-control" value="{{{ isset($input['title']) ? $input['title'] : '' }}}" placeholder="Nhập tên danh mục để tìm kiếm"></input>
                                 </div>
                                 <div class="col-sm-1">
                                     <button class="btn btn-primary pull-right" type="submit" style="margin-top: 25px; padding: 6px 8px;"> Tìm kiếm</button>
@@ -59,7 +56,7 @@
                             <tr>
                                 <th class="fix-width-30 col-center">Mã</th>
                                 <th class="fix-width-50 col-center">Ảnh</th>
-                                <th>Tiêu đề</th>
+                                <th>Tên danh mục</th>
                                 <th class="fix-width-120">Ngày tạo</th>
                                 <th class="fix-width-100 col-center">@lang('form.label.action')</th>
                             </tr>
@@ -67,17 +64,17 @@
                         <tbody>
                             @foreach ($news as $new)
                                 <tr>
-                                    <td style="text-align: center !important;">{{ $new->new_id }}</td>
+                                    <td style="text-align: center !important;">{{ $new->id }}</td>
                                     <td class="fix-width-50">
                                         <?php $imageUrl = Media::find($new->media_id); ?>
                                         <img src="{{ $imageUrl->path.$imageUrl->thumb }}" style="width: 60px; height: 40px;">
                                     </td>
-                                    <td>{{{ $new->title }}}</td>
+                                    <td>{{{ $new->name }}}</td>
                                     <td>{{ date('d-m-Y H:i', strtotime($new->created_at)) }}</td>
                                     <td>
                                         @if ($new->is_deleted != 1) 
-                                        <a href="{{ URL::to('/admin/new/edit/'.$new->new_id) }}" class="btn btn-primary has-tooltip" title="Sửa"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="{{ URL::to('/admin/new/delete/'.$new->new_id) }}" 
+                                        <a href="{{ URL::to('/admin/catenews/edit/'.$new->id) }}" class="btn btn-primary has-tooltip" title="Sửa"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="{{ URL::to('/admin/catenews/delete/'.$new->id) }}" 
                                             class="delete-new btn btn-danger has-tooltip" 
                                             title="Xóa"
                                             data-method="post" 
@@ -104,5 +101,5 @@
 @stop
 
 @section('scripts')
-    {{ HTML::script('assets/js/elements/new.js') }}
+    {{ HTML::script('assets/js/elements/catenews.js') }}
 @stop

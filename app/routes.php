@@ -44,7 +44,8 @@ Route::get('/tai-khoan/vi-pham',                        array('as' => 'account.b
 Route::get('/dailydiscount',                            array('as' => 'dailydiscount', 'uses' => 'HomeController@dailydiscount'));
 
 Route::get('/hoc-vien',                                 array('as' => 'academy.list', 'uses' => 'AcademyController@index'));
-Route::get('/thu-vien',                                 array('as' => 'library.list', 'uses' => 'LibraryController@index'));
+Route::get('/thu-vien',                                 array('as' => 'library.list', 'uses' => 'LibraryController@listnew'));
+Route::get('/thu-vien/{id}/{slug}.html',                 array('as' => 'library.detail', 'uses' => 'LibraryController@detail'));
 Route::get('/shop',                                     array('as' => 'shop.list', 'uses' => 'ShopController@index'));
 Route::get("launcher/statics", function() {
     //return File::get(public_path() . '/Launcher/statics/index.php');
@@ -128,6 +129,20 @@ Route::group(array('before'=>'adminFilter'), function(){
     Route::any('/admin/new/edit/{id}',             array('as' => 'admin.new.edit', 'uses' => 'NewController@edit'));
     Route::post('/admin/new/status/{id}',          array('as' => 'admin.new.status', 'uses' => 'NewController@status'));
     Route::post('/admin/new/delete/{id}',          array('as' => 'admin.new.delete', 'uses' => 'NewController@delete'));
+
+    //Routes for categories news
+    Route::get('/admin/catenews',                   array('as' => 'admin.catenews', 'uses' => 'CategoryNewsController@index'));
+    Route::any('/admin/catenews/create',            array('as' => 'admin.catenews.create', 'uses' => 'CategoryNewsController@create'));
+    Route::any('/admin/catenews/edit/{id}',         array('as' => 'admin.catenews.edit', 'uses' => 'CategoryNewsController@edit'));
+    Route::post('/admin/catenews/status/{id}',      array('as' => 'admin.catenews.status', 'uses' => 'CategoryNewsController@status'));
+    Route::post('/admin/catenews/delete/{id}',      array('as' => 'admin.catenews.delete', 'uses' => 'CategoryNewsController@delete'));
+
+    // routes for library
+    Route::get('/admin/library',                       array('as' => 'admin.library', 'uses' => 'LibraryController@index'));
+    Route::any('/admin/library/create',                array('as' => 'admin.library.create', 'uses' => 'LibraryController@create'));
+    Route::any('/admin/library/edit/{id}',             array('as' => 'admin.library.edit', 'uses' => 'LibraryController@edit'));
+    Route::post('/admin/library/status/{id}',          array('as' => 'admin.library.status', 'uses' => 'LibraryController@status'));
+    Route::post('/admin/library/delete/{id}',          array('as' => 'admin.library.delete', 'uses' => 'LibraryController@delete'));
 
     // routes for discounts
     Route::get('/admin/discount',                       array('as' => 'admin.discount', 'uses' => 'DiscountController@index'));
