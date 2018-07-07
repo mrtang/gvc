@@ -145,4 +145,8 @@ class CommonHelper {
         $news = CategoryNews::get();
         return $news;
     }
+    public static function getCateAcademy(){
+        $news = CategoryAcademy::get();
+        return $news;
+    }
 }

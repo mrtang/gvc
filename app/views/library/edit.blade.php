@@ -29,7 +29,7 @@
                 )) }}
                 
                     <!-- Edit: type = 1 -->
-                    @include('new.form', array('type' => 1))
+                    @include('library.form', array('type' => 1))
                 
                 {{ Form::close() }}
                 

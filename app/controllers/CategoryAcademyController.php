@@ -1,11 +1,11 @@
 <?php
 
-class CategoryNewsController extends \BaseController {
+class CategoryAcademyController extends \BaseController {
     protected $layout = 'layouts.admin';
     
-    public function __construct(CategoryNews $cNews) {
+    public function __construct(CategoryAcademy $cAcademy) {
         parent::__construct();
-        $this->news = $cNews;
+        $this->news = $cAcademy;
     }
 
     public function index() {
@@ -14,7 +14,7 @@ class CategoryNewsController extends \BaseController {
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
         
-        $view = View::make('cateNews.index')->with(array(
+        $view = View::make('cateAcademy.index')->with(array(
             'news' => $news,
             'totalRecords' => $totalRecords,
             'input' => $input
@@ -31,7 +31,7 @@ class CategoryNewsController extends \BaseController {
                 Session::flash('f_notice', 'Tạo mới thành công');            
                 return Response::json(array(
                     'status' => 1,
-                    'redirect' => route('admin.catenews'),
+                    'redirect' => route('admin.cateacademy'),
                     'message' => 'Tạo mới thành công'
                 ));
                 
@@ -42,7 +42,7 @@ class CategoryNewsController extends \BaseController {
                     'messages' =>  CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
             }       
         } else {
-            $view = View::make('cateNews.create');
+            $view = View::make('cateAcademy.create');
             $this->layout->content = $view;
         }
     }
@@ -55,8 +55,8 @@ class CategoryNewsController extends \BaseController {
      * @return Response
      */
     public function edit($id) {
-        $new = CategoryNews::find($id);
-        if (empty($new)) Redirect::to('/admin/catenews');
+        $new = CategoryAcademy::find($id);
+        if (empty($new)) Redirect::to('/admin/cateacademy');
         
         $input = array_map('trim', Input::all());
         if (!empty($input)) {
@@ -66,7 +66,7 @@ class CategoryNewsController extends \BaseController {
                 Session::flash('f_notice', 'Cập nhật thành công');            
                 return Response::json(array(
                     'status' => 1,
-                    'redirect' => route('admin.catenews'),
+                    'redirect' => route('admin.cateacademy'),
                     'message' => 'Cập nhật thành công'
                 ));
                 
@@ -77,7 +77,7 @@ class CategoryNewsController extends \BaseController {
                     'messages' =>  CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
             }       
         } else {
-            $view = View::make('cateNews.edit')->with(array(
+            $view = View::make('cateAcademy.edit')->with(array(
                 'new' => $new,
             ));
             $this->layout->content = $view;
@@ -92,14 +92,14 @@ class CategoryNewsController extends \BaseController {
      * @return response
      */
     public function delete($id) {
-        $new = CategoryNews::find($id);
-        if (empty($new)) Redirect::to('/admin/catenews');
+        $new = CategoryAcademy::find($id);
+        if (empty($new)) Redirect::to('/admin/cateacademy');
    
-        CategoryNews::destroy($id);
+        CategoryAcademy::destroy($id);
         Session::flash('f_notice', 'Danh mục đã được xóa thành công');
         return Response::json(array(
             'status' => 1,
-            'href' => URL::to('/admin/catenews'),
+            'href' => URL::to('/admin/cateacademy'),
         ));
     }
 }

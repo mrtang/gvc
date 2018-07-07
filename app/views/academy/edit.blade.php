@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý tin tức
+    Quản lý tin học viện
 @stop
 
 @section('style')
@@ -12,15 +12,15 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-pencil-square-o"></i> 
-                            <span> Cập nhật tin tức</span>
+                            <span> Cập nhật tin học viện</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <a href="{{ URL::to('admin/new') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách tin tức</a>
+                        <a href="{{ URL::to('admin/academy') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách tin tức</a>
                     </div>
                 </div>
                 {{ Form::open(array(
-                    'url' => URL::to('/admin/new/edit/'.$new->new_id),
+                    'url' => URL::to('/admin/academy/edit/'.$new->new_id),
                     'id' => 'form-new-edit',
                     'class' => '',
                     'method' => 'put',

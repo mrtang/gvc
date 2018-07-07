@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý tin tức
+    Quản lý danh mục tin tức
 @stop
 
 @section('style')
@@ -12,15 +12,15 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-pencil-square-o"></i> 
-                            <span> Cập nhật tin tức</span>
+                            <span> Cập nhật danh mục</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <a href="{{ URL::to('admin/new') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách tin tức</a>
+                        <a href="{{ URL::to('admin/cateacademy') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách danh mục học viện</a>
                     </div>
                 </div>
                 {{ Form::open(array(
-                    'url' => URL::to('/admin/new/edit/'.$new->new_id),
+                    'url' => URL::to('/admin/cateacademy/edit/'.$new->id),
                     'id' => 'form-new-edit',
                     'class' => '',
                     'method' => 'put',
@@ -29,7 +29,7 @@
                 )) }}
                 
                     <!-- Edit: type = 1 -->
-                    @include('new.form', array('type' => 1))
+                    @include('cateAcademy.form')
                 
                 {{ Form::close() }}
                 
@@ -39,5 +39,5 @@
     </div>
 @stop
 @section('scripts')
-    {{ HTML::script('assets/js/elements/new.js') }}
+    {{ HTML::script('assets/js/elements/catenews.js') }}
 @stop

@@ -12,7 +12,7 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-plus-square"></i> 
-                            <span> Tạo mới tin tức</span>
+                            <span> Tạo mới danh mục</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">

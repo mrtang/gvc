@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý tin thư viện
+    Quản lý danh mục học viện
 @stop
 
 @section('style')
@@ -12,15 +12,15 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-plus-square"></i> 
-                            <span> Tạo mới tin</span>
+                            <span> Tạo mới danh mục</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <a href="{{ URL::to('admin/library') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách tin</a>
+                        <a href="{{ URL::to('admin/cateacademy') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách danh mục học viện</a>
                     </div>
                 </div>
                     {{ Form::open(array(
-			            'url' => URL::to('/admin/library/create'),
+			            'url' => URL::to('/admin/cateacademy/create'),
 			            'id' => 'form-new-new',
 			            'class' => '',
 			            'method' => 'post',
@@ -28,7 +28,7 @@
 			            'data-type' => 'json'
 			        )) }}
 			            <!-- Create: type = 0 -->
-			            @include('library.form', array('type' => 0))
+			            @include('cateAcademy.form')
 			        
 			        {{ Form::close() }}
 			        
@@ -38,6 +38,6 @@
     </div>
 @stop
 @section('scripts')
-    {{ HTML::script('assets/js/elements/new.js') }}
+    {{ HTML::script('assets/js/elements/catenews.js') }}
 @stop
 

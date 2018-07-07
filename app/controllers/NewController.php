@@ -155,7 +155,6 @@ class NewController extends \BaseController {
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
         $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->first();
-        $hotNotice = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->first();
         $cateNews = CategoryNews::orderBy('created_at', 'asc')->take(3)->get();
 
         $this->layout = View::make('layouts.layout_home_v3');
@@ -164,7 +163,6 @@ class NewController extends \BaseController {
             'totalRecords' => $totalRecords,
             'input' => $input,
             'hotNews' => $hotNews,
-            'hotNotice' => $hotNotice,
             'listCate' => $cateNews
         ));
         $this->layout->content = $view;
@@ -197,7 +195,6 @@ class NewController extends \BaseController {
             return Redirect::action('HomeController@index');
         }
         
-        $latestNews = News::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'desc')->skip(0)->take(5)->get();
         $imageUrl = Media::find($new->media_id);
         
         Session::put('title', $new->title);
@@ -208,7 +205,6 @@ class NewController extends \BaseController {
         $this->layout = View::make('layouts.layout_sidebar_right_v3');
         $view = View::make('new.detail')->with(array(
             'new' => $new,
-            'latestNews' => $latestNews
         ));
         $this->layout->content = $view;
     }

@@ -44,9 +44,11 @@ Route::get('/tai-khoan/xep-hang',                       array('as' => 'account.r
 Route::get('/tai-khoan/vi-pham',                        array('as' => 'account.banned', 'uses' => 'AccountController@banned'));
 Route::get('/dailydiscount',                            array('as' => 'dailydiscount', 'uses' => 'HomeController@dailydiscount'));
 
-Route::get('/hoc-vien',                                 array('as' => 'academy.list', 'uses' => 'AcademyController@index'));
+Route::get('/hoc-vien',                                 array('as' => 'academy.list', 'uses' => 'AcademyController@listnew'));
+Route::get('/hoc-vien/{id}/{slug}.html',                array('as' => 'academy.detail', 'uses' => 'AcademyController@detail'));
+Route::get('/hoc-vien/danh-muc/{id}/{slug}.html',       array('as' => 'academy.category', 'uses' => 'AcademyController@category'));
 Route::get('/thu-vien',                                 array('as' => 'library.list', 'uses' => 'LibraryController@listnew'));
-Route::get('/thu-vien/{id}/{slug}.html',                 array('as' => 'library.detail', 'uses' => 'LibraryController@detail'));
+Route::get('/thu-vien/{id}/{slug}.html',                array('as' => 'library.detail', 'uses' => 'LibraryController@detail'));
 Route::get('/shop',                                     array('as' => 'shop.list', 'uses' => 'ShopController@index'));
 Route::get("launcher/statics", function() {
     //return File::get(public_path() . '/Launcher/statics/index.php');
@@ -144,6 +146,20 @@ Route::group(array('before'=>'adminFilter'), function(){
     Route::any('/admin/library/edit/{id}',             array('as' => 'admin.library.edit', 'uses' => 'LibraryController@edit'));
     Route::post('/admin/library/status/{id}',          array('as' => 'admin.library.status', 'uses' => 'LibraryController@status'));
     Route::post('/admin/library/delete/{id}',          array('as' => 'admin.library.delete', 'uses' => 'LibraryController@delete'));
+
+    //Routes for categories academy
+    Route::get('/admin/cateacademy',                   array('as' => 'admin.cateacademy', 'uses' => 'CategoryAcademyController@index'));
+    Route::any('/admin/cateacademy/create',            array('as' => 'admin.cateacademy.create', 'uses' => 'CategoryAcademyController@create'));
+    Route::any('/admin/cateacademy/edit/{id}',         array('as' => 'admin.cateacademy.edit', 'uses' => 'CategoryAcademyController@edit'));
+    Route::post('/admin/cateacademy/status/{id}',      array('as' => 'admin.cateacademy.status', 'uses' => 'CategoryAcademyController@status'));
+    Route::post('/admin/cateacademy/delete/{id}',      array('as' => 'admin.cateacademy.delete', 'uses' => 'CategoryAcademyController@delete'));
+
+    // routes for academy
+    Route::get('/admin/academy',                       array('as' => 'admin.academy', 'uses' => 'AcademyController@index'));
+    Route::any('/admin/academy/create',                array('as' => 'admin.academy.create', 'uses' => 'AcademyController@create'));
+    Route::any('/admin/academy/edit/{id}',             array('as' => 'admin.academy.edit', 'uses' => 'AcademyController@edit'));
+    Route::post('/admin/academy/status/{id}',          array('as' => 'admin.academy.status', 'uses' => 'AcademyController@status'));
+    Route::post('/admin/academy/delete/{id}',          array('as' => 'admin.academy.delete', 'uses' => 'AcademyController@delete'));
 
     // routes for discounts
     Route::get('/admin/discount',                       array('as' => 'admin.discount', 'uses' => 'DiscountController@index'));

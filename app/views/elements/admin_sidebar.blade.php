@@ -30,6 +30,12 @@
                     <span class="menu-item-parent">Quản lý thư viện</span>
                 </a>
             </li>
+            <li class="{{ Route::currentRouteName() == 'admin.academy' ? 'active' : '' }}">
+                <a href="{{ URL::to('/admin/academy') }}" title="Quản lý học viện">
+                    <i class="fa fa-lg fa-fw fa-file-text-o"></i> 
+                    <span class="menu-item-parent">Quản lý học viện</span>
+                </a>
+            </li>
             <li class="{{ Route::currentRouteName() == 'admin.inbox' ? 'active' : '' }}">
                 <a href="{{ URL::to('/admin/inbox') }}" title="Quản lý hòm thư">
                     <i class="fa fa-lg fa-fw fa-envelope"></i>

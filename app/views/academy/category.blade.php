@@ -10,7 +10,7 @@
                     <div class="topic">
                         <?php $imageUrlC = Media::find($value->media_id); ?>
                         <h2 class="topic-title">{{$value->name}}</h2>
-                        <a href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">
+                        <a href="{{ URL::to('/tin-tuc/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">
                             <img class="topic-image only-pc" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
                             <img class="topic-image only-mobile" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
                         </a>
@@ -18,7 +18,7 @@
                             {{$value->summary}}
                         </p>
                         <div class="actions">
-                            <a class="btn-action small btn-green" href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">Xem ngay</a>
+                            <a class="btn-action small btn-green" href="{{ URL::to('/tin-tuc/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">Xem ngay</a>
                         </div>
                     </div>
                     @endforeach
@@ -42,7 +42,7 @@
                  src="{{Asset('assets/frontendV3/images/texture/mobile/news-2-right.png')}}"/>
             <div class="container">
                 <div class="section-news" id="thu-vien">
-                                        <h1 class="title-section" style="font-family: Roboto Condensed;">Tin tức học viện</h1>
+                                        <h1 class="title-section" style="font-family: Roboto Condensed;">{{$info->name}}</h1>
                     <div class="latest-news">
                             <div class="left-side only-pc">
                                 <?php $imageUrl = Media::find($hotNews->media_id); ?>
