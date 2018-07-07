@@ -52,6 +52,7 @@
                             <div class="section section-2 section-dynamic">
                 <img class="texture only-pc top" data-aos="fade-down-left" data-aos-duration="100"
                      src="{{Asset('assets/frontendV3/images/texture/pc/slide-2-top.png')}}"/>
+                     <img class="category-slide" src="{{Asset('assets/frontendV3/images/sukien.png')}}"/>
                 <div class="section-wrapper">
                     <div class="container">
                         <div class="section-right section-image">

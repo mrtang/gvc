@@ -4812,9 +4812,25 @@ footer {
 }
 .sidebar-products .item:hover{
     background-color: #feba01;
-    color: #000;
     cursor: pointer;
+    opacity: 0.7;
 }
+.sidebar-products .item:hover h2{
+    color: #000;
+}
+.sidebar-products .item:hover .summary{
+    color: #000;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.sidebar-products .item:hover .price{
+    color: #feba01;
+    margin-top: 50px;
+    background-color: #000;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    width: 70%;}
 .sidebar-products .item .item-img-left{
     display: inline-block;
     width: 45%;
@@ -4828,8 +4844,8 @@ footer {
     height: 21.1rem;
 }
 .sidebar-products h2 {
-  font-size: 18px;
-  margin-bottom: 14px;
+    color: #feba01;
+    font-size: 16px;
 }
 .sidebar-products img {
   width: 65px;
@@ -4841,8 +4857,19 @@ footer {
  /* margin-left: 80px;*/
   margin-bottom: 2px;
 }
+.sidebar-products .summary {
+    color: #FFF;
+    margin-top: 20px;
+    font-size: 13px;
+}
 .sidebar-products .price {
-    color: #E84D1C;
+    color: #FFF;
+    margin-top: 50px;
+    background-color: #feba01;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    width: 70%;
 }
 .sidebar-products .item .item-right{
     position: relative;

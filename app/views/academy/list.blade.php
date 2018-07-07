@@ -2,7 +2,7 @@
 <div class="page library-page feature-page">
         <div class="section section-6">
             <div class="bg-image-wrapper">
-                <img src="{{Asset('assets/frontendV3/images/section-6-bg.jpg')}}" alt="" class="bg only-pc">
+                <img src="{{Asset('assets/frontendV3/images/backfground3.jpg')}}" alt="" class="bg only-pc">
             </div>
             <div class="section-main-content">
                 <div class="container">
