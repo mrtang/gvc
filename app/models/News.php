@@ -47,10 +47,11 @@ class News extends Eloquent {
         return $totalRecords;
     }
 
-    public function getNewsCategory($cateId,$newsId){
+    public function getNewsCategory($cateId,$newsId = ''){
         $query = News::query();
         $appends = array();
-        $news = $query->where('cate_id', $cateId)->where('new_id','!=',$newsId)->orderBy('created_at', 'desc')->get();        
+        $news = $query->where('cate_id', $cateId)->where('new_id','!=',$newsId)->orderBy('created_at', 'desc')->get(); 
+
         return $news;
     }
     

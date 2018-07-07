@@ -42,7 +42,8 @@
                  src="{{Asset('assets/frontendV3/images/texture/mobile/news-2-right.png')}}"/>
             <div class="container">
                 <div class="section-news" id="thu-vien">
-                                        <h1 class="title-section" style="font-family: Roboto Condensed;">{{$info->name}}</h1>
+                    <h1 class="title-section" style="font-family: Roboto Condensed;">{{$info->name}}</h1>
+                    @if (isset($hotNews->new_id))
                     <div class="latest-news">
                             <div class="left-side only-pc">
                                 <?php $imageUrl = Media::find($hotNews->media_id); ?>
@@ -66,6 +67,7 @@
                                 </div>
                             </div>
                     </div>
+                    @endif
                     <div class="list-news">
                         @foreach($news as $value)
                             <div class="news">

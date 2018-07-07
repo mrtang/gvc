@@ -47,7 +47,7 @@ class Academy extends Eloquent {
         return $totalRecords;
     }
 
-    public function getNewsCategory($cateId,$newsId){
+    public function getNewsCategory($cateId,$newsId = ''){
         $query = Academy::query();
         $appends = array();
         $news = $query->where('cate_id', $cateId)->where('new_id','!=',$newsId)->orderBy('created_at', 'desc')->get();        

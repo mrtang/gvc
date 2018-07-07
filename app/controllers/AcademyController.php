@@ -141,8 +141,12 @@ class AcademyController extends \BaseController {
     public function category($id) {
         $infoCate = CategoryAcademy::find($id);
         $cateAca = CategoryAcademy::orderBy('created_at', 'asc')->take(3)->get();
-        $hotNews = News::whereRaw('is_deleted = ? and status = ? and cate_id = ?', array(0, 1, (int)$id))->orderBy('updated_at', 'desc')->first();
-        $news = $this->news->getNewsCategory((int)$id,$hotNews->new_id);
+        $hotNews = Academy::whereRaw('is_deleted = ? and status = ? and cate_id = ?', array(0, 1, (int)$id))->orderBy('updated_at', 'desc')->first();
+        if(!empty($hotNews)){
+            $news = $this->news->getNewsCategory((int)$id,$hotNews->new_id);
+        }else{
+            $news = $this->news->getNewsCategory((int)$id,'');
+        }
         $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('academy.category')->with(array(
             'news' => $news,
@@ -158,7 +162,7 @@ class AcademyController extends \BaseController {
 
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
-        $hotNews = Academy::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->first();
+        $hotNews = Academy::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'desc')->first();
         $cateAca = CategoryAcademy::orderBy('created_at', 'asc')->take(3)->get();
 
         $this->layout = View::make('layouts.layout_home_v3');
