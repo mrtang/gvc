@@ -2,7 +2,7 @@
     <?php $currentAccount = BaseController::getAccountInfo(); ?>
     <div class="container">
         <div class="header-left">
-            <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-bottom: 3px;" alt=""></a>
+            <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-top: -6px;" alt=""></a>
             <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a>
             <a href="{{ URL::to('/tin-tuc') }}" class="{{ Route::currentRouteName() == 'new.list' ? 'active' : ''}}">Tin tức</a>
             <a href="{{ URL::to('/hoc-vien') }}" class="{{ Route::currentRouteName() == 'academy.list' ? 'active' : ''}}">Học viện</a>
@@ -73,7 +73,7 @@
             <!-- Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="background-color: black; opacity: 0.8;">
+                    <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;">
                         <div class="popup-content">
                             <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                             <div class="head">
@@ -91,18 +91,17 @@
                                 ))
                             }}
                                 <div class="">
-                                    <p id="login-error" style="color: #EB0000"></p>
+                                    <p id="login-error" style="color: #EB0000;text-align: center;"></p>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="username" style="text-align: center;">
+                                <div class="form-group" style="width: 230px;">
+                                    <input type="text" class="form-control" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;">
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" name="password" style="text-align: center;">
+                                <div class="form-group" style="width: 230px;">
+                                    <input type="password" class="form-control" name="password" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;">
                                 </div>
-                                <p style="text-align: right; font-family: RobotoLight; font-size: 13px; margin-bottom: 0px;"><a href="javascript:void(0)" id="forgotPass" style="color: #EB0000;">Quên mật khẩu ?</a></p>
-                                <p style="text-align: right; font-family: RobotoLight; font-size: 13px; margin-top: 0px;"><a href="{{ URL::to('/cau-hoi-dang-ky') }}" style="color: #EB0000;">Chưa có tài khoản ? Đăng ký</a></p>
-                                <div style="text-align: center">
-                                    <button class="btn-action small" type="submit" style="color: #8dc230;">Đăng nhập</button>
+                                <p style="text-align: right;font-size: 13px; margin-top: 5px;width: 358px;"><a href="javascript:void(0)" id="forgotPass" style="color: #feba01;">Quên mật khẩu ?</a></p>
+                                <div style="text-align: center;width: 490px;">
+                                    <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng nhập</button>
                                 </div>
                             {{Form::close()}}
 
@@ -121,12 +120,12 @@
                                     <div class="row">
                                         <p id="send-success" style="padding: 0 15px;"></p>
                                         <div class="col-xs-9">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="username" style="text-align: center;" placeholder="Nhập tài khoản của bạn">
+                                            <div class="form-group" style="width: 230px;">
+                                                <input type="text" class="form-control" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Nhập tài khoản của bạn">
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            <button class="btn-action small" type="submit" style="color: #8dc230;"> Gửi</button>
+                                            <button class="btn-action small" type="submit" style="color: #000;width: 60px;height: 30px;background-color: #feba01;border-radius: 2px; margin-top: 2px;"> Gửi</button>
                                         </div>
                                     </div>
                                 </div>
@@ -136,4 +135,5 @@
                     </div>
                 </div>
             </div>
+        </div>
             @endif

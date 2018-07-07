@@ -42,15 +42,6 @@
                 data-action2="{{ "<i class='fa fa-check'></i> Xóa"  }}"
                 ><i class='fa fa-upload'></i> Tải lên</a>
 	    </div>
-        <div class="col-sm-4 form-group">
-            <label>Danh mục</label>
-            <select name="cate_id" class="has-custom-select custom-input" id="disabled">
-                <option value="-1">Chọn danh mục</option>
-                @foreach(CommonHelper::getCateNews() as $value)
-                <option value="{{$value->id}}" {{ isset($new->cate_id) && $new->cate_id == $value->id ? "selected='selected'" : '' }} >{{$value->name}}</option>
-                @endforeach
-            </select>
-        </div>
         <div class="form-group col-sm-12">
             <label for="title">Tiêu đề <span class="required"> *</span></label>
             {{ Form::text('title', !empty($new) ? $new->title : null, array('class' => 'form-control')) }}

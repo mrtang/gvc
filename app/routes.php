@@ -38,6 +38,7 @@ Route::get('/tin-tuc',                                  array('as' => 'new.list'
 Route::get('/thong-ke',                                 array('as' => 'home.analytic', 'uses' => 'HomeController@analytic'));
 Route::get('/thong-tin-server',                         array('as' => 'new.list', 'uses' => 'HomeController@serverinfo'));
 Route::get('/tin-tuc/{id}/{slug}.html',                 array('as' => 'new.detail', 'uses' => 'NewController@detail'));
+Route::get('/tin-tuc/danh-muc/{id}/{slug}.html',        array('as' => 'new.category', 'uses' => 'NewController@category'));
 
 Route::get('/tai-khoan/xep-hang',                       array('as' => 'account.ranking', 'uses' => 'AccountController@ranking'));
 Route::get('/tai-khoan/vi-pham',                        array('as' => 'account.banned', 'uses' => 'AccountController@banned'));

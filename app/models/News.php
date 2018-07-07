@@ -46,6 +46,13 @@ class News extends Eloquent {
         
         return $totalRecords;
     }
+
+    public function getNewsCategory($cateId,$newsId){
+        $query = News::query();
+        $appends = array();
+        $news = $query->where('cate_id', $cateId)->where('new_id','!=',$newsId)->orderBy('created_at', 'desc')->get();        
+        return $news;
+    }
     
     
     /**
@@ -82,6 +89,7 @@ class News extends Eloquent {
         $new->slug = BaseController::sanitizeStringForUrl($input['title']);
         $new->title = $input['title'];
         $new->summary = $input['title'];
+        $new->cate_id = $input['cate_id'];
         $new->content = $input['content'];  
         $new->media_id = $media;
         $new->status = 1;
@@ -108,6 +116,7 @@ class News extends Eloquent {
         $new->slug = BaseController::sanitizeStringForUrl($input['title']);
         $new->title = $input['title'];
         $new->summary = $input['title'];
+        $new->cate_id = $input['cate_id'];
         $new->content = $input['content'];  
         $new->media_id = $media;
         $new->status = 1;

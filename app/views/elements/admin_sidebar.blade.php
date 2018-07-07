@@ -24,6 +24,12 @@
                     <span class="menu-item-parent">Quản lý tin tức</span>
                 </a>
             </li>
+            <li class="{{ Route::currentRouteName() == 'admin.library' ? 'active' : '' }}">
+                <a href="{{ URL::to('/admin/library') }}" title="Quản lý thư viện">
+                    <i class="fa fa-lg fa-fw fa-file-text-o"></i> 
+                    <span class="menu-item-parent">Quản lý thư viện</span>
+                </a>
+            </li>
             <li class="{{ Route::currentRouteName() == 'admin.inbox' ? 'active' : '' }}">
                 <a href="{{ URL::to('/admin/inbox') }}" title="Quản lý hòm thư">
                     <i class="fa fa-lg fa-fw fa-envelope"></i>

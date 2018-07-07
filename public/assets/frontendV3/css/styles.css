@@ -4813,6 +4813,7 @@ footer {
 .sidebar-products .item:hover{
     background-color: #feba01;
     color: #000;
+    cursor: pointer;
 }
 .sidebar-products .item .item-img-left{
     display: inline-block;

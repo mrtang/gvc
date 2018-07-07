@@ -10,7 +10,7 @@
     <?php $currentAccount = BaseController::getAccountInfo(); ?>
     <div class="container">
         <div class="header-left">
-            <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-bottom: 3px;" alt=""></a>
+            <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-top: -6px;" alt=""></a>
             <a href="/" class="{{ Route::currentRouteName() == 'home' ? 'active' : ''}}">Trang chủ</a>
             <a href="{{ URL::to('/tin-tuc') }}" class="{{ Route::currentRouteName() == 'new.list' ? 'active' : ''}}">Tin tức</a>
             <a href="{{ URL::to('/hoc-vien') }}" class="{{ Route::currentRouteName() == 'academy.list' ? 'active' : ''}}">Học viện</a>
