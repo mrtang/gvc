@@ -8,12 +8,12 @@
             <a href="{{ URL::to('/hoc-vien') }}" class="{{ Route::currentRouteName() == 'academy.list' ? 'active' : ''}}">Học viện</a>
             <a href="{{ URL::to('/thu-vien') }}" class="{{ Route::currentRouteName() == 'library.list' ? 'active' : ''}}">Thư viện</a>
 <!--            <a href="" data-toggle="modal" data-target="#cashModal">Nạp code</a>-->
-            <a href="{{ URL::to('/shop') }}" class="support" class="{{ Route::currentRouteName() == 'shop.list' ? 'active' : ''}}">G-Shop</a>
+            <a href="{{ URL::to('/shop') }}" class="{{ Route::currentRouteName() == 'shop.list' ? 'active' : ''}}">G-Shop</a>
             <a href="https://forum.gta-online.vn" class="support" target="_blank">Forum</a>
         </div>
         <div class="header-right actions">
             @if (empty($currentAccount))
-            <a href="{{ URL::to('/cau-hoi-dang-ky') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
+            <a href="#" class="register" data-toggle="modal" data-target="#regisModal"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng ký</a>
             <a href="#"  data-toggle="modal" data-target="#loginModal" class="btn-action small btn-gray"><span>Đăng nhập</span></a>
             @else
             <a href="{{ URL::to('/dang-xuat') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng xuất</a>
@@ -137,3 +137,58 @@
             </div>
         </div>
             @endif
+    <!-- Modal Register -->
+    <div class="modal fade" id="regisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;">
+                <div class="popup-content">
+                    <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
+                    <div class="head">
+                        <h2 class="popup-title title-1" style="text-align: center;margin-top: 30px;">Đăng ký</h2>
+                    </div>
+                    {{
+                        Form::open(array(
+                            'action' => 'AccountController@register',
+                            'class' => 'smart-form client-form',
+                            'id' => 'form-user-register',
+                            'method' => 'post',
+                            'data-remote' => 'true',
+                            'data-type' => 'json',
+                            'novalidate'
+                        ))
+                    }}
+                    <div class="">
+                        <p id="login-error" style="color: #EB0000;text-align: center;"></p>
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="text" class="form-control" name="username" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="password" class="form-control" name="password" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="password" class="form-control" name="confirm_password" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="email" class="form-control" name="email" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Email">
+                        <span style="margin-left: 45px;font-size: 10px;color: #feba01;">Bạn cần xử dụng email này trong trường hợp đổi lại mật khẩu</span>
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="text" class="form-control" name="friend" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
+                    </div>
+                    <div class="form-group" style="width: 400px;">
+                        <input type="checkbox" class="form-control" name="agree" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" value="1"> f
+                    </div>
+
+                    {{ Form::close() }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+

@@ -16,7 +16,7 @@
             <a href="{{ URL::to('/hoc-vien') }}" class="{{ Route::currentRouteName() == 'academy.list' ? 'active' : ''}}">Học viện</a>
             <a href="{{ URL::to('/thu-vien') }}" class="{{ Route::currentRouteName() == 'library.list' ? 'active' : ''}}">Thư viện</a>
 <!--            <a href="" data-toggle="modal" data-target="#cashModal">Nạp code</a>-->
-            <a href="{{ URL::to('/shop') }}" class="support" class="{{ Route::currentRouteName() == 'shop.list' ? 'active' : ''}}">G-Shop</a>
+            <a href="{{ URL::to('/shop') }}" class="{{ Route::currentRouteName() == 'shop.list' ? 'active' : ''}}">G-Shop</a>
             <a href="https://forum.gta-online.vn" class="support" target="_blank">Forum</a>
         </div>
         <div class="header-right actions">
