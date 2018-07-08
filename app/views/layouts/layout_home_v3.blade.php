@@ -17,7 +17,6 @@
         {{ HTML::style('assets/frontendV3/css/font.css') }}
         {{ HTML::style('assets/frontendV3/css/aos.css') }}
         {{ HTML::style('assets/frontendV3/css/styles.css') }}
-        {{ HTML::style('assets/frontendV3/css/tooltip.css') }}
         <!-- FAVICONS -->
         <link rel="shortcut icon" href="{{Asset('assets/frontendV3/images/logo_gta.png')}}" type="image/x-icon">
         <link rel="icon" href="{{Asset('assets/frontendV3/images/logo_gta.png')}}" type="image/x-icon">

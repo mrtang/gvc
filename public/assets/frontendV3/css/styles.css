@@ -4821,7 +4821,6 @@ footer {
 .sidebar-products .item:hover .summary{
     color: #000;
     margin-top: 20px;
-    font-size: 14px;
 }
 .sidebar-products .item:hover .price{
     color: #feba01;
