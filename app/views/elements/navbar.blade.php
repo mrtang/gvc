@@ -176,8 +176,8 @@
                     <div class="form-group" style="width: 400px;">
                         <input type="text" class="form-control" name="friend" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
                     </div>
-                    <div class="form-group">
-                        <label class="checkbox-inline"><input type="checkbox" value="1" name="agree">Option 1</label>
+                    <div class="form-group" style="width: 400px;">
+                        <label class="checkbox-inline" style="margin-left: 45px;font-size: 11px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 0px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
                     </div>
 
                     {{ Form::close() }}
@@ -186,6 +186,36 @@
         </div>
     </div>
 
+    <div class="popup">
+        <!-- Modal help -->
+        <div class="modal fade" id="ruleModal" role="dialog" style="display: none;">
+            <div class="modal-dialog"><div class="modal-content">
+                <div class="modal-body"><div class="popup-content">
+                    <button type="button" class="btn btn-default close" data-dismiss="modal"><img src="https://cdn.vn.garenanow.com/web/fo3/fo4/epp/images/X.png"></button>
+                    <div class="body">
+                        <h2>Quy định</h2>
+                        <div class="text-content rule-main-content">
+                            <div class="scroll-wrapper">
+                                <div class="side-left" style="font-size: 2rem;">
+                                    <div class="title-text">
+                                        <strong>Thời gian:</strong>
+                                    </div>
+                                    <ul><li style="font-size: 1.7rem;">Bắt đầu: ngày 20/06/2018</li></ul>
+                                    <div class="title-text"><strong>Hướng dẫn chung:</strong></div>
+                                    <ul style="text-align: left; line-height: 3rem;">
+                                        <li style="font-size: 1.7rem;"><!-- react-text: 55 -->Đăng nhập vào trang: <!-- /react-text --><a class="linkrule" target="_blank" href="https://betago.garena.vn">https://betago.garena.vn</a><!-- react-text: 57 --> để kiểm tra xem mình có thể nhận được bao nhiêu điểm EP Point.<!-- /react-text --></li><li style="font-size: 1.7rem;"><!-- react-text: 59 -->Đăng nhập vào trang <!-- /react-text --><a class="linkrule" target="_blank" href="https://epp.fo4.garena.vn">https://epp.fo4.garena.vn</a><!-- react-text: 61 --> để kiểm tra số điểm EP Point mình đang có.<!-- /react-text --></li><li style="font-size: 1.7rem;">Sử dụng điểm EP Point đang có để mua vật phẩm mình thích</li><li style="font-size: 1.7rem;">Có thể kiểm tra lại vật phẩm mình đã mua ở Lịch sử mua.</li><li style="font-size: 1.7rem;">Điểm EP Point của bạn được sử dụng chung cho cả 2 shop EP Point Shop FO3 &amp; EP Point Shop FO4. Vì thế khi bạn mua vật phẩm ở EP Point Shop FO3 và EP Point Shop FO4 điểm EP Point của bạn đều bị trừ.</li><li style="font-size: 1.7rem;">Một số vật phẩm ở EP Point Shop FO4 bị giới hạn lần mua, các HLV không thể mua vượt số lần giới hạn đấy.</li><li style="font-size: 1.7rem;">Các vật phẩm sau một thời gian có thể thay đổi nếu vật phẩm hết hạn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
 
 
 
