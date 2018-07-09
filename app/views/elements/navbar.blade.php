@@ -176,8 +176,8 @@
                     <div class="form-group" style="width: 400px;">
                         <input type="text" class="form-control" name="friend" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
                     </div>
-                    <div class="form-group" style="width: 400px;">
-                        <input type="checkbox" class="form-control" name="agree" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" value="1"> f
+                    <div class="form-group">
+                        <label class="checkbox-inline"><input type="checkbox" value="1" name="agree">Option 1</label>
                     </div>
 
                     {{ Form::close() }}

@@ -4,7 +4,7 @@
         <div class="bg-image-wrapper">
             <img src="{{Asset('assets/frontendV3/images/shop.jpg')}}" alt="" class="img-responsive">
         </div>
-        <div class="section-main-content">
+        <div class="section-main-content" style="margin-top: -65px !important;">
             <div class="container">
                 <div class="content">
                     <h1 class="text-center"><span class="">G-SHOP</h1>
