@@ -4805,7 +4805,6 @@ footer {
 .sidebar-products .item {
   width: 100%;
   overflow: hidden;
-  padding-bottom: 15px;
   margin-bottom: 15px;
   border: solid 1px #feba01;
   background: rgba(27, 31, 27, 0.8);
@@ -4839,8 +4838,8 @@ footer {
     position: relative;
 }
 .sidebar-products .item .item-image{
-    width: 13.3rem;
-    height: 21.1rem;
+    width: 9.3rem;
+    height: 17.1rem;
 }
 .sidebar-products h2 {
     color: #feba01;
@@ -4938,6 +4937,17 @@ h3.txt-tooltip{
 }
 .content-tooltip > ul{
     margin-top: 10px;
+}
+.popup .close img {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0rem !important;
+}
+.popup .body h2 {
+  color: #feba01;
+  font-size: 5.4rem;
+  text-align: center;
+  font-family: 'UTM Futura Extra';
 }
 
 
