@@ -95,7 +95,7 @@ class QuestionController extends \BaseController {
      * @return view
      */
     public function finishregister() {
-        $this->layout = View::make('layouts.application');
+        $this->layout = View::make('layouts.layout_sidebar_right_v3');
         $view = View::make('question.finishregister')->with(array(
 
         ));
