@@ -158,7 +158,7 @@
                         ))
                     }}
                     <div class="">
-                        <p id="login-error" style="color: #EB0000;text-align: center;"></p>
+                        <p id="regis-error" style="color: #EB0000;text-align: center;"></p>
                     </div>
                     <div class="form-group" style="width: 400px;">
                         <input type="text" class="form-control" name="username" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
@@ -178,6 +178,9 @@
                     </div>
                     <div class="form-group" style="width: 400px;">
                         <label class="checkbox-inline" style="margin-left: 45px;font-size: 11px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 0px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
+                    </div>
+                    <div style="text-align: center;width: 490px;">
+                        <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng ký ngay</button>
                     </div>
 
                     {{ Form::close() }}

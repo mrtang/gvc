@@ -292,7 +292,9 @@ class AccountController extends \BaseController {
                     return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => array('confirm_password' => array('Nhập lại mật khẩu không khớp'))));
                 }
             } else {
-                return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
+                if (Request::ajax()) {
+                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
+                }
             }
         } else {
             $this->layout = View::make('layouts.application');

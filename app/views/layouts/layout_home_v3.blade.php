@@ -226,6 +226,48 @@
 
                 }, '#form-change-email');
 
+                /**
+             * regis (normal)
+             */
+            $document.on({
+                'ajax:beforeSend': function() {
+                    $.utils.clearFieldError('form-user-register');
+                    $(this).find('.btn').attr('disabled', 'disabled');
+                    $('#regis-error').text('');
+                    $('.alert').css('display', 'none');
+                },
+                'ajax:success': function(e, data) {
+                    console.log(data);
+                    if (data.status) {
+                        if (typeof data.redirect != '') {
+                            window.location.href = data.redirect;
+                        } else {
+                            window.location.reload();
+                        }
+                        
+                    } else {
+                        if (data.code == 'invalid_data') {
+                            for (var field in data.messages) {
+                                //$.utils.showFieldError('form-admin-login', field, data.messages[field][0]);
+
+                                $('#regis-error').text(data.messages[field][0]);
+                                break;
+                            }
+                            //$.utils.autoFocus('form-user-register', '.input-error');
+                        }
+                        else {
+                            $('#regis-error').text(data.message);
+                            $('.alert').css('display', 'block');
+                        }
+                        
+                    }
+                },
+                'ajax:complete': function() {
+                    $(this).find('.btn').removeAttr('disabled');
+                }
+        
+            }, '#form-user-register');
+
 
                 $('#forgotPass').click(function(){
                     $( ".forgotPassword" ).animate({

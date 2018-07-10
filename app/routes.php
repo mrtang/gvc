@@ -19,9 +19,10 @@ Route::any('/gvc-terms',                        array('as' => 'question.gvc.term
 Route::any('/samp-terms',                       array('as' => 'question.samp.terms', 'uses' => 'QuestionController@sampterms'));
 Route::any('/hoan-tat-dang-ky',                 array('as' => 'account.register.finish', 'uses' => 'QuestionController@finishregister'));
 
-Route::group(array('before'=>'passQuestionFilter'), function() {
+/*Route::group(array('before'=>'passQuestionFilter'), function() {
     Route::any('/dang-ky', array('as' => 'account.register', 'uses' => 'AccountController@register'));
-});
+});*/
+Route::any('/dang-ky', array('as' => 'account.register', 'uses' => 'AccountController@register'));
 Route::get('/kich-hoat-tai-khoan/{id}', array('as' => 'account.active', 'uses' => 'AccountController@active'));
 
 
