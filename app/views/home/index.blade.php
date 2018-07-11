@@ -32,7 +32,7 @@
             <div class="bg-image bg-blur"></div>
             <div class="content">
                 <div class="actions">
-                    <a href="https://gta-online.vn/Launcher/GvC%20Launcher.exe" class="btn-action big download btn-green only-pc">
+                    <a href="https://gta-online.vn/tin-tuc/41/huong-dan-su-dung-launcher-toan-tap-ban-gta-sa-fullrip.html" class="btn-action big download btn-green only-pc">
                         <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                         <span class="text">Tải game</span>
                     </a>

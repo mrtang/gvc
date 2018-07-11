@@ -13,6 +13,7 @@
                 <div class="row">
                     <div class="col-xs-3">
                         <div class="col-xs-12">
+                            <div class="charac-bd-dt"></div>
                             <a href="#" class="character-account">
                                 <img src="{{Asset("assets/frontend/skins/$character->Skin.png")}}" style="width: 100%; margin-top: 90px;">
                                 <p style="color: #fff; text-align: center; margin-top: -70px;">{{ $character->CharacterName }}</p>

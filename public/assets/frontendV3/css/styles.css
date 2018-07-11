@@ -4957,8 +4957,116 @@ h3.txt-tooltip{
   font-family: 'UTM Futura Extra';
 }
 
+@media only screen and (max-width: 1368px){
+.charac-bd{
+  height: 82%;
+position: absolute;
+border: 1px solid #feba01;
+width: 89%;
+margin-top: 42px;
+border-radius: 10px;
+z-index: -999;
+}
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px){
+  .charac-bd{
+  height: 77%;
+position: absolute;
+border: 1px solid #feba01;
+width: 82%;
+margin-top: 54px;
+border-radius: 10px;
+z-index: -999;
+} }
+
+@media only screen and (max-width: 1368px){
+.charac-bd-not{
+  height: 87%;
+position: absolute;
+border: 1px solid #feba01;
+width: 93%;
+margin-top: 36px;
+border-radius: 30px;
+z-index: -999;
+}
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px){
+  .charac-bd-not{
+  height: 85%;
+position: absolute;
+border: 1px solid #feba01;
+width: 93%;
+margin-top: 45px;
+border-radius: 38px;
+z-index: -999;
+} }
 
 
+@media only screen and (max-width: 1368px){
+.charac-bd-dt{
+  height: 61%;
+position: absolute;
+border: 1px solid #feba01;
+width: 90%;
+margin-top: 137px;
+border-radius: 10px;
+z-index: -999;
+}
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px){
+  .charac-bd-dt{
+  height: 60%;
+position: absolute;
+border: 1px solid #feba01;
+width: 77%;
+margin-top: 140px;
+border-radius: 10px;
+z-index: -999;
+} }
+
+
+.title-pup{
+  text-align: center;margin-top: 30px;font-family: "UTM Bebas";
+  font-size: 28px;
+}
+
+.user-icon {
+  width: 45px;
+margin-left: 95px;
+position: relative;
+top: 35px;
+height: 36px;
+}
+
+.inp-log{
+  border: 1px solid #FFF !important;
+  background-color: #17171c;
+}
+@media only screen and (max-width: 1368px){
+.login-md{
+    background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 150px;
+}}
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px){
+.login-md{
+    background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 280px;
+}}
+
+
+@media only screen and (max-width: 1368px){
+.regis-md{
+    background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 150px;
+}}
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1920px){
+.regis-md{
+    background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 280px;
+}}
 
 
 

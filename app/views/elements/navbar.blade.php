@@ -73,11 +73,12 @@
             <!-- Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 200px;">
+                    <div class="modal-content login-md">
                         <div class="popup-content">
                             <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                             <div class="head">
-                                <h2 class="popup-title title-1" style="text-align: center;margin-top: 30px;">Đăng nhập</h2>
+                                <h2 class="popup-title title-1 title-pup">Đăng nhập</h2>
+                                <p style="text-align: center;font-size: 12px;">Tên tài khoản và mật khẩu</p>
                             </div>
                             {{
                                 Form::open(array(
@@ -93,15 +94,17 @@
                                 <div class="">
                                     <p id="login-error" style="color: #EB0000;text-align: center;"></p>
                                 </div>
-                                <div class="form-group" style="width: 230px;">
-                                    <input type="text" class="form-control" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;">
+                                <div class="form-group" style="width: 230px;margin-top: -30px;margin-left: 15px;">
+                                    <img class="user-icon" src="{{Asset('assets/frontendV3/images/user-icon.png')}}">
+                                    <input type="text" class="form-control inp-log" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
                                 </div>
-                                <div class="form-group" style="width: 230px;">
-                                    <input type="password" class="form-control" name="password" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;">
+                                <div class="form-group" style="width: 230px;margin-top: -30px;margin-left: 15px;">
+                                    <img class="user-icon" src="{{Asset('assets/frontendV3/images/lock-icon.png')}}">
+                                    <input type="password" class="form-control inp-log" name="password" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Mật khẩu">
                                 </div>
                                 <p style="text-align: right;font-size: 13px; margin-top: 5px;width: 358px;"><a href="javascript:void(0)" id="forgotPass" style="color: #feba01;">Quên mật khẩu ?</a></p>
                                 <div style="text-align: center;width: 490px;">
-                                    <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng nhập</button>
+                                    <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;margin-bottom: 10px;border-radius: 10px;">Đăng nhập</button>
                                 </div>
                             {{Form::close()}}
 
@@ -140,11 +143,11 @@
     <!-- Modal Register -->
     <div class="modal fade" id="regisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 100px;">
+            <div class="modal-content regis-md">
                 <div class="popup-content">
                     <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                     <div class="head">
-                        <h2 class="popup-title title-1" style="text-align: center;margin-top: 30px;">Đăng ký</h2>
+                        <h2 class="popup-title title-1 title-pup">Đăng ký</h2>
                     </div>
                     {{
                         Form::open(array(
@@ -180,7 +183,7 @@
                         <label class="checkbox-inline" style="margin-left: 45px;font-size: 11px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 0px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
                     </div>
                     <div style="text-align: center;width: 490px;">
-                        <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng ký ngay</button>
+                        <button class="btn-action small" type="submit" style="color: #FFF;width: 83%;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng ký ngay</button>
                     </div>
 
                     {{ Form::close() }}

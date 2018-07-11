@@ -48,7 +48,7 @@
 body {
     font-family: 'RobotoRegular' !important;
     font-size: 13px !important;
-    background: url('/assets/frontend/img/background2.jpg') no-repeat center center fixed;
+    background: url('../img/background2.jpg') no-repeat center center fixed;
     background-size: cover;
     width: 100%;
     height: auto;
@@ -627,7 +627,7 @@ form .control-label {
 .character-account img{
 
 }
-.character-account:hover img {
+/*.character-account:hover img {
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.05);
     -ms-transition: all 200ms ease-in;
@@ -636,7 +636,7 @@ form .control-label {
     -moz-transform: scale(1.05);
     transition: all 200ms ease-in;
     transform: scale(1.05);
-}
+}*/
 .character-skin-1, .character-skin-2{
     width: 100%;
     position: relative;

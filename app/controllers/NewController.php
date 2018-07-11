@@ -155,7 +155,7 @@ class NewController extends \BaseController {
         $news = $this->news->searchNew($input);
         $totalRecords = $this->news->getTotalRecords($input);
         $hotNews = News::whereRaw('is_deleted = ? and status = ?', array(0, 1))->orderBy('updated_at', 'desc')->first();
-        $cateNews = CategoryNews::orderBy('created_at', 'asc')->take(3)->get();
+        $cateNews = CategoryNews::orderBy('created_at', 'asc')->take(2)->get();
 
         $this->layout = View::make('layouts.layout_home_v3');
         $view = View::make('new.list')->with(array(
@@ -170,7 +170,7 @@ class NewController extends \BaseController {
 
     public function category($id) {
         $infoCate = CategoryNews::find($id);
-        $cateNews = CategoryNews::orderBy('created_at', 'asc')->take(3)->get();
+        $cateNews = CategoryNews::orderBy('created_at', 'asc')->take(2)->get();
         $hotNews = News::whereRaw('is_deleted = ? and status = ? and cate_id = ?', array(0, 1, (int)$id))->orderBy('updated_at', 'desc')->first();
         if(!empty($hotNews)){
             $news = $this->news->getNewsCategory((int)$id,$hotNews->new_id);

@@ -6,22 +6,24 @@
             </div>
             <div class="section-main-content">
                 <div class="container">
-                    @foreach($listCate as $value)
-                    <div class="topic">
-                        <?php $imageUrlC = Media::find($value->media_id); ?>
-                        <h2 class="topic-title">{{$value->name}}</h2>
-                        <a href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">
-                            <img class="topic-image only-pc" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
-                            <img class="topic-image only-mobile" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
-                        </a>
-                        <p class="topic-caption" alt="">
-                            {{$value->summary}}
-                        </p>
-                        <div class="actions">
-                            <a class="btn-action small btn-green" href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">Xem ngay</a>
+                    <div class="topics-wrapper">
+                        @foreach($listCate as $value)
+                        <div class="topic">
+                            <?php $imageUrlC = Media::find($value->media_id); ?>
+                            <h2 class="topic-title">{{$value->name}}</h2>
+                            <a href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">
+                                <img class="topic-image only-pc" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
+                                <img class="topic-image only-mobile" src="{{ $imageUrlC->path.$imageUrlC->original }}" alt="">
+                            </a>
+                            <p class="topic-caption" alt="">
+                                {{$value->summary}}
+                            </p>
+                            <div class="actions">
+                                <a class="btn-action small btn-green" href="{{ URL::to('/hoc-vien/danh-muc/'.$value->id.'/'.$value->slug.'.html') }}">Xem ngay</a>
+                            </div>
                         </div>
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>
