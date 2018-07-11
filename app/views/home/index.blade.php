@@ -36,7 +36,7 @@
                         <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                         <span class="text">Tải game</span>
                     </a>
-                    <a href="#" class="btn-action big btn-gray help only-pc">
+                    <a href="{{ URL::to('/hoc-vien') }}" class="btn-action big btn-gray help only-pc">
                         <img src="{{Asset('assets/frontendV3/images/icon-help.png')}}" alt="">
                         <span class="text">Học viện</span>
                     </a>

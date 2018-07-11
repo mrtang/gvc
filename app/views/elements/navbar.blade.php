@@ -19,7 +19,7 @@
             <a href="{{ URL::to('/dang-xuat') }}" class="register"><img src="{{Asset('assets/frontendV3/images/icon-person.png')}}" alt="">Đăng xuất</a>
             <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" class="btn-action small recharge btn-gray"><span>{{$currentAccount->UserName}}</span></a>
             @endif
-            <a href="https://gta-online.vn/Launcher/GvC%20Launcher.exe" class="btn-action small download btn-green">
+            <a href="https://gta-online.vn/tin-tuc/41/huong-dan-su-dung-launcher-toan-tap-ban-gta-sa-fullrip.html" class="btn-action small download btn-green">
 <!--            <a href="javascript:void(0)" class="btn-action small download btn-green"  data-toggle="modal" data-target="#commingSoonModal">-->
                 <img src="{{Asset('assets/frontendV3/images/icon-down.png')}}" alt="">
                 <span>Tải GTA</span>
@@ -73,7 +73,7 @@
             <!-- Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;">
+                    <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 200px;">
                         <div class="popup-content">
                             <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                             <div class="head">
@@ -140,7 +140,7 @@
     <!-- Modal Register -->
     <div class="modal fade" id="regisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;">
+            <div class="modal-content" style="background-color: black; opacity: 0.8;border: 2px solid #feba01;margin-top: 100px;">
                 <div class="popup-content">
                     <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                     <div class="head">

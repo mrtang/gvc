@@ -40,11 +40,9 @@
         @yield('content')
 
         @include('elements/navbar')
-        @if(Route::currentRouteName() == 'shop.list')
-        <div class="links">
+        <!--div class="links">
             <a href="true" class="true" data-toggle="modal" data-target="#ruleModal">Hướng dẫn</a>
-        </div>
-        @endif
+        </div-->
 
         <div class="go-top" id="go-to-top">
             <img src="{{Asset('assets/frontendV3/images/gototop.png')}}" alt="">
