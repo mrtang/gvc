@@ -2963,7 +2963,9 @@ img {
 
 .home-page ~ header .header-left a.active {
   color: #feba01;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: "UTM Bebas"
+   }
 
 .feature-page ~ header .header-left a.active {
   color: #feba01;
@@ -2993,7 +2995,7 @@ header {
   width: 100%;
   height: 6.6rem;
   background: rgba(7, 24, 38, 0.8);
-  border-bottom: 1px solid #699d82; }
+  border-bottom: 1px solid #feba01; }
   header a {
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -3010,6 +3012,7 @@ header {
     line-height: 6.6rem; }
     header .header-left a {
       margin-right: 1rem;
+      font-family: "UTM Bebas";
       color: white; }
       header .header-left a:hover {
         text-decoration: none;
@@ -3071,18 +3074,19 @@ header {
                 box-sizing: content-box; }
       header .header-right .search.active input {
         width: 53rem;
+        height: 55px;
         padding-left: 1rem;
         padding-right: 5rem; }
         header .header-right .search.active input::-webkit-input-placeholder {
-          color: #c5ff45; }
+          color: #feba01; }
         header .header-right .search.active input:-moz-placeholder {
           /* Firefox 18- */
-          color: #c5ff45; }
+          color: #feba01; }
         header .header-right .search.active input::-moz-placeholder {
           /* Firefox 19+ */
-          color: #c5ff45; }
+          color: #feba01; }
         header .header-right .search.active input:-ms-input-placeholder {
-          color: #c5ff45; }
+          color: #feba01; }
   header .logo img {
     width: 5.3rem; }
   header .recharge.btn-action {
@@ -3686,7 +3690,8 @@ header {
       font-weight: 400; }
     .section-6 .topic .topic-image {
       width: 37.5rem;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      height: 200px; }
     .section-6 .topic .topic-caption {
       font-size: 1.8rem;
       min-height: 11rem; }
@@ -3711,7 +3716,7 @@ header {
     font-family: 'UTM Bebas'; }
   .section-7 .latest-news {
     padding-bottom: 5rem;
-    border-bottom: 1px solid #96d610; }
+    border-bottom: 1px solid #feba01; }
     .section-7 .latest-news .left-side {
       width: 50%;
       display: inline-block; }
@@ -3756,7 +3761,7 @@ header {
         display: block; }
         .section-7 .list-news .news a img {
           width: 100%;
-          min-height: 25rem; }
+          min-height: 26rem; }
   .section-7 .actions a {
     width: 26rem;
     color: #feba01;
@@ -3851,7 +3856,7 @@ header {
               transform: scale(0.8); }
 
 footer {
-  border-top: 1px solid #a3e90c;
+  border-top: 1px solid #feba01;
   padding-top: 4rem;
   padding-bottom: 2rem;
   background: black;
@@ -4376,6 +4381,7 @@ footer {
         display: none; }
       .section-6 .topic .topic-image {
         width: 100%;
+        height: 200px;
         margin-bottom: 0rem; }
       .section-6 .topic .topic-title {
         position: absolute;
