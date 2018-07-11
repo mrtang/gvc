@@ -148,7 +148,7 @@ class AccountController extends \BaseController {
         
         if (!empty($account)) {
             // save account to forum
-            $apiKey = '5e47987b566a11cd08caae38498d3953';
+            $apiKey = '2d62d32ea27e7653304430a31976a8e2';
             $body = [
                 'name'      =>  $account->UserName,
                 'email'     =>  $account->Email,
