@@ -1,7 +1,8 @@
 (function($) {
     //
-    var scrollPos =  $("#show-first").offset().top;
-    $(window).scrollTop(scrollPos);
+    // var scrollPos =  $("#show-first").offset().top;
+    // $(window).scrollTop(scrollPos);
+    $("html,body").animate({scrollTop: 575}, 800);
     //
     var $document = $(document);
     
