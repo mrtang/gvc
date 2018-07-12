@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section-7">
+        <div class="section section-7" id="show-first">
             <img class="texture only-pc top" data-aos="fade-up-right" data-aos-duration="1000"
                  src="{{Asset('assets/frontendV3/images/texture/pc/news-2-top.png')}}"/>
             <img class="texture only-pc bottom" data-aos="fade-down-left" data-aos-duration="1000"
@@ -91,4 +91,7 @@
             </div>
         </div>
     </div>
+@stop
+@section('scripts')
+    {{ HTML::script('assets/js/elements/new.js') }}
 @stop
