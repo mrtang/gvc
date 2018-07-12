@@ -147,7 +147,7 @@
                             <div class="about-news">
                                 EP Point Shop đã được mở cửa trở lại! Hãy cùng xem thử những phần quà hoàn toàn miễn phí dành riêng cho những người chơi FO3 như bạn trong FO4 trong những ngày tháng này                            </div>
                             <div class="actions thin-actions">
-                                <a href="#"
+                                <a href="{{ URL::to('/shop') }}"
                                    class="dark">Xem ngay</a>
                                 <a href="#" class="white">Tin khác</a>
                             </div>

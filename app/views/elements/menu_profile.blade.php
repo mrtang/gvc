@@ -11,21 +11,21 @@
         <div class="container-fluid container">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="{{ Route::currentRouteName() == 'account.characters' ? 'active' : '' }}"><a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" >Quản lý nhân vật</a></li>
-                    <li><a href="">Quản lý dịch vụ</a></li>
-                    <li><a href="#">Quản lý ticket</a></li>
-                    <li><a href="#">Đăng bài lên trang chủ</a></li>
-                    <li><a href="#">Chia sẻ ảnh</a></li>
+                    <li class="{{ Route::currentRouteName() == 'account.characters' ? 'active' : '' }}"><a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" >QUẢN LÝ NHÂN VẬT</a></li>
+                    <li><a href="#">QUẢN LÝ TICKET</a></li>
+                    <li><a href="#">QUẢN LÝ TICKET</a></li>
+                    <li><a href="#">QUẢN LÝ TICKET</a></li>
+                    <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cài đặt tài khoản <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NÚT CÀI ĐẶT <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
-                            <li><a data-toggle="modal" data-target="#loginModal" style="cursor: pointer;">Thay đổi mật khẩu</a></li>
+                            <li><a data-toggle="modal" data-target="#loginModal" style="cursor: pointer;">ĐỔI MẬT KHẨU</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a data-toggle="modal" data-target="#emailModal" style="cursor: pointer;">Thay đổi email</a></li>
+                            <li><a data-toggle="modal" data-target="#emailModal" style="cursor: pointer;">ĐỔI EMAIL</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <!--li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nạp G-Coin <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
@@ -33,10 +33,10 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="{{ URL::to('/nap-the/lich-su') }}" style="cursor: pointer;">Lịch sử nạp thẻ</a></li>
                         </ul>
-                    </li>
+                    </li-->
                     <li class="{{ Route::currentRouteName() == 'inbox.user.list' ? 'active' : '' }}">
                         <a href="{{ URL::to('/tai-khoan/hop-thu') }}">
-                            <span style="padding-right: 5px;">Hòm thư</span>
+                            <span style="padding-right: 5px;">HÒM THƯ</span>
                             <?php $currentAccount = BaseController::getAccountInfo(); $unreadInbox = Inbox::whereRaw('receive_account_id in ('.$currentAccount->ID.', -1) and is_read = 0', [])->count() ?>
                             @if (!empty($unreadInbox))
                                 <span style="background-color: #fff; padding: 2px 7px 2px 7px; border-radius: 50%; color: #9F2B33; font-size: 12px;">{{ $unreadInbox }}</span>

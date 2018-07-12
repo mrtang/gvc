@@ -608,7 +608,7 @@ form .control-label {
     font-family: 'RobotoRegular';
     background-color: transparent !important;
     text-transform: none !important;
-    padding: 8px 14px;
+    padding: 10px 23px;
 }
 .menu-profile .navbar-default .navbar-nav > li:hover > a {
     color: #ffc200 !important;

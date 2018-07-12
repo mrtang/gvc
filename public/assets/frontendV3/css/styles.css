@@ -3678,7 +3678,7 @@ header {
       background: #96d610;
       color: #1c1f26; }
   .section-6 .topic {
-    width: 28%;
+    width: 37%;
     display: inline-block;
     margin-right: 3%;
     vertical-align: text-top; }
@@ -3689,9 +3689,9 @@ header {
       font-size: 2.5rem;
       font-weight: 400; }
     .section-6 .topic .topic-image {
-      width: 37.5rem;
+      width: 49.5rem;
       margin-bottom: 2rem;
-      height: 200px; }
+      height: 260px; }
     .section-6 .topic .topic-caption {
       font-size: 1.8rem;
       min-height: 11rem; }
@@ -4829,7 +4829,7 @@ footer {
 }
 .sidebar-products .item:hover .price{
     color: #feba01;
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: #000;
     height: 30px;
     text-align: center;
@@ -4868,7 +4868,7 @@ footer {
 }
 .sidebar-products .price {
     color: #FFF;
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: #feba01;
     height: 30px;
     text-align: center;

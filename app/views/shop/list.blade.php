@@ -13,17 +13,17 @@
                               <div class="col-md-4">
                                   <div class="item showTip show1">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600002.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom1.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP GRAFFITY</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
                                   </div>
                                   <div id="show1" class="tipContent">
                                       <div class="content-tooltip">
-                                          <h3 class="text-center txt-tooltip">HỘP KIM Loại</h3>
+                                          <h3 class="text-center txt-tooltip">HỘP GRAFFITY</h3>
                                           <ul class="tipContentList">
                                               <li>Gói 8x1000 chi</li>
                                               <li>Gói 18x1000 chi</li>
@@ -36,17 +36,17 @@
                               <div class="col-md-4">
                                   <div class="item showTip show2">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600002.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom2.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP XE MÁY</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
                                   </div>
                                   <div id="show2" class="tipContent">
                                       <div class="content-tooltip">
-                                          <h3 class="text-center txt-tooltip">HỘP KIM CƯƠNG</h3>
+                                          <h3 class="text-center txt-tooltip">HỘP XE MÁY</h3>
                                           <ul class="tipContentList">
                                               <li>Gói 8x1000 chi</li>
                                               <li>Gói 18x1000 chi</li>
@@ -59,17 +59,17 @@
                               <div class="col-md-4">
                                   <div class="item showTip show3">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600003.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom3.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP ĐỒNG</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
                                   </div>
                                   <div id="show3" class="tipContent">
                                       <div class="content-tooltip">
-                                          <h3 class="text-center txt-tooltip">HỘP KIM CƯƠNG</h3>
+                                          <h3 class="text-center txt-tooltip">HỘP ĐỒNG</h3>
                                           <ul class="tipContentList">
                                               <li>Gói 8x1000 chi</li>
                                               <li>Gói 18x1000 chi</li>
@@ -81,17 +81,17 @@
                               <div class="col-md-4">
                                   <div class="item showTip show4">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600002.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom4.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP BẠC</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
                                   </div>
                                   <div id="show4" class="tipContent">
                                       <div class="content-tooltip">
-                                          <h3 class="text-center txt-tooltip">HỘP KIM CƯƠNG</h3>
+                                          <h3 class="text-center txt-tooltip">HỘP BẠC</h3>
                                           <ul class="tipContentList">
                                               <li>Gói 8x1000 chi</li>
                                               <li>Gói 18x1000 chi</li>
@@ -103,10 +103,10 @@
                               <div class="col-md-4">
                                   <div class="item showTip show5">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600003.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom5.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP KIM CƯƠNG</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
@@ -126,17 +126,17 @@
                               <div class="col-md-4">
                                   <div class="item showTip show6">
                                       <div class="item-img-left">
-                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/600002.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                                          <a href="shop-item.html"><img class="item-image" src="{{Asset('assets/frontendV3/images/shop/hom6.png')}}" alt="Some Shoes in Animal with Cut Out"></a>
                                       </div>
                                       <div class="item-right">
-                                          <h2><a href="shop-item.html">Some Shoes in Anim</a></h2>
+                                          <h2><a href="shop-item.html">HỘP VÀNG</a></h2>
                                           <div class="summary">Bạn sẽ nhận được tất cả các vật phẩm bên trong.</div>
                                           <div class="price">150.000.000</div>
                                       </div>
                                   </div>
                                   <div id="show6" class="tipContent">
                                       <div class="content-tooltip">
-                                          <h3 class="text-center txt-tooltip">HỘP KIM CƯƠNG</h3>
+                                          <h3 class="text-center txt-tooltip">HỘP VÀNG</h3>
                                           <ul class="tipContentList">
                                               <li>Gói 8x1000 chi</li>
                                               <li>Gói 18x1000 chi</li>
