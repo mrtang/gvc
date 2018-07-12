@@ -1,4 +1,8 @@
 (function($) {
+    //
+    var scrollPos =  $("#show-first").offset().top;
+    $(window).scrollTop(scrollPos);
+    //
     var $document = $(document);
     
     $document.on({
