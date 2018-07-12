@@ -27,29 +27,17 @@
                         </a>
                     </div>
                 @endforeach
-            @else
+            @endif
+                <?php $countUnknow = 3 - $countCharacters; ?>
+                @for ($i = 1; $i <= $countUnknow; $i++ )
                 <div class="col-xs-4">
                     <div class="charac-bd-not"></div>
                     <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat/tao-moi') }}" class="character-account">
-                        <img src="{{Asset("assets/frontend/images/not1.png")}}" style="width: 100%;">
-                        <p style="color:#ffc200; text-align: center; margin-top: -35px;">Chưa khởi tạo</p>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <div class="charac-bd-not"></div>
-                    <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat/tao-moi') }}" class="character-account">
-                        <img src="{{Asset("assets/frontend/images/not2.png")}}" style="width: 100%;">
-                        <p style="color:#ffc200; text-align: center; margin-top: -35px;">Chưa khởi tạo</p>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <div class="charac-bd-not"></div>
-                    <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat/tao-moi') }}" class="character-account">
-                        <img src="{{Asset("assets/frontend/images/not3.png")}}" style="width: 100%;">
+                        <img src="{{Asset("assets/frontend/images/not$i.png")}}" style="width: 100%;">
                         <p style="color:#ffc200; text-align: center; margin-top: -35px;">Chưa khởi tạo</p>
                     </a>
                 </div> 
-            @endif
+                @endfor
         </div>
     </div>
     <div class="row" style="height: auto;">

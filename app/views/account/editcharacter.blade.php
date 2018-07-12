@@ -92,7 +92,13 @@
                                 <p class="color-white" style="text-align: left; font-size: 12px;">Ngày tạo: {{ date('d/m/Y', strtotime($character->created_at)) }}</p>
                             </div>
                             <div class="col-xs-3">
-                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $character->Connect_Time }} tiếng</p>
+                                <?php
+                                    $seconds = '';
+                                    if($character->Connect_Time > 0){
+                                        $seconds = $character->Connect_Time *3600;
+                                    }
+                                ?>
+                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $seconds }} giây</p>
                             </div>
                             <div class="col-xs-4">
                                 <p class="color-white" style="text-align: left; font-size: 12px;">Điểm kinh nghiệm: 0</p>
@@ -194,7 +200,7 @@
                             </div>
                             <div class="col-xs-12">
                                 <p class="" style="color: #fff; font-size: 15px;">
-                                    Tổng số tiền kiếm được: {{ number_format($character->Other_Money_Total + $character->Mechanic_Money_Total + $character->Lumberjack_Money_Total + $character->Miner_Money_Total + $character->Farmer_Money_Total + $character->Trucker_Money_Total, 0, '.', '.')  }} $    -  Đã sử dụng: {{ number_format($character->Money_Spend_Total, 0, '.', '.')  }} $
+                                    Tổng số tiền kiếm được: {{ number_format($character->Other_Money_Total + $character->Mechanic_Money_Total + $character->Lumberjack_Money_Total + $character->Miner_Money_Total + $character->Farmer_Money_Total + $character->Trucker_Money_Total + $character->Fishing_Money_Total + $character->Trashman_Money_Total + $character->Taxi_Money_Total + $character->Trade_Money_Total + $character->Newspaper_Money_Total + $character->Pizza_Money_Total, 0, '.', '.')  }} $    -  Đã sử dụng: {{ number_format($character->Money_Spend_Total, 0, '.', '.')  }} $
                                 </p>
                             </div>
                         </div>

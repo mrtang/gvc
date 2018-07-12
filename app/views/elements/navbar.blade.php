@@ -78,7 +78,7 @@
                             <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                             <div class="head">
                                 <h2 class="popup-title title-1 title-pup">Đăng nhập</h2>
-                                <p style="text-align: center;font-size: 12px;">Tên tài khoản và mật khẩu</p>
+                                <p style="text-align: center;font-size: 12px;margin-top: -10px;">Tên tài khoản và mật khẩu</p>
                             </div>
                             {{
                                 Form::open(array(
@@ -94,11 +94,11 @@
                                 <div class="">
                                     <p id="login-error" style="color: #EB0000;text-align: center;"></p>
                                 </div>
-                                <div class="form-group" style="width: 230px;margin-top: -30px;margin-left: 15px;">
+                                <div class="form-group" style="width: 230px;margin-top: -50px;margin-left: 15px;">
                                     <img class="user-icon" src="{{Asset('assets/frontendV3/images/user-icon.png')}}">
                                     <input type="text" class="form-control inp-log" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
                                 </div>
-                                <div class="form-group" style="width: 230px;margin-top: -30px;margin-left: 15px;">
+                                <div class="form-group" style="width: 230px;margin-top: -46px;margin-left: 15px;">
                                     <img class="user-icon" src="{{Asset('assets/frontendV3/images/lock-icon.png')}}">
                                     <input type="password" class="form-control inp-log" name="password" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Mật khẩu">
                                 </div>
@@ -183,7 +183,7 @@
                         <label class="checkbox-inline" style="margin-left: 45px;font-size: 11px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 0px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
                     </div>
                     <div style="text-align: center;width: 490px;">
-                        <button class="btn-action small" type="submit" style="color: #FFF;width: 83%;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 10px;">Đăng ký ngay</button>
+                        <button class="btn-action small" type="submit" style="color: #FFF;width: 83%;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 20px;border: none;">Đăng ký ngay</button>
                     </div>
 
                     {{ Form::close() }}
