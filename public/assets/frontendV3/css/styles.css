@@ -3074,7 +3074,7 @@ header {
                 box-sizing: content-box; }
       header .header-right .search.active input {
         width: 53rem;
-        height: 55px;
+        height: 60px;
         padding-left: 1rem;
         padding-right: 5rem; }
         header .header-right .search.active input::-webkit-input-placeholder {
@@ -5035,7 +5035,7 @@ z-index: -999;
 
 .user-icon {
   width: 45px;
-margin-left: 95px;
+margin-left:110px;
 position: relative;
 top: 35px;
 height: 36px;
