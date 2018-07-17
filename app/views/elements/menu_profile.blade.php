@@ -6,23 +6,23 @@
     border-radius: 15px !important;
     }
 </style>
-<div class="menu-profile" style="margin-top: 54px;">
+<div class="menu-profile" style="margin-top: 74px;">
     <nav class="navbar navbar-default">
         <div class="container-fluid container">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="{{ Route::currentRouteName() == 'account.characters' ? 'active' : '' }}"><a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" >QUẢN LÝ NHÂN VẬT</a></li>
+                    <li class="{{ Route::currentRouteName() == 'account.characters' || Route::currentRouteName() == 'account.characters.create' || Route::currentRouteName() == 'account.characters.edit' ? 'active' : '' }}"><a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat') }}" >QUẢN LÝ NHÂN VẬT</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NÚT CÀI ĐẶT <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="z-index: 999;">
                             <li role="separator" class="divider"></li>
-                            <li><a data-toggle="modal" data-target="#loginModal" style="cursor: pointer;">ĐỔI MẬT KHẨU</a></li>
+                            <li><a data-toggle="modal" data-target="#loginModals" style="cursor: pointer;">ĐỔI MẬT KHẨU</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a data-toggle="modal" data-target="#emailModal" style="cursor: pointer;">ĐỔI EMAIL</a></li>
+                            <li><a data-toggle="modal" data-target="#emailModals" style="cursor: pointer;">ĐỔI EMAIL</a></li>
                         </ul>
                     </li>
                     <!--li class="dropdown">
@@ -49,9 +49,9 @@
     </nav>
 </div>
 
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="loginModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content login-md">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
                     <span style="color: #ffc200;">Đổi mật khẩu</span>
@@ -86,9 +86,9 @@
     </div>
 </div>
 
-<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="emailModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content login-md">
             <div class="modal-body">
                 <h3 style="color: #fff; text-align: center; text-transform: uppercase; font-family: RobotoBold; margin-top: 5px;" >
                     <span style="color: #ffc200;">Đổi email</span>

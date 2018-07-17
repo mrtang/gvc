@@ -96,13 +96,16 @@
                                 </div>
                                 <div class="form-group" style="width: 230px;margin-top: -50px;margin-left: 15px;">
                                     <img class="user-icon" src="{{Asset('assets/frontendV3/images/user-icon.png')}}">
-                                    <input type="text" class="form-control inp-log" name="username" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
+                                    <input type="text" class="form-control inp-log" name="username" style="margin-left: 62%;background-color: #000;color: #FFF;padding-left: 10px; border-left: none !important;border-radius: 0px 7px 7px 0; height: 35.2px; width: 205px; " placeholder="Tên tài khoản">
                                 </div>
                                 <div class="form-group" style="width: 230px;margin-top: -46px;margin-left: 15px;">
-                                    <img class="user-icon" src="{{Asset('assets/frontendV3/images/lock-icon.png')}}">
-                                    <input type="password" class="form-control inp-log" name="password" style="text-align: center;margin-left: 55%;background-color: #000;color: #FFF;" placeholder="Mật khẩu">
+                                    <img class="user-icon-lock" src="{{Asset('assets/frontendV3/images/lock-icon.png')}}">
+                                    <input type="password" class="form-control inp-log" name="password" style="margin-left: 146px;background-color: #000;color: #FFF;padding-left: 10px; border-left: none !important;border-radius: 0px 7px 7px 0; height: 35px; width: 205px;" placeholder="Mật khẩu">
                                 </div>
-                                <p style="text-align: right;font-size: 13px; margin-top: 5px;width: 358px;"><a href="javascript:void(0)" id="forgotPass" style="color: #feba01;">Quên mật khẩu ?</a></p>
+                                <p style="margin-bottom: 5px !important; text-align: right;font-size: 14px; margin-top: 5px;width: 368px;"><a href="javascript:void(0)" id="forgotPass" style="color: #feba01;">Quên mật khẩu ?</a></p>
+
+                                <p style="text-align: right;font-size: 14px; margin-top: 5px;width: 368px;"><a href="#" style="color: #feba01;" id="closeLogin">Chưa có tài khoản ? Đăng ký</a></p>
+
                                 <div style="text-align: center;width: 490px;">
                                     <button class="btn-action small" type="submit" style="color: #000;width: 130px;height: 30px;margin-bottom: 10px;border-radius: 10px;">Đăng nhập</button>
                                 </div>
@@ -147,7 +150,7 @@
                 <div class="popup-content">
                     <button type="button" class="btn btn-default close" data-dismiss="modal">X</button>
                     <div class="head">
-                        <h2 class="popup-title title-1 title-pup">Đăng ký</h2>
+                        <h2 class="popup-title title-1 title-pup" style="margin-bottom: 50px;">Đăng ký</h2>
                     </div>
                     {{
                         Form::open(array(
@@ -172,17 +175,17 @@
                     <div class="form-group" style="width: 400px;">
                         <input type="password" class="form-control" name="confirm_password" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Nhập lại mật khẩu">
                     </div>
-                    <div class="form-group" style="width: 400px;">
+                    <div class="form-group" style="width: 400px; margin-bottom: 10px !impotant;">
                         <input type="email" class="form-control" name="email" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Email">
-                        <span style="margin-left: 45px;font-size: 10px;color: #feba01;">Bạn cần xử dụng email này trong trường hợp đổi lại mật khẩu</span>
+                        <span style="font-size: 13px;">Bạn cần xử dụng email này trong trường hợp đổi lại mật khẩu</span>
                     </div>
                     <div class="form-group" style="width: 400px;">
-                        <input type="text" class="form-control" name="friend" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
+                        <input type="text" class="form-control" name="friend" style="margin-top: 10px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
                     </div>
                     <div class="form-group" style="width: 400px;">
-                        <label class="checkbox-inline" style="margin-left: 45px;font-size: 11px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 0px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
+                        <label class="checkbox-inline" style="font-size: 13px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 2px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
                     </div>
-                    <div style="text-align: center;width: 490px;">
+                    <div style="">
                         <button class="btn-action small" type="submit" style="color: #FFF;width: 83%;height: 30px;background-color: #feba01;border-radius: 2px;margin-bottom: 20px;border: none;">Đăng ký ngay</button>
                     </div>
 

@@ -261,12 +261,13 @@ img#bg-wrapper {
     display: block;
     -ms-flex: 100;
     flex: 100;
-    border-bottom: 6px solid;
+    border-bottom: 10px solid;
     -ms-transform: translateY(-7px);
     transform: translateY(-7px);
+    z-index: -44;
 }
 .nk-decorated-h-2::after, .nk-decorated-h-2::before {
-    border-bottom-color: #ABA1A2;
+    border-bottom-color: #bbb;
 }
 .nk-decorated-h-2::before, .nk-decorated-h::before {
     min-width: 60px;
@@ -604,17 +605,18 @@ form .control-label {
     border-right: none;
 }
 .menu-profile .navbar-default .navbar-nav > li > a {
-    color: #fff !important;
+    color: #fff  !important;
     font-family: 'RobotoRegular';
     background-color: transparent !important;
     text-transform: none !important;
-    padding: 10px 23px;
+    padding: 10px 35px;
 }
 .menu-profile .navbar-default .navbar-nav > li:hover > a {
     color: #ffc200 !important;
 }
 .menu-profile .navbar-default .navbar-nav > li.active a {
     color: #ffc200 !important;
+
 }
 
 .character-account:hover {
@@ -779,7 +781,8 @@ blockquote {
     background-color: transparent !important;
 }
 .menu-profile-detail .navbar-default .navbar-nav > li > a {
-    padding: 2px 12px;
+    padding: 2px 30px;
+    color: #ffc200 !important;
 }
 .menu-profile-detail .navbar-default .navbar-nav > li:first-child > a {
     padding-left: 0px !important;

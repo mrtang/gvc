@@ -3722,7 +3722,8 @@ header {
       display: inline-block; }
       .section-7 .latest-news .left-side img {
         width: 62.5rem;
-        min-height: 42rem; }
+        height: 400px;
+      }
     .section-7 .latest-news .right-side {
       float: right;
       width: 48%; }
@@ -3761,7 +3762,9 @@ header {
         display: block; }
         .section-7 .list-news .news a img {
           width: 100%;
-          min-height: 26rem; }
+          /*min-height: 26rem;*/ 
+          height: 260px;
+        }
   .section-7 .actions a {
     width: 26rem;
     color: #feba01;
@@ -4806,7 +4809,7 @@ footer {
 /*SHOP*/
 /* sidebar products */
 .sidebar-products {
-  padding: 15px 15px 20px;
+  -padding: 15px 15px 20px;
 }
 .sidebar-products .item {
   width: 100%;
@@ -4829,12 +4832,15 @@ footer {
 }
 .sidebar-products .item:hover .price{
     color: #feba01;
-    margin-top: 30px;
+    margin-top: 60px;
     background-color: #000;
-    height: 30px;
+     
+    width: 17.4rem;
+    height: 4.2rem;
+    line-height: 4.2rem;
     text-align: center;
-    padding-top: 3px;
-    width: 70%;}
+    padding: 3px 30px;
+    width: 80%;}
 .sidebar-products .item .item-img-left{
     display: inline-block;
     width: 45%;
@@ -4844,8 +4850,8 @@ footer {
     position: relative;
 }
 .sidebar-products .item .item-image{
-    width: 9.3rem;
-    height: 17.1rem;
+    width: 13.3rem;
+    height: 21.1rem;
 }
 .sidebar-products h2 {
     color: #feba01;
@@ -4868,12 +4874,14 @@ footer {
 }
 .sidebar-products .price {
     color: #FFF;
-    margin-top: 30px;
+    margin-top: 60px;
     background-color: #feba01;
-    height: 30px;
+    width: 17.4rem;
+    height: 4.2rem;
+    line-height: 4.2rem;
     text-align: center;
-    padding-top: 3px;
-    width: 70%;
+    padding: 3px 30px;
+    width: 80%;
 }
 .sidebar-products .item .item-right{
     position: relative;
@@ -5037,12 +5045,20 @@ z-index: -999;
   width: 45px;
 margin-left:110px;
 position: relative;
+top: 35.4px;
+height: 35.4px;
+}
+.user-icon-lock {
+  width: 45px;
+margin-left:110px;
+position: relative;
 top: 35px;
-height: 36px;
+height: 35px;
 }
 
+
 .inp-log{
-  border: 1px solid #FFF !important;
+  border: 1.3px solid #FFF !important;
   background-color: #17171c;
 }
 @media only screen and (max-width: 1368px){
@@ -5070,3 +5086,168 @@ height: 36px;
 
 
 
+#regisModal .modal-dialog {
+  width: 700px;
+  max-width: 700px;
+  top: 0px;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#regisModal .modal-dialog .modal-content{
+  border: 1.2px solid #feba01;
+  border-radius: 40px;
+  margin-top: 150px;
+  opacity: 0.88 !important;
+}
+
+#regisModal .modal-dialog .modal-content h2{
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#regisModal .modal-dialog .modal-content form{
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+#regisModal .modal-dialog .modal-content form .form-group{
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+#regisModal .modal-dialog .modal-content form .form-group input[type=text], #regisModal .modal-dialog .modal-content form .form-group input[type=password], #regisModal .modal-dialog .modal-content form .form-group input[type=email]{
+  margin-left: 0px !important;
+  -font-weight: bold;
+  height: 36px;
+  border-color: #fff;
+  border-radius: 8px;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#regisModal .modal-dialog .modal-content form label {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#regisModal .modal-dialog .modal-content form button {
+  width: 100% !important;
+  opacity: 1;
+  padding: 7px 20px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  font-weight: bold !important;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+}
+
+#loginModal .modal-dialog .modal-content{
+  border: 1.2px solid #feba01;
+  border-radius: 40px;
+  margin-top: 170px;
+  opacity: 0.88 !important;
+}
+
+#loginModal .modal-dialog .modal-content h2{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin-bottom: 30px;
+}
+
+#loginModal .modal-dialog .modal-content .head p{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 16px !important;
+}
+
+#loginModal .modal-dialog .modal-content form .form-group input[type=text], #loginModal .modal-dialog .modal-content form .form-group input[type=password]{
+  -height: 36px;
+  border-color: #fff;
+  border-radius: 8px;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#loginModal .modal-dialog .modal-content form button {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: bold !important;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+  border-radius: 7px !important;
+}
+
+#loginModals .modal-dialog .modal-content{
+  border: 1.2px solid #feba01;
+  border-radius: 40px;
+  opacity: 0.88 !important;
+}
+
+#loginModals .modal-dialog .modal-content h2{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin-bottom: 30px;
+}
+
+#loginModals .modal-dialog .modal-content .head p{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 16px !important;
+}
+
+#loginModals .modal-dialog .modal-content form .form-group input[type=text], #loginModals .modal-dialog .modal-content form .form-group input[type=password]{
+  -height: 36px;
+  border-color: #fff;
+  border-radius: 8px;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#loginModals .modal-dialog .modal-content form button {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: bold !important;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+  border-radius: 7px !important;
+}
+
+
+#emailModals .modal-dialog .modal-content{
+  border: 1.2px solid #feba01;
+  border-radius: 40px;
+  opacity: 0.88 !important;
+}
+
+#emailModals .modal-dialog .modal-content h2{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin-bottom: 30px;
+}
+
+#emailModals .modal-dialog .modal-content .head p{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 16px !important;
+}
+
+#emailModals .modal-dialog .modal-content form .form-group input[type=text], #emailModals .modal-dialog .modal-content form .form-group input[type=password]{
+  -height: 36px;
+  border-color: #fff;
+  border-radius: 8px;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#emailModals .modal-dialog .modal-content form button {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: bold !important;
+  margin-bottom: 50px !important;
+  text-transform: uppercase;
+  border-radius: 7px !important;
+}
+
+a.topic-image::after {
+
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(21,27,33,0.8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+
+}
