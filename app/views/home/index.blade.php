@@ -67,9 +67,9 @@
                                 <div class="about-news">
                                     Chuỗi sự kiện đồng hành cùng FIFA World Cup 2018 với nhiều sự kiện hấp dẫn cùng nhiều giải thưởng giá trị. Các sự kiện gồm: Đi Tìm Thánh Dự, Cổ Vũ Đội Bóng, e-World Cup Championship hứa hẹn một mùa ăn ngủ cùng bóng đá đầy sôi động!                                </div>
                                 <div class="actions thin-actions">
-                                    <a href="#"
+                                    <a href="https://gta-online.vn/tin-tuc/43/them-ban-them-vui.html"
                                        class="dark">Xem ngay</a>
-                                    <a href="#"
+                                    <a href="https://gta-online.vn/tin-tuc/danh-muc/1/thong-bao-su-kien.html"
                                        class="white">Tin
                                         khác</a>
                                 </div>
@@ -99,9 +99,9 @@
                                 <div class="about-news">
                                     Gửi huấn luyện viên, Gói TOTY là gói vật phẩm siêu cấp đắt giá nhất của FO4 Shop. Nhưng gói này sẽ chỉ được phép bán từ hôm nay đến 11:59 trưa ngày 04/07. Sau thời gian này, bạn sẽ gần như không còn cơ hội nào để mở ra TOTY nữa!                                </div>
                                 <div class="actions thin-actions">
-                                    <a href="{{Asset('assets/frontendV3/images/goi-toty-20-06.png')}}"
+                                    <a href="#"
                                        class="dark">Xem ngay</a>
-                                    <a href="https://fo4.garena.vn/cac-vat-pham-trong-fo4-shop/"
+                                    <a href="#"
                                        class="white">Tin
                                         khác</a>
                                 </div>
@@ -125,9 +125,9 @@
                             <div class="about-news">
                                 Chào mừng FO4 Shop và EP Point Shop chính thức mở cửa, FIFA Online 4 Việt Nam sẽ dành tặng những phần quà đặc biệt cho những người thực hiện chuyển Sò sang FC đạt đủ các hạn mức quy định.                            </div>
                             <div class="actions thin-actions">
-                                <a href="#"
+                                <a href="https://gta-online.vn/hoc-vien/danh-muc/2/huong-dan-nguoi-moi.html"
                                    class="dark">Xem ngay</a>
-                                <a href="#" class="white">Tin khác</a>
+                                <a href="https://gta-online.vn/hoc-vien" class="white">Tin khác</a>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                             <div class="actions thin-actions">
                                 <a href="{{ URL::to('/shop') }}"
                                    class="dark">Xem ngay</a>
-                                <a href="#" class="white">Tin khác</a>
+                                <a href="https://gta-online.vn/tin-tuc" class="white">Tin khác</a>
                             </div>
                         </div>
 
