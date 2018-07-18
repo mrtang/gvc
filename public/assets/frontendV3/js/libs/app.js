@@ -1065,15 +1065,17 @@ $(document).ready(function () {
         $('html').animate({scrollTop: 0}, 500, 'swing', function () {
         });
     });
+
+
     $('.search input').keyup(function (e) {
         if (e.keyCode == 13) {
             var q = $(this).val().trim();
             if (q.length == 0) return;
-            var url = 'https://cse.google.com/cse?cx=009551682254834596188:0rhxtkmoake&ie=UTF-8&q=' + encodeURIComponent(q) + '#gsc.tab=0&gsc.q=' + encodeURIComponent(q) + '&gsc.sort=';
+            var url = 'https://cse.google.com/cse?cx=011577049781106195186:fvztr5frpsi&ie=UTF-8&q=' + encodeURIComponent(q) + '#gsc.tab=0&gsc.q=' + encodeURIComponent(q) + '&gsc.sort=';
             if ($(this).parents('.nav-menu').length > 0) {
                 var q = $(this).parent().find('input').val().trim();
                 if (q.length == 0) return;
-                var url = 'https://cse.google.com/cse?cx=009551682254834596188:0rhxtkmoake&ie=UTF-8&q=' + encodeURIComponent(q) + '#gsc.tab=0&gsc.q=' + encodeURIComponent(q) + '&gsc.sort=';
+                var url = 'https://cse.google.com/cse?cx=011577049781106195186:fvztr5frpsi&ie=UTF-8&q=' + encodeURIComponent(q) + '#gsc.tab=0&gsc.q=' + encodeURIComponent(q) + '&gsc.sort=';
                 location.href = url;
             } else {
                 var win = window.open(url, '_blank');
