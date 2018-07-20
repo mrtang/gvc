@@ -65,7 +65,7 @@
                             <div class="wrapper">
                                 <h2 class="title-news">Thêm bạn thêm vui</h2>
                                 <div class="about-news">
-                                    Chuỗi sự kiện đồng hành cùng FIFA World Cup 2018 với nhiều sự kiện hấp dẫn cùng nhiều giải thưởng giá trị. Các sự kiện gồm: Đi Tìm Thánh Dự, Cổ Vũ Đội Bóng, e-World Cup Championship hứa hẹn một mùa ăn ngủ cùng bóng đá đầy sôi động!                                </div>
+                                    Tính năng Thêm bạn thêm vui  đã chính thức khởi chạy . Đây là một chức năng sẽ giúp tăng độ tương tác và giá trị của bạn ở trong cũng như ngoài game, đồng thời còn là một tiện ích giúp người chơi có thêm nhiều quà tặng hấp dẫn khi giới thiệu bạn bè tham gia máy chủ.</div>
                                 <div class="actions thin-actions">
                                     <a href="https://gta-online.vn/tin-tuc/43/them-ban-them-vui.html"
                                        class="dark">Xem ngay</a>
@@ -97,7 +97,7 @@
                             <div class="wrapper">
                                 <h2 class="title-news">Gói siêu xe</h2>
                                 <div class="about-news">
-                                    Gửi huấn luyện viên, Gói TOTY là gói vật phẩm siêu cấp đắt giá nhất của FO4 Shop. Nhưng gói này sẽ chỉ được phép bán từ hôm nay đến 11:59 trưa ngày 04/07. Sau thời gian này, bạn sẽ gần như không còn cơ hội nào để mở ra TOTY nữa!                                </div>
+                                    Hộp quà này sẽ chứa những siêu xe từ những hãng sang chảnh nhất thế giới như Lambo , Ferrari , BMW chưa từng có tại bất kì máy chủ GTA Online nào. Hãy cùng chiêm ngưỡng và trải nghiệm tịnh năng độc đáo này trong server nhé.</div>
                                 <div class="actions thin-actions">
                                     <a href="#"
                                        class="dark">Xem ngay</a>
@@ -123,7 +123,7 @@
                         <div class="section-left section-text">
                             <h2 class="title-news">Giới thiệu các job</h2>
                             <div class="about-news">
-                                Chào mừng FO4 Shop và EP Point Shop chính thức mở cửa, FIFA Online 4 Việt Nam sẽ dành tặng những phần quà đặc biệt cho những người thực hiện chuyển Sò sang FC đạt đủ các hạn mức quy định.                            </div>
+                                Siêu xe , Những biệt thự , Trang bị , Vũ khí tối tân , Các mối quan hệ bên ngoài xã hội. Trước khi có những điều đó các bạn phải có TIỀN. Vì vậy hãy chọn cho mình một ngành nghề phù hợp để làm việc và kiếm tiền. Sau một thời gian nhìn lại bạn sẽ không thấy hối tiếc cho thời gian và công sức bạn bỏ ra.</div>
                             <div class="actions thin-actions">
                                 <a href="https://gta-online.vn/hoc-vien/danh-muc/2/huong-dan-nguoi-moi.html"
                                    class="dark">Xem ngay</a>
@@ -145,7 +145,7 @@
                         <div class="section-right section-text">
                             <h2 class="title-news">G-SHOP</h2>
                             <div class="about-news">
-                                EP Point Shop đã được mở cửa trở lại! Hãy cùng xem thử những phần quà hoàn toàn miễn phí dành riêng cho những người chơi FO3 như bạn trong FO4 trong những ngày tháng này                            </div>
+                                Hãy cùng chúng tôi khám phá những tính năng mới lạ , những vật phẩm quý hiếm bên trong server mà bạn có thể sở hữu nhé.</div>
                             <div class="actions thin-actions">
                                 <a href="{{ URL::to('/shop') }}"
                                    class="dark">Xem ngay</a>
