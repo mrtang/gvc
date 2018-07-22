@@ -95,10 +95,10 @@
                                 <?php
                                     $seconds = '';
                                     if($character->Connect_Time > 0){
-                                        $seconds = $character->Connect_Time *3600;
+                                        $seconds = $character->Connect_Time;
                                     }
                                 ?>
-                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $seconds }} giây</p>
+                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $character->Connect_Time/3600 }} giờ</p>
                             </div>
                             <div class="col-xs-4">
                                 <p class="color-white" style="text-align: left; font-size: 12px;">Điểm kinh nghiệm: 0</p>
@@ -184,6 +184,12 @@
 
                                 <p style="color: #FF9900; font-size: 15px; margin-bottom: 0px;">Miner</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Miner_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #00FFBF; font-size: 15px; margin-bottom: 0px;">Trade</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Trade_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #66aa00; font-size: 15px; margin-bottom: 0px;">Pizza Delivery</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Pizza_Money_Total, 0, '.', '.')  }} $</p>
                             </div>
                             <div class="col-xs-6">
                                 <div id="donutchart" style="width: 100%; height: 230px; margin-bottom: 10px;"></div>
@@ -194,6 +200,12 @@
 
                                 <p style="color: #DC3912; font-size: 15px; margin-bottom: 0px; text-align: right;">Mechanic</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Mechanic_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #dd4477; font-size: 15px; margin-bottom: 0px; text-align: right;">Newspaper Delivery</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Newspaper_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #013ADF; font-size: 15px; margin-bottom: 0px; text-align: right;">Taxi Driver</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Taxi_Money_Total, 0, '.', '.')  }} $</p>
 
                                 <p style="color: #0099C6; font-size: 15px; margin-bottom: 0px; text-align: right;">Other</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Other_Money_Total, 0, '.', '.')  }} $</p>
@@ -310,6 +322,12 @@
                 ['Miner',   <?php echo $character->Miner_Money_Total ?>],
                 ['Lumberjack',  <?php echo $character->Lumberjack_Money_Total ?>],
                 ['Farmer',     <?php echo $character->Farmer_Money_Total ?>],
+                ['Trade',     <?php echo $character->Trade_Money_Total ?>],
+                ['Newspaper Delivery',     <?php echo $character->Newspaper_Money_Total ?>],
+                ['Pizza Delivery',     <?php echo $character->Pizza_Money_Total ?>],
+                ['Taxi Driver',     <?php echo $character->Taxi_Money_Total ?>],
+                // ['Trashman',     <?php echo $character->Trashman_Money_Total ?>],
+                // ['Fishing',     <?php echo $character->Fishing_Money_Total ?>],
                 ['Other',     <?php echo $character->Other_Money_Total ?>]
             ]);
 

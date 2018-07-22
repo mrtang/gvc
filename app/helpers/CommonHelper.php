@@ -123,7 +123,7 @@ class CommonHelper {
      * get news type 1   
      */
     public static function getNoticeNew(){
-        $notice = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy(DB::raw('RAND()'))->skip(0)->take(6)->get();
+        $notice = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy(DB::raw('RAND()'))->skip(0)->take(6)->get();
         return $notice;
     }
 

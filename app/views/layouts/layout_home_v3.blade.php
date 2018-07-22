@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
+        <meta name="google-site-verification" content="uda0BlDJ6JGNISwKUYKfB9HOwoJVROwoL--yQ-Dq5kQ" />
 
         <!-- Basic Styles -->
         {{ HTML::style('assets/frontendV3/css/bootstrap4.min.css') }}
@@ -38,8 +39,18 @@
     <!-- BEGIN BODY -->
     <body class="home blog hfeed has-header-image has-sidebar colors-light">
         @yield('content')
-
+        <div class="contain-flash" style="z-index: 9999;position: fixed;
+top: 55px;
+left: 0px;
+z-index: 123;
+width: 100%;
+height: 6.6rem;">
+            <div class="flash">
+                @include('elements/flash')
+            </div>
+        </div>
         @include('elements/navbar')
+
         <!--div class="links">
             <a href="true" class="true" data-toggle="modal" data-target="#ruleModal">Hướng dẫn</a>
         </div-->
@@ -280,6 +291,12 @@
                     if ($(this).val() == 'tôi đồng ý')
                     $('#next-step').css('display', 'block');
                 });
+            });
+
+
+            $("#closeLogin").click(function(){
+                $('#loginModal').modal('hide');
+                $('#regisModal').modal('show');
             });
         </script>
     </body>

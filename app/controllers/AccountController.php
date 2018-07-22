@@ -92,7 +92,7 @@ class AccountController extends \BaseController {
                 $body = [
                     'name'      =>  $input['username'],
                     'email'     =>  $input['email'],
-                    'key'       =>  $apiKey
+                    //'key'       =>  $apiKey
                 ];
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
@@ -154,7 +154,7 @@ class AccountController extends \BaseController {
                 'email'     =>  $account->Email,
                 'password'  =>  $account->Password_Clear,
                 'group'     =>  3,
-                'key'       =>  $apiKey
+                //'key'       =>  $apiKey
             ];
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members');
@@ -311,7 +311,7 @@ class AccountController extends \BaseController {
      */
     public function active($id) {
         $account = Account::whereRaw('active_key = ? and Disabled = ?', [$id, 1])->first();
-
+	
         if (!empty($account)) {
             // save account to forum
             $apiKey = '2d62d32ea27e7653304430a31976a8e2';
@@ -320,7 +320,7 @@ class AccountController extends \BaseController {
                 'email'     =>  $account->Email,
                 'password'  =>  $account->Password_Clear,
                 'group'     =>  3,
-                'key'       =>  $apiKey
+                //'key'       =>  $apiKey
             ];
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members');
@@ -336,6 +336,7 @@ class AccountController extends \BaseController {
             $response = json_decode($response);
 
             if (isset($response->errorCode)) {
+		Log::info($response->errorMessage);
                 Session::flash('f_error', 'Lỗi đồng bộ tài khoản lên forum: '.$response->errorMessage);
                 return Redirect::to('/');
                 //return Response::json(array(
@@ -505,7 +506,7 @@ class AccountController extends \BaseController {
                             'username'  =>  $account->UserName,
                             'email'     =>  $account->Email,
                             'password'  =>  $input['password'],
-                            'key'       =>  $apiKey
+                            //'key'       =>  $apiKey
                         ];
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
@@ -575,7 +576,7 @@ class AccountController extends \BaseController {
                 'username'  =>  $account->UserName,
                 'email'     =>  $account->email_new,
                 'password'  =>  $account->Password_Clear,
-                'key'       =>  $apiKey
+                //'key'       =>  $apiKey
             ];
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://forum.gta-online.vn/api/index.php?/core/members/'.$account->forum_id);
@@ -825,7 +826,7 @@ class AccountController extends \BaseController {
                   
                     <div style="Margin-left:20px;Margin-right:20px">
               
-        <p style="Margin-top:0;Margin-bottom:0">Xin chào '.$account->UserName.', cảm ơn bạn đã đăng ký tham gia cộng đồng GvC - Grand Theft Auto Vietnam Community.</p><p style="Margin-top:20px;Margin-bottom:0">Thông tin đăng ký: </p><blockquote style="Margin-top:20px;Margin-bottom:0;Margin-left:0;Margin-right:0;padding-left:14px;border-left:4px solid #ccc"><ul style="Margin-top:20px;Margin-bottom:20px;Margin-left:24px;padding:0;list-style-type:disc"><li style="Margin-top:20px;Margin-bottom:0;Margin-left:0">Tên tài khoản: '.$account->UserName.'</li><li style="Margin-top:0;Margin-bottom:0;Margin-left:0">Mật khẩu: '.$account->Password_Clear.'</li><li style="Margin-top:0;Margin-bottom:0;Margin-left:0">Email: <a href="mailto:'.$account->UserName.'" target="_blank">'.$account->Email.'</a></li></ul></blockquote><p style="Margin-top:20px;Margin-bottom:20px">Còn một bước cuối cùng trước khi Hãy nhấn vào nút &quot;Kích hoạt tài khoản&quot; phía dưới để hoàn tất quá trình đăng ký tài khoản và bắt đầu tham gia hoạt động cùng GvC nhé.</p>
+        <p style="Margin-top:0;Margin-bottom:0">Xin chào '.$account->UserName.', cảm ơn bạn đã đăng ký tham gia cộng đồng GTO - Grand Theft Auto Online.</p><p style="Margin-top:20px;Margin-bottom:0">Thông tin đăng ký: </p><blockquote style="Margin-top:20px;Margin-bottom:0;Margin-left:0;Margin-right:0;padding-left:14px;border-left:4px solid #ccc"><ul style="Margin-top:20px;Margin-bottom:20px;Margin-left:24px;padding:0;list-style-type:disc"><li style="Margin-top:20px;Margin-bottom:0;Margin-left:0">Tên tài khoản: '.$account->UserName.'</li><li style="Margin-top:0;Margin-bottom:0;Margin-left:0">Mật khẩu: '.$account->Password_Clear.'</li><li style="Margin-top:0;Margin-bottom:0;Margin-left:0">Email: <a href="mailto:'.$account->Email.'" target="_blank">'.$account->Email.'</a></li></ul></blockquote><p style="Margin-top:20px;Margin-bottom:20px">Còn một bước cuối cùng trước khi Hãy nhấn vào nút "Kích hoạt tài khoản" phía dưới để hoàn tất quá trình đăng ký tài khoản và bắt đầu tham gia hoạt động cùng GTO nhé.</p>
             </div>
                   
                     <div style="Margin-left:20px;Margin-right:20px">

@@ -5051,7 +5051,6 @@ height: 35.4px;
 .user-icon-lock {
   width: 45px;
 margin-left:110px;
-position: relative;
 top: 35px;
 height: 35px;
 }
@@ -5234,3 +5233,20 @@ height: 35px;
   border-radius: 7px !important;
 }
 
+a.topic-image::after {
+
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(21,27,33,0.8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+
+}
