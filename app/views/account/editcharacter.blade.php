@@ -190,6 +190,9 @@
 
                                 <p style="color: #66aa00; font-size: 15px; margin-bottom: 0px;">Pizza Delivery</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Pizza_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #01DF3A; font-size: 15px; margin-bottom: 0px;">Trashman</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Trashman_Money_Total, 0, '.', '.')  }} $</p>
                             </div>
                             <div class="col-xs-6">
                                 <div id="donutchart" style="width: 100%; height: 230px; margin-bottom: 10px;"></div>
@@ -206,6 +209,9 @@
 
                                 <p style="color: #013ADF; font-size: 15px; margin-bottom: 0px; text-align: right;">Taxi Driver</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Taxi_Money_Total, 0, '.', '.')  }} $</p>
+
+                                <p style="color: #FE2EC8; font-size: 15px; margin-bottom: 0px; text-align: right;">Fishing</p>
+                                <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Fishing_Money_Total, 0, '.', '.')  }} $</p>
 
                                 <p style="color: #0099C6; font-size: 15px; margin-bottom: 0px; text-align: right;">Other</p>
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px; text-align: right;">{{ number_format($character->Other_Money_Total, 0, '.', '.')  }} $</p>
