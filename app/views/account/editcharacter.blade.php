@@ -96,9 +96,10 @@
                                     $seconds = '';
                                     if($character->Connect_Time > 0){
                                         $seconds = $character->Connect_Time;
+                                        $timeConnect = ceil($character->Connect_Time/3600);
                                     }
                                 ?>
-                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $character->Connect_Time/3600 }} giờ</p>
+                                <p class="color-white" style="text-align: left; font-size: 12px;">Thời gian đã chơi: {{ $timeConnect }} giờ</p>
                             </div>
                             <div class="col-xs-4">
                                 <p class="color-white" style="text-align: left; font-size: 12px;">Điểm kinh nghiệm: 0</p>
@@ -195,7 +196,7 @@
                                 <p class="" style="color: #fff; font-size: 15px; margin-bottom: 30px;">{{ number_format($character->Trashman_Money_Total, 0, '.', '.')  }} $</p>
                             </div>
                             <div class="col-xs-6">
-                                <div id="donutchart" style="width: 100%; height: 230px; margin-bottom: 10px;"></div>
+                                <div id="donutchart" style="width: 100%; height: 350px; margin-bottom: 10px;"></div>
                             </div>
                             <div class="col-xs-3">
                                 <p style="color: #109618; font-size: 15px; margin-bottom: 0px; text-align: right;">Lumberjack</p>
@@ -343,7 +344,7 @@
                 legend: 'none',
                 pieSliceText: 'label',
                 chartArea: {
-                    left:10,top:10,width:'100%',height:'80%'
+                    left:10,top:55,width:'100%',height:'70%'
                 },
                 tooltip: {
                     ignoreBounds: true
