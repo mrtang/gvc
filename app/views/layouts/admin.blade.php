@@ -86,7 +86,8 @@
         {{ HTML::script('assets/js/common.js') }}
         {{ HTML::script('assets/js/script.js') }}
         
-        {{ HTML::script('assets/ckeditor/ckeditor.js') }}
+        {{ HTML::script('ckeditor/ckeditor.js') }}
+        {{ HTML::script('ckfinder/ckfinder.js') }}
         {{ HTML::script('assets/js/fileUpload/jquery.knob.js') }}
         {{ HTML::script('assets/js/fileUpload/jquery.ui.widget.js') }}
         {{ HTML::script('assets/js/fileUpload/jquery.iframe-transport.js') }}

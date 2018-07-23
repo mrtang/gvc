@@ -206,4 +206,6 @@ Route::group(array('before'=>'adminFilter'), function(){
 });
 
 Route::get('/sendmail',                           array('as' => 'send.mail', 'uses' => 'AccountController@sendMail'));
-    
+
+//API
+Route::get('/api/news',                           array('as' => 'api.news', 'uses' => 'ApiController@getNews'));
