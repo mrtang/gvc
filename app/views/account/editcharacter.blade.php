@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-xs-3">
                                 <?php
-                                    $seconds = '';
+                                    $timeConnect = 0;
                                     if($character->Connect_Time > 0){
                                         $seconds = $character->Connect_Time;
                                         $timeConnect = ceil($character->Connect_Time/3600);

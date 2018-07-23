@@ -13,11 +13,11 @@
             @if (!empty($countCharacters))
                 @foreach ($characters as $character)
                     <div class="col-xs-4">
-                        @if ($character->Skin)
+                        @if ($character->Skin !== '')
                         <div class="charac-bd"></div>
                         @endif
                         <a href="{{ URL::to('/tai-khoan/quan-ly-nhan-vat/chi-tiet/'.$character->ID) }}" class="character-account">
-                            @if ($character->Skin)
+                            @if ($character->Skin !== '')
                             <img src="{{Asset("assets/frontend/skins/$character->Skin.png")}}" style="width: 100%;">
                             @else
                             <img src="{{Asset("assets/frontend/skins/unknow.png")}}" style="width: 100%;">

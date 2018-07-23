@@ -10,7 +10,17 @@ class ApiController extends \BaseController {
     //get News
     public function getNews(){
     	$input = array_map('trim', Input::all());
-    	var_dump($input);die;
+    	if(!empty($input)){
+    		if(isset($input['cat']) && isset($input['limit'])){
+    			echo 2;
+    		}else{
+    			return Response::json(array('Code' => 0,'Msg' => 'Not data!!'));
+    		}
+    	}else{
+    		return Response::json(array('Code' => 0,'Msg' => 'Not data!'));
+    	}
     }
+
+    //authorize
 
 }

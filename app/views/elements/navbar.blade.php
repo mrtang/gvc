@@ -80,6 +80,9 @@
                                 <h2 class="popup-title title-1 title-pup">Đăng nhập</h2>
                                 <p style="text-align: center;font-size: 12px;margin-top: -10px;">Tên tài khoản và mật khẩu</p>
                             </div>
+                            <div class="">
+                                    <p id="login-error" style="color: #EB0000;text-align: center;"></p>
+                                </div>
                             {{
                                 Form::open(array(
                                     'action' => 'AccountController@login',
@@ -91,16 +94,13 @@
                                     'novalidate'
                                 ))
                             }}
-                                <div class="">
-                                    <p id="login-error" style="color: #EB0000;text-align: center;"></p>
-                                </div>
                                 <div class="form-group" style="width: 230px;margin-top: -50px;margin-left: 15px;">
                                     <img class="user-icon" src="{{Asset('assets/frontendV3/images/user-icon.png')}}">
                                     <input type="text" class="form-control inp-log" name="username" style="margin-left: 62%;background-color: #000;color: #FFF;padding-left: 10px; border-left: none !important;border-radius: 0px 7px 7px 0; height: 35.2px; width: 205px; z-index: 555;" placeholder="Tên tài khoản">
                                 </div>
                                 <div class="" style="width: 230px;margin-top: 0px;margin-left: 15px;height: 40px !important;">
                                     <img class="user-icon-lock" src="{{Asset('assets/frontendV3/images/lock-icon.png')}}">
-                                    <input type="password" class="form-control inp-log" name="password" style="margin-left: 152px;background-color: #000;color: #FFF;padding-left: 10px; border-left: none !important;border-radius: 0px 7px 7px 0; height: 35px; width: 198px; z-index: 576;position: fixed;top: 160px;" placeholder="Mật khẩu">
+                                    <input type="password" class="form-control inp-log" name="password" style="margin-left: 152px;background-color: #000;color: #FFF;padding-left: 10px; border-left: none !important;border-radius: 0px 7px 7px 0; height: 35px; width: 198px; z-index: 576;position: relative;top: -35px;" placeholder="Mật khẩu">
                                 </div>
                                 <p style="margin-bottom: 5px !important; text-align: right;font-size: 14px; margin-top: 5px;width: 368px;"><a href="javascript:void(0)" id="forgotPass" style="color: #feba01;">Quên mật khẩu ?</a></p>
 
