@@ -52,7 +52,7 @@ class ApiController extends \BaseController {
     	$input = Input::all();
     	$cipher = new Crypt_TripleDES(CRYPT_DES_MODE_ECB);
 		$cipher->setKey('eb4b57225211fceb2a875e2f40cb3b57');
-		//dd(urlencode(base64_encode($cipher->encrypt('abcxyz:123456'))));
+		//dd(urlencode(base64_encode($cipher->encrypt('Devin:123456'))));
 		//$cipher->setIV('anh');
 		if(!empty($input)){
 			if(isset($input['encrypt'])){
@@ -60,18 +60,22 @@ class ApiController extends \BaseController {
 				//var_dump($plaintext);die;
 				//$a = base64_decode($plaintext);var_dump($a);die;
 				$author = $cipher->decrypt(base64_decode($plaintext));
-				$arrAuthor = explode(':', $author);
-				$account = $this->account->checkLoginApp($arrAuthor[0], $arrAuthor[1]);
-				if ($account instanceof Account) {
-                    if (isset($input['remember']) && $input['remember'] == 1) {
-                        setcookie('username', $input['username'], time()+3600*24*30);
-                        setcookie('password', $input['password'], time()+3600*24*30);
-                    }
-                    Session::put('auth', $account->ID);
-                    return Response::json(array('Code' => 1, 'Msg' => 'Success'));
-                } else {
-                    return Response::json(array('Code' => 0, 'Msg' => 'Tài khoản hoặc mật khẩu không đúng'));
-                }
+				if($author != false){
+					$arrAuthor = explode(':', $author);
+					$account = $this->account->checkLoginApp($arrAuthor[0], $arrAuthor[1]);
+					if ($account instanceof Account) {
+	                    if (isset($input['remember']) && $input['remember'] == 1) {
+	                        setcookie('username', $input['username'], time()+3600*24*30);
+	                        setcookie('password', $input['password'], time()+3600*24*30);
+	                    }
+	                    Session::put('auth', $account->ID);
+	                    return Response::json(array('Code' => 1, 'Msg' => 'Success'));
+	                } else {
+	                    return Response::json(array('Code' => 0, 'Msg' => 'Tài khoản hoặc mật khẩu không đúng'));
+	                }
+	            }else{
+	            	return Response::json(array('Code' => 0, 'Msg' => 'Chuỗi mã hóa truyền lên không chính xác'));
+	            }
 			}else{
 				return Response::json(array('Code' => 0,'Msg' => 'Input data authorization fail!'));
 			}
