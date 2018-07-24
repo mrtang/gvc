@@ -209,3 +209,4 @@ Route::get('/sendmail',                           array('as' => 'send.mail', 'us
 
 //API
 Route::get('/api/news',                           array('as' => 'api.news', 'uses' => 'ApiController@getNews'));
+Route::get('/api/authorization',                  array('as' => 'api.authorization', 'uses' => 'ApiController@authorization'));
