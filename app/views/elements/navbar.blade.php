@@ -1,5 +1,6 @@
 <header class="only-pc">
     <?php $currentAccount = BaseController::getAccountInfo(); ?>
+    <?php $ref = BaseController::getReferral(); ?>
     <div class="container">
         <div class="header-left">
             <a href="/" class="logo"><img src="{{Asset('assets/frontendV3/images/logo_gta.png')}}" style="width: 65px; margin-top: -6px;" alt=""></a>
@@ -166,6 +167,12 @@
                     <div class="">
                         <p id="regis-error" style="color: #EB0000;text-align: center;"></p>
                     </div>
+                    @if(!empty($ref))
+                    <div class="form-group" style="width: 400px;">
+                        <span>Người giới thiệu : {{$ref}}</span>
+                        <input type="hidden" name="ref" value="{{$ref}}">
+                    </div>
+                    @endif
                     <div class="form-group" style="width: 400px;">
                         <input type="text" class="form-control" name="username" style="margin-top: 10px;margin-left: 45px;background-color: #000;color: #FFF;" placeholder="Tên tài khoản">
                     </div>
@@ -180,7 +187,7 @@
                         <span style="font-size: 13px;">Bạn cần xử dụng email này trong trường hợp đổi lại mật khẩu</span>
                     </div>
                     <div class="form-group" style="width: 400px;">
-                        <input type="text" class="form-control" name="friend" style="margin-top: 10px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)">
+                        <input type="text" class="form-control" name="friend" style="margin-top: 10px;background-color: #000;color: #FFF;" placeholder="ID người giới thiệu (nếu có)" value="">
                     </div>
                     <div class="form-group" style="width: 400px;">
                         <label class="checkbox-inline" style="font-size: 13px;padding-top: 5px;"><input type="checkbox" value="1" name="agree" style="margin-top: 2px;">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>

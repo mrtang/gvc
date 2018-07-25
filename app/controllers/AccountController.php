@@ -2,11 +2,12 @@
 class AccountController extends \BaseController {
     protected $layout = 'layouts.admin';
     
-    public function __construct(Account $account, Email $email, Character $character) {
+    public function __construct(Account $account, Email $email, Character $character, Referral $ref) {
         parent::__construct();
         $this->account = $account;
         $this->email = $email;
         $this->character = $character;
+        $this->ref = $ref;
     }
     
     public function check($username, $password) {
@@ -267,7 +268,15 @@ class AccountController extends \BaseController {
                     $pos = strpos($input['email'], '@gmail.com');
                     if($pos){
                         $account = $this->account->saveAccount($input);
-
+                        //save ref
+                        $infoRef = $this->account->where('UserName',$input['ref'])->first();
+                        $dataRef = array(
+                            'user_id' => $account->ID,
+                            'user_name' => $account->UserName,
+                            'ref_id' => $infoRef->ID,
+                            'ref_name' => $infoRef->UserName
+                        );
+                        $this->ref->saveReferral($dataRef);
                         // save statics
                         $static = Statics::whereRaw('Date = ?', [date('Y-m-d')])->first();
                         if (!empty($static)) {

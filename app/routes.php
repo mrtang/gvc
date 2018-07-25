@@ -51,6 +51,7 @@ Route::get('/hoc-vien/danh-muc/{id}/{slug}.html',       array('as' => 'academy.c
 Route::get('/thu-vien',                                 array('as' => 'library.list', 'uses' => 'LibraryController@listnew'));
 Route::get('/thu-vien/{id}/{slug}.html',                array('as' => 'library.detail', 'uses' => 'LibraryController@detail'));
 Route::get('/shop',                                     array('as' => 'shop.list', 'uses' => 'ShopController@index'));
+Route::get('/affiliate',                                array('as' => 'affiliate', 'uses' => 'AffiliateController@index'));
 Route::get("launcher/statics", function() {
     //return File::get(public_path() . '/Launcher/statics/index.php');
     ob_start();

@@ -65,6 +65,14 @@ class HomeController extends BaseController {
      */
     public function index() {
         $input = array_map('trim', Input::all());
+        if (isset($input['ref']) && !empty($input['ref'])) {
+            $checkRef = $this->account->where('UserName',$input['ref'])->first();
+            if(!empty($checkRef)){
+                return Redirect::to('/affiliate?ref='.$input['ref']);
+            }else{
+                return Redirect::to('/');
+            }
+        }
         $specialNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->skip(0)->take(4)->get();
         $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->skip(0)->take(1)->get()->toArray();
         $latestNews = News::whereRaw('is_deleted = ? and status = ? and type = ? and new_id != ?', array(0, 1, 2,$hotNews[0]['new_id']))->orderBy('updated_at', 'desc')->skip(0)->take(4)->get();

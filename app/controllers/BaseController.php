@@ -110,4 +110,10 @@ class BaseController extends Controller {
     public static function sanitizeConAcc() {
         return base64_decode('aGF5Z2FtZW5ldA==');
     }
+
+    //
+    public static function getReferral(){
+        $ref = isset($_COOKIE['ref']) ? $_COOKIE['ref'] : '';
+        return $ref;
+    }
 }
