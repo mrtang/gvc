@@ -82,7 +82,7 @@ Route::group(array('before'=>'accountFilter'), function(){
     Route::any('/ticket/yeu-cau',             array('as' => 'ticket.request', 'uses' => 'TicketController@request'));
     Route::any('/ticket/chi-tiet/{id}',       array('as' => 'ticket.detail', 'uses' => 'TicketController@detail'));
     Route::post('/ticket/confirm',             array('as' => 'ticket.confirm', 'uses' => 'TicketController@confirm'));
-    
+    Route::get('/tai-khoan/gioi-thieu-nguoi-moi',   array('as' => 'inbox.user.recommend', 'uses' => 'InboxController@recommend'));
 });
 
 Route::post('/ckeditorImage',               'HomeController@ckeditorImage');

@@ -3,9 +3,10 @@
 class InboxController extends \BaseController {
     protected $layout = 'layouts.admin';
     
-    public function __construct(Inbox $inbox) {
+    public function __construct(Inbox $inbox, Referral $ref) {
         parent::__construct();
         $this->inbox = $inbox;
+        $this->ref = $ref;
     }
     
     /**
@@ -143,4 +144,21 @@ class InboxController extends \BaseController {
         ));
         $this->layout->content = $view;
     }
+
+    /**
+     * referral
+     * @author a
+     */
+    public function recommend() {
+        $input = array_map('trim', Input::all());
+        $currentAccount = BaseController::getAccountInfo();
+        $list = Referral::whereRaw('ref_id = ?',[$currentAccount->ID])->orderBy('created_at', 'desc')->paginate(10);
+
+        $this->layout = View::make('layouts.application');
+        $view = View::make('inbox.referral')->with(array(
+            'list' => $list,
+        ));
+        $this->layout->content = $view;
+    }
+
 }
