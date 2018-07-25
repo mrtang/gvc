@@ -104,5 +104,5 @@
 @stop
 
 @section('scripts')
-    {{ HTML::script('assets/js/elements/new.js') }}
+    {{ HTML::script('assets/js/elements/academy.js') }}
 @stop

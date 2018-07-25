@@ -44,7 +44,7 @@
 	    </div>
         <div class="col-sm-4 form-group">
             <label>Danh mục</label>
-            <select name="cate_id" class="has-custom-select custom-input" id="disabled">
+            <select name="cate_id" class="has-custom-select custom-input">
                 <option value="-1">Chọn danh mục</option>
                 @foreach(CommonHelper::getCateAcademy() as $value)
                 <option value="{{$value->id}}" {{ isset($new->cate_id) && $new->cate_id == $value->id ? "selected='selected'" : '' }} >{{$value->name}}</option>
@@ -66,6 +66,6 @@
 <div class="row direct-header">
     <div class="col col-sm-12">
         <button class="btn btn-primary" type="submit" style="margin: 15px 0;"> Lưu tin</button>
-        <a href="{{ URL::to('/admin/new') }}" class="btn btn-default"> Hủy bỏ</a>
+        <a href="{{ URL::to('/admin/academy') }}" class="btn btn-default"> Hủy bỏ</a>
     </div>
 </div>

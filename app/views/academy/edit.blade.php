@@ -21,7 +21,7 @@
                 </div>
                 {{ Form::open(array(
                     'url' => URL::to('/admin/academy/edit/'.$new->new_id),
-                    'id' => 'form-new-edit',
+                    'id' => 'form-academy-edit',
                     'class' => '',
                     'method' => 'put',
                     'data-remote' => 'true',
@@ -29,7 +29,7 @@
                 )) }}
                 
                     <!-- Edit: type = 1 -->
-                    @include('new.form', array('type' => 1))
+                    @include('academy.form', array('type' => 1))
                 
                 {{ Form::close() }}
                 
@@ -39,5 +39,5 @@
     </div>
 @stop
 @section('scripts')
-    {{ HTML::script('assets/js/elements/new.js') }}
+    {{ HTML::script('assets/js/elements/academy.js') }}
 @stop
