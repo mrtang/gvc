@@ -15,7 +15,7 @@
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
                     <li><a href="#">QUẢN LÝ TICKET</a></li>
-                    <li><a href="#">QUẢN LÝ TICKET</a></li>
+                    <li class="{{ Route::currentRouteName() == 'inbox.user.recommend' ? 'active' : '' }}"><a href="{{ URL::to('/tai-khoan/gioi-thieu-nguoi-moi') }}">GIỚI THIỆU</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NÚT CÀI ĐẶT <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="z-index: 999;">

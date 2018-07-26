@@ -13,7 +13,7 @@
     </h3>
 
     <div class="row" style=" margin-bottom: 500px;">
-        <div class="col-xs-12">
+        <div class="col-xs-12" style="margin-top: 30px;">
             <table id="functions" class="table dataTable" style="border: 1px solid #aba1a2;">
                 <thead>
                     <tr>
@@ -27,13 +27,13 @@
                     @foreach ($list as $value)
                         <tr>
                             <td class="th-ref">
-                                333
+                                {{$value->user_id}}
                             </td>
                             <td class="th-ref">
-                                fffff
+                                {{$value->user_name}}
                             </td class="th-ref">
-                            <td class="th-ref">anhth</td>
-                            <td class="th-ref">{{ date('H:i:s d/m/Y') }}</td>
+                            <td class="th-ref">{{ date('H:i d/m/Y',strtotime($value->created_at)) }}</td>
+                            <td class="th-ref"></td>
                         </tr>
                     @endforeach
                     @if (!sizeof($list)) 

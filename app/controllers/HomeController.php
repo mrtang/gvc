@@ -68,6 +68,7 @@ class HomeController extends BaseController {
         if (isset($input['ref']) && !empty($input['ref'])) {
             $checkRef = $this->account->where('UserName',$input['ref'])->first();
             if(!empty($checkRef)){
+                setcookie('ref', $input['ref'], time()+60*20);
                 return Redirect::to('/affiliate?ref='.$input['ref']);
             }else{
                 return Redirect::to('/');

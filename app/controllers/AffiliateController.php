@@ -12,7 +12,7 @@ class AffiliateController extends \BaseController {
     public function index() {
         $input = array_map('trim', Input::all());
         if (isset($input['ref']) && !empty($input['ref'])) {
-            setcookie('ref', $input['ref'], time()+60*10);
+            setcookie('ref', $input['ref'], time()+60*20);
         }
         $specialNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 1))->orderBy('updated_at', 'desc')->skip(0)->take(4)->get();
         $hotNews = News::whereRaw('is_deleted = ? and status = ? and type = ?', array(0, 1, 2))->orderBy('updated_at', 'desc')->skip(0)->take(1)->get()->toArray();

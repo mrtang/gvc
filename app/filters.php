@@ -48,7 +48,7 @@ Route::filter('adminFilter', function(){
 
 Route::filter('accountFilter', function(){
     if (!Session::has('auth')) {
-        return Redirect::to('/dang-nhap');
+        return Redirect::to('/');
     }
 });
 
